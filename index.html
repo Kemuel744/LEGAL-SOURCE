@@ -2,7 +2,21 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/LOCAL-SOURCES/favicon.png" />
+    <!-- GitHub Pages SPA routing: restore path from query string -->
+    <script>
+      (function(l) {
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (decoded.charAt(1) === '/' ? '' : '/') +
+            decoded.slice(1) + l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#01325B" />
     <title>LEGAL SOURCE — Consulting, Management &amp; Certification QHSE</title>
