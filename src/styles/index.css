@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  body {
+    @apply bg-white font-sans text-brand-muted antialiased;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-brand-ink;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    @apply bg-brand-green/20 text-brand-ink;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: high-quality;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  svg {
+    shape-rendering: geometricPrecision;
+  }
+}
+
+/* Sharpness boost on HiDPI / 4K screens */
+@media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+  img {
+    image-rendering: high-quality;
+    transform: translateZ(0);
+  }
+
+  h1, h2, h3 {
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-shadow: 0 0 0 transparent;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-14 sm:py-16 lg:py-20;
+  }
+
+  .section-tight {
+    @apply py-10 sm:py-12;
+  }
+
+  .legal-content h2 {
+    @apply mt-8 font-display text-lg font-bold text-brand-ink;
+  }
+
+  .legal-content h3 {
+    @apply mt-6 font-display text-base font-bold text-brand-ink;
+  }
+
+  .legal-content p {
+    @apply mt-3 text-sm leading-relaxed text-brand-muted;
+  }
+
+  .legal-content ul {
+    @apply mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-brand-muted;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
