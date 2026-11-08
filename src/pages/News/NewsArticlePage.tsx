@@ -31,9 +31,9 @@ export default function NewsArticlePage() {
         <Container>
           <nav aria-label="Fil d’Ariane" className="py-3">
             <ol className="flex flex-wrap items-center gap-1 text-xs text-brand-muted">
-              <li><Link to="/" className="hover:text-brand-green">Accueil</Link></li>
+              <li><Link to="/" className="hover:text-brand-green-dark">Accueil</Link></li>
               <li aria-hidden="true" className="select-none">›</li>
-              <li><Link to="/actualites" className="hover:text-brand-green">Actualités</Link></li>
+              <li><Link to="/actualites" className="hover:text-brand-green-dark">Actualités</Link></li>
               <li aria-hidden="true" className="select-none">›</li>
               <li className="font-semibold text-brand-ink line-clamp-1 max-w-[220px]">{post.title}</li>
             </ol>
@@ -46,7 +46,7 @@ export default function NewsArticlePage() {
           <div className="mx-auto max-w-3xl">
             <Link
               to="/actualites"
-              className="mb-8 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+              className="mb-8 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               Retour aux actualités
@@ -55,7 +55,7 @@ export default function NewsArticlePage() {
             {/* Header de l’article */}
             <header className="mb-8">
               <div className="flex flex-wrap items-center gap-3 text-xs text-brand-muted">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-green-light px-3 py-1 font-display font-semibold text-brand-green">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-green-light px-3 py-1 font-display font-semibold text-brand-green-dark">
                   <Tag className="h-3 w-3" aria-hidden="true" />
                   {post.category}
                 </span>
@@ -114,7 +114,7 @@ export default function NewsArticlePage() {
                   external
                   variant="white"
                 >
-                  <WhatsAppIcon className="h-4 w-4 text-brand-green" />
+                  <WhatsAppIcon className="h-4 w-4 text-brand-green-dark" />
                   Nous écrire sur WhatsApp
                 </Button>
                 <Button to="/contact" variant="outline">

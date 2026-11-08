@@ -93,7 +93,7 @@ export default function ContactPage() {
                       {cta && href && (
                         <a
                           href={href}
-                          className="mt-2 inline-flex items-center gap-1 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+                          className="mt-2 inline-flex items-center gap-1 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
                         >
                           {cta}
                         </a>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                           href={social.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-md border border-brand-border px-4 py-2 font-display text-sm font-semibold text-brand-ink hover:border-brand-green hover:text-brand-green"
+                          className="rounded-md border border-brand-border px-4 py-2 font-display text-sm font-semibold text-brand-ink hover:border-brand-green-dark hover:text-brand-green-dark"
                         >
                           {social.label}
                         </a>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   size="lg"
                   className="mt-6 w-full"
                 >
-                  <WhatsAppIcon className="h-5 w-5 text-brand-green" />
+                  <WhatsAppIcon className="h-5 w-5 text-brand-green-dark" />
                   Ouvrir WhatsApp
                 </Button>
               </div>
@@ -171,11 +171,6 @@ export default function ContactPage() {
                 </Button>
               </div>
 
-              <p className="rounded-lg border border-orange-200 bg-orange-50 p-4 text-xs leading-relaxed text-orange-700">
-                <strong>Coordonnées provisoires.</strong> Le numéro de téléphone, l’adresse e-mail
-                et l’adresse physique sont repris des modèles graphiques fournis. Ils seront mis à
-                jour dès confirmation par LEGAL SOURCE.
-              </p>
             </div>
           </div>
         </Container>

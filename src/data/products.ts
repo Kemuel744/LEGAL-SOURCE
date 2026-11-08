@@ -1,16 +1,16 @@
 import type { Product } from '@/types'
 
-import casque from '@/assets/images/products/casque-securite.jpg'
-import gilet from '@/assets/images/products/gilet-visibilite.jpg'
-import chaussures from '@/assets/images/products/chaussures-securite.jpg'
-import gants from '@/assets/images/products/gants-protection.jpg'
-import masque from '@/assets/images/products/masque-respiratoire.jpg'
-import antibruit from '@/assets/images/products/casque-antibruit.jpg'
-import lunettes from '@/assets/images/products/lunettes-securite.jpg'
-import kitAgricole from '@/assets/images/products/kit-agricole.jpg'
-import kitHygiene from '@/assets/images/products/kit-hygiene.jpg'
-import kitSecours from '@/assets/images/products/kit-premiers-secours.jpg'
-import kitNettoyage from '@/assets/images/products/kit-nettoyage.jpg'
+import casque from '@/assets/images/products/casque-securite.webp'
+import gilet from '@/assets/images/products/gilet-visibilite.webp'
+import chaussures from '@/assets/images/products/chaussures-securite.webp'
+import gants from '@/assets/images/products/gants-protection.webp'
+import masque from '@/assets/images/products/masque-respiratoire.webp'
+import antibruit from '@/assets/images/products/casque-antibruit.webp'
+import lunettes from '@/assets/images/products/lunettes-securite.webp'
+import kitAgricole from '@/assets/images/products/kit-agricole.webp'
+import kitHygiene from '@/assets/images/products/kit-hygiene.webp'
+import kitSecours from '@/assets/images/products/kit-premiers-secours.webp'
+import kitNettoyage from '@/assets/images/products/kit-nettoyage.webp'
 
 /**
  * Catalogue provisoire — produits, prix et mentions repris du template

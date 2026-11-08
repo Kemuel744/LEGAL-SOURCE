@@ -8,20 +8,60 @@ function ScrollManager() {
   const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    if (hash) {
-      const id = hash.replace('#', '')
-      const frame = requestAnimationFrame(() => {
-        const element = document.getElementById(id)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        } else {
-          window.scrollTo({ top: 0 })
-        }
-      })
-      return () => cancelAnimationFrame(frame)
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+      return undefined
     }
-    window.scrollTo({ top: 0, behavior: 'auto' })
-    return undefined
+
+    let id = hash.slice(1)
+    try {
+      id = decodeURIComponent(id)
+    } catch {
+      // Hash malformé : on conserve la valeur brute.
+    }
+    let cancelled = false
+    let observer: MutationObserver | undefined
+    let timeoutId: number | undefined
+
+    const scrollToTarget = () => {
+      if (cancelled) return false
+      const element = document.getElementById(id)
+      if (!element) return false
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      observer?.disconnect()
+      window.clearTimeout(timeoutId)
+      return true
+    }
+
+    // Les routes sont chargées en lazy : la cible peut apparaître après le
+    // montage du Layout. On réessaie sur les frames puis on observe le DOM.
+    let frameId = 0
+    let attempts = 0
+    const retry = () => {
+      if (scrollToTarget() || cancelled) return
+      attempts += 1
+      if (attempts < 120) frameId = requestAnimationFrame(retry)
+    }
+    frameId = requestAnimationFrame(retry)
+
+    observer = new MutationObserver(scrollToTarget)
+    observer.observe(document.body, { childList: true, subtree: true })
+
+    // Filet de sécurité : on arrête l'observation au bout de 10 s et on
+    // remonte en haut si la cible n'existe toujours pas.
+    timeoutId = window.setTimeout(() => {
+      observer?.disconnect()
+      if (!cancelled && !document.getElementById(id)) {
+        window.scrollTo({ top: 0, behavior: 'auto' })
+      }
+    }, 10000)
+
+    return () => {
+      cancelled = true
+      cancelAnimationFrame(frameId)
+      observer?.disconnect()
+      window.clearTimeout(timeoutId)
+    }
   }, [pathname, hash])
 
   return null

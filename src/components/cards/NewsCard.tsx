@@ -21,7 +21,7 @@ export function NewsCard({ post, featured = false }: NewsCardProps) {
               width={360}
               height={180}
             />
-            <span className="absolute left-4 top-4 rounded bg-brand-green px-2.5 py-1 font-display text-[11px] font-semibold text-white">
+            <span className="absolute left-4 top-4 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-semibold text-white">
               {post.category}
             </span>
           </div>
@@ -37,7 +37,7 @@ export function NewsCard({ post, featured = false }: NewsCardProps) {
           <p className="mt-3 text-sm leading-relaxed text-brand-muted">{post.excerpt}</p>
           <Link
             to={`/actualites/${post.slug}`}
-            className="mt-6 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+            className="mt-6 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
           >
             Lire l’article
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -59,7 +59,7 @@ export function NewsCard({ post, featured = false }: NewsCardProps) {
             width={180}
             height={72}
           />
-          <span className="absolute left-3 top-3 rounded bg-brand-green px-2.5 py-1 font-display text-[11px] font-semibold text-white">
+          <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-semibold text-white">
             {post.category}
           </span>
         </div>
@@ -75,7 +75,7 @@ export function NewsCard({ post, featured = false }: NewsCardProps) {
         <p className="mt-2 text-sm leading-relaxed text-brand-muted">{post.excerpt}</p>
         <Link
           to={`/actualites/${post.slug}`}
-          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
         >
           Lire l’article
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />

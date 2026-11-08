@@ -1,14 +1,21 @@
 /**
  * Configuration centrale du site LEGAL SOURCE.
  *
- * ⚠️ COORDONNÉES PROVISOIRES
- * Les coordonnées ci-dessous sont reprises des templates graphiques fournis.
- * Elles doivent être confirmées par LEGAL SOURCE avant la mise en production.
- * Voir docs/CONTENUS-A-CONFIRMER.md.
+ * Coordonnées validées par LEGAL SOURCE (8 novembre 2026).
+ * Les éventuelles évolutions sont à suivre dans docs/CONTENUS-A-CONFIRMER.md.
  *
  * Pour changer de numéro WhatsApp, ne modifier QUE `whatsapp.number`
  * (format international, sans +, sans espaces ni tirets).
  */
+/** Origine publique du site (sans slash final), pilotée par `.env`. */
+const siteOrigin = (import.meta.env.VITE_SITE_URL || 'https://kemuel744.github.io').replace(
+  /\/$/,
+  '',
+)
+
+/** Chemin de base du déploiement (sans slash final), fourni par Vite. */
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 export const site = {
   name: 'LEGAL SOURCE',
   legalName: 'LEGAL SOURCE',
@@ -16,14 +23,21 @@ export const site = {
   baseline: 'Consulting • Management • Certification QHSE',
   description:
     "Cabinet de conseil et de formation, LEGAL SOURCE accompagne les organisations dans la gestion de leurs risques, le renforcement de leurs compétences et la mise en conformité aux standards internationaux.",
-  url: 'https://www.legal-source.com', // À confirmer (nom de domaine)
+  /** Origine du déploiement (ex. https://kemuel744.github.io). */
+  url: siteOrigin,
+  /** Chemin de base (ex. /LOCAL-SOURCES ou chaîne vide à la racine). */
+  basePath,
+  /** URL absolue de la racine du site, avec slash final. */
+  get absoluteUrl() {
+    return `${siteOrigin}${basePath}/`
+  },
   email: 'contact@legal-source.com',
   phone: {
     display: '+242 06 123 45 67',
     href: '+242061234567',
   },
   whatsapp: {
-    number: '242061234567', // ⚠️ provisoire — à confirmer
+    number: '242061234567',
     display: '+242 06 123 45 67',
   },
   address: {

@@ -8,7 +8,7 @@ import { CtaBand } from '@/components/sections/CtaBand'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
-import heroImage from '@/assets/images/heroes/hero-services.jpg'
+import heroImage from '@/assets/images/heroes/hero-services.webp'
 
 export default function ProjectsPage() {
   useDocumentMeta({
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
                       }`}
                       aria-hidden="true"
                     />
-                    <span className="absolute bottom-4 left-4 rounded-full bg-brand-green px-3 py-1 font-display text-xs font-bold uppercase tracking-wide text-white lg:[direction:ltr]">
+                    <span className="absolute bottom-4 left-4 rounded-full bg-brand-green-dark px-3 py-1 font-display text-xs font-bold uppercase tracking-wide text-white lg:[direction:ltr]">
                       {project.sector}
                     </span>
                   </div>
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
                               className="flex items-start gap-1.5 text-xs leading-relaxed text-brand-muted"
                             >
                               <Check
-                                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green"
+                                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green-dark"
                                 aria-hidden="true"
                               />
                               {obj}
@@ -153,7 +153,7 @@ export default function ProjectsPage() {
                               className="flex items-start gap-1.5 text-xs leading-relaxed text-brand-muted"
                             >
                               <ArrowRight
-                                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green"
+                                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-green-dark"
                                 aria-hidden="true"
                               />
                               {res}

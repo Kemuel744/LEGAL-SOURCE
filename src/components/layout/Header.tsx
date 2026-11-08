@@ -72,9 +72,9 @@ export function Header() {
                     end={item.to === '/'}
                     className={({ isActive }) =>
                       cn(
-                        'flex items-center gap-1 border-b-2 px-3 py-6 font-display text-[13px] font-semibold text-brand-ink transition-colors hover:text-brand-green',
+                        'flex items-center gap-1 border-b-2 px-3 py-6 font-display text-[13px] font-semibold text-brand-ink transition-colors hover:text-brand-green-dark',
                         isActive || (active && item.to !== '/')
-                          ? 'border-brand-green text-brand-green'
+                          ? 'border-brand-green-dark text-brand-green-dark'
                           : 'border-transparent',
                       )
                     }
@@ -98,8 +98,8 @@ export function Header() {
                             cn(
                               'block rounded px-3 py-2 text-sm transition-colors',
                               isActive
-                                ? 'bg-brand-sky font-semibold text-brand-green'
-                                : 'text-brand-ink hover:bg-brand-sky hover:text-brand-green',
+                                ? 'bg-brand-sky font-semibold text-brand-green-dark'
+                                : 'text-brand-ink hover:bg-brand-sky hover:text-brand-green-dark',
                             )
                           }
                         >
@@ -123,7 +123,7 @@ export function Header() {
             aria-expanded={mobileOpen}
             aria-controls="menu-mobile"
             aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-brand-border text-brand-navy transition-colors hover:border-brand-green hover:text-brand-green lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-brand-border text-brand-navy transition-colors hover:border-brand-green-dark hover:text-brand-green-dark lg:hidden"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -147,7 +147,7 @@ export function Header() {
                       className={({ isActive }) =>
                         cn(
                           'flex-1 py-2.5 font-display text-sm font-semibold',
-                          isActive ? 'text-brand-green' : 'text-brand-ink',
+                          isActive ? 'text-brand-green-dark' : 'text-brand-ink',
                         )
                       }
                     >
@@ -181,7 +181,7 @@ export function Header() {
                           className={({ isActive }) =>
                             cn(
                               'block py-2 text-sm',
-                              isActive ? 'font-semibold text-brand-green' : 'text-brand-muted',
+                              isActive ? 'font-semibold text-brand-green-dark' : 'text-brand-muted',
                             )
                           }
                         >
@@ -204,18 +204,18 @@ export function Header() {
                 variant="outlineNavy"
                 fullWidth
               >
-                <WhatsAppIcon className="h-4 w-4 text-brand-green" />
+                <WhatsAppIcon className="h-4 w-4 text-brand-green-dark" />
                 Écrire sur WhatsApp
               </Button>
             </div>
 
             <div className="mt-4 space-y-2 border-t border-brand-border pt-4 text-sm">
               <a href={site.phoneHref} className="flex items-center gap-2 text-brand-ink">
-                <Phone className="h-4 w-4 text-brand-green" aria-hidden="true" />
+                <Phone className="h-4 w-4 text-brand-green-dark" aria-hidden="true" />
                 {site.phone.display}
               </a>
               <a href={site.emailHref} className="flex items-center gap-2 text-brand-ink">
-                <Mail className="h-4 w-4 text-brand-green" aria-hidden="true" />
+                <Mail className="h-4 w-4 text-brand-green-dark" aria-hidden="true" />
                 {site.email}
               </a>
             </div>

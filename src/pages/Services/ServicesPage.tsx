@@ -1,6 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-services.jpg'
-import ctaImage from '@/assets/images/projects/formation-terrain.jpg'
+import heroImage from '@/assets/images/heroes/hero-services.webp'
+import ctaImage from '@/assets/images/projects/formation-terrain.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -110,7 +110,7 @@ export default function ServicesPage() {
                     <h2 className="mt-4 font-display text-xl font-bold text-brand-ink sm:text-2xl">
                       {service.title}
                     </h2>
-                    <p className="mt-1 font-display text-sm font-semibold text-brand-green">
+                    <p className="mt-1 font-display text-sm font-semibold text-brand-green-dark">
                       {service.tagline}
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-brand-muted">
@@ -140,7 +140,7 @@ export default function ServicesPage() {
                             className="flex items-start gap-2 text-sm leading-relaxed text-brand-muted"
                           >
                             <Check
-                              className="mt-0.5 h-4 w-4 shrink-0 text-brand-green"
+                              className="mt-0.5 h-4 w-4 shrink-0 text-brand-green-dark"
                               aria-hidden="true"
                             />
                             {objective}

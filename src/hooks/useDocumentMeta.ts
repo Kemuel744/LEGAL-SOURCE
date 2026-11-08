@@ -33,12 +33,12 @@ function upsertCanonical(href: string) {
 export function useDocumentMeta({ title, description, path, image }: MetaOptions) {
   useEffect(() => {
     const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`
-    const url = `${site.url}${path}`
+    const url = `${site.url}${site.basePath}${path === '/' ? '/' : path}`
     const imageUrl = image
       ? image.startsWith('http')
         ? image
         : `${site.url}${image}`
-      : `${site.url}/og-image.jpg`
+      : `${site.absoluteUrl}og-image.jpg`
 
     document.title = fullTitle
     upsertMeta('name', 'description', description)

@@ -1,6 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react'
-import aboutImage from '@/assets/images/about.jpg'
-import heroImage from '@/assets/images/heroes/hero-services.jpg'
+import aboutImage from '@/assets/images/about.webp'
+import heroImage from '@/assets/images/heroes/hero-services.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 key={value.title}
                 className="rounded-lg border border-brand-border bg-white p-6 shadow-sm"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-green-light text-brand-green">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-green-light text-brand-green-dark">
                   <Check className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <h3 className="mt-4 font-display text-base font-bold text-brand-ink">

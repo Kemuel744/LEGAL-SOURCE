@@ -22,11 +22,11 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         )}
       </div>
       <h3 className="mt-4 font-display text-lg font-bold text-brand-ink">{service.title}</h3>
-      <p className="mt-1 font-display text-sm font-semibold text-brand-green">{service.tagline}</p>
+      <p className="mt-1 font-display text-sm font-semibold text-brand-green-dark">{service.tagline}</p>
       <p className="mt-3 text-sm leading-relaxed text-brand-muted">{service.description}</p>
       <Link
         to={`/services#${service.slug}`}
-        className="mt-auto inline-flex items-center gap-1.5 pt-5 font-display text-sm font-semibold text-brand-green transition-colors hover:text-brand-green-dark"
+        className="mt-auto inline-flex items-center gap-1.5 pt-5 font-display text-sm font-semibold text-brand-green-dark transition-colors hover:text-brand-green-darker"
       >
         Découvrir le service
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />

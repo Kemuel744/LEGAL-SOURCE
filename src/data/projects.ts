@@ -1,9 +1,9 @@
 import type { Project } from '@/types'
 
-import auditIso from '@/assets/images/projects/audit-iso.jpg'
-import formation from '@/assets/images/projects/formation-terrain.jpg'
-import agriculture from '@/assets/images/projects/agriculture-durable.jpg'
-import impact from '@/assets/images/projects/etude-impact.jpg'
+import auditIso from '@/assets/images/projects/audit-iso.webp'
+import formation from '@/assets/images/projects/formation-terrain.webp'
+import agriculture from '@/assets/images/projects/agriculture-durable.webp'
+import impact from '@/assets/images/projects/etude-impact.webp'
 
 /**
  * Réalisations présentées dans le template officiel « activités / services ».

@@ -44,7 +44,7 @@ export function ProductCard({ product, view = 'grid' }: ProductCardProps) {
           />
         </Link>
         {product.badge && (
-          <span className="absolute left-3 top-3 rounded bg-brand-green px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-wide text-white">
+          <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-wide text-white">
             {product.badge}
           </span>
         )}
@@ -64,7 +64,7 @@ export function ProductCard({ product, view = 'grid' }: ProductCardProps) {
         <h3 className="mt-1 font-display text-[15px] font-bold leading-snug text-brand-ink">
           <Link
             to={`/boutique/${product.slug}`}
-            className="hover:text-brand-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+            className="hover:text-brand-green-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
           >
             {product.name}
           </Link>
@@ -84,7 +84,7 @@ export function ProductCard({ product, view = 'grid' }: ProductCardProps) {
           </p>
           <p className="mt-1 flex items-center gap-1 text-[11px] font-medium text-brand-muted">
             {inStock ? (
-              <CheckCircle2 className="h-3.5 w-3.5 text-brand-green" aria-hidden="true" />
+              <CheckCircle2 className="h-3.5 w-3.5 text-brand-green-dark" aria-hidden="true" />
             ) : (
               <Clock3 className="h-3.5 w-3.5 text-logo-orange" aria-hidden="true" />
             )}

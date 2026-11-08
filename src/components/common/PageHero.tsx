@@ -92,6 +92,7 @@ export function PageHero({
                   alt={imageAlt ?? ''}
                   className="h-full w-full object-cover [image-rendering:high-quality] will-change-[opacity]"
                   loading="eager"
+                  fetchPriority="high"
                   decoding="async"
                 />
                 <div

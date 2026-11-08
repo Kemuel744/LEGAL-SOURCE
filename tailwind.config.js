@@ -19,6 +19,7 @@ export default {
           ink: '#0B2A4A',
           green: '#2E8D29',
           'green-dark': '#24701F',
+          'green-darker': '#1D5C19',
           'green-light': '#EAF4E8',
           sky: '#F3F8FC',
           border: '#E2EAF2',

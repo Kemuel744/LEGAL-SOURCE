@@ -37,11 +37,11 @@ export default function ProductPage() {
           <nav aria-label="Fil d’Ariane" className="py-3">
             <ol className="flex flex-wrap items-center gap-1 text-xs text-brand-muted">
               <li>
-                <Link to="/" className="hover:text-brand-green">Accueil</Link>
+                <Link to="/" className="hover:text-brand-green-dark">Accueil</Link>
               </li>
               <li aria-hidden="true" className="select-none">›</li>
               <li>
-                <Link to="/boutique" className="hover:text-brand-green">Boutique</Link>
+                <Link to="/boutique" className="hover:text-brand-green-dark">Boutique</Link>
               </li>
               <li aria-hidden="true" className="select-none">›</li>
               <li className="font-semibold text-brand-ink">{product.name}</li>
@@ -54,7 +54,7 @@ export default function ProductPage() {
         <Container>
           <Link
             to="/boutique"
-            className="mb-8 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+            className="mb-8 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Retour à la boutique
@@ -72,7 +72,7 @@ export default function ProductPage() {
                 height={184}
               />
               {product.badge && (
-                <span className="absolute left-4 top-4 rounded bg-brand-green px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wide text-white">
+                <span className="absolute left-4 top-4 rounded bg-brand-green-dark px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wide text-white">
                   {product.badge}
                 </span>
               )}
@@ -100,7 +100,7 @@ export default function ProductPage() {
                 <span
                   className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-display text-xs font-semibold ${
                     inStock
-                      ? 'bg-brand-green-light text-brand-green'
+                      ? 'bg-brand-green-light text-brand-green-dark'
                       : 'bg-orange-50 text-orange-600'
                   }`}
                 >
@@ -126,7 +126,7 @@ export default function ProductPage() {
                         className="flex items-start gap-2 text-sm leading-relaxed text-brand-muted"
                       >
                         <Check
-                          className="mt-0.5 h-4 w-4 shrink-0 text-brand-green"
+                          className="mt-0.5 h-4 w-4 shrink-0 text-brand-green-dark"
                           aria-hidden="true"
                         />
                         {feature}

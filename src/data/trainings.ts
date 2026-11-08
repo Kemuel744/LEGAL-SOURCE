@@ -1,11 +1,11 @@
 import type { Training } from '@/types'
 
-import formationsImg from '@/assets/images/activities/formations.jpg'
-import terrainImg from '@/assets/images/projects/formation-terrain.jpg'
-import auditsImg from '@/assets/images/activities/audits.jpg'
-import haccpImg from '@/assets/images/activities/haccp.jpg'
-import rseImg from '@/assets/images/activities/rse.jpg'
-import energiesImg from '@/assets/images/activities/energies.jpg'
+import formationsImg from '@/assets/images/activities/formations.webp'
+import terrainImg from '@/assets/images/projects/formation-terrain.webp'
+import auditsImg from '@/assets/images/activities/audits.webp'
+import haccpImg from '@/assets/images/activities/haccp.webp'
+import rseImg from '@/assets/images/activities/rse.webp'
+import energiesImg from '@/assets/images/activities/energies.webp'
 
 /**
  * Catalogue de formations.

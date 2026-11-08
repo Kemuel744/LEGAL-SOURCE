@@ -32,7 +32,7 @@ export function SectionHeading({
         <p
           className={cn(
             'mb-3 font-display text-xs font-bold uppercase tracking-[0.18em]',
-            light ? 'text-[#A8DC97]' : 'text-brand-green',
+            light ? 'text-[#A8DC97]' : 'text-brand-green-dark',
           )}
         >
           {kicker}

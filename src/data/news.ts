@@ -1,8 +1,8 @@
 import type { NewsPost } from '@/types'
 
-import epiImg from '@/assets/images/activities/epi.jpg'
-import securiteImg from '@/assets/images/activities/rse.jpg'
-import haccpImg from '@/assets/images/activities/haccp.jpg'
+import epiImg from '@/assets/images/activities/epi.webp'
+import securiteImg from '@/assets/images/activities/rse.webp'
+import haccpImg from '@/assets/images/activities/haccp.webp'
 
 /**
  * Publications statiques de la première version.

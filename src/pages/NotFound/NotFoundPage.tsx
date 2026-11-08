@@ -44,10 +44,10 @@ export default function NotFoundPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-brand-muted">
-            <Link to="/services" className="hover:text-brand-green">Nos services</Link>
-            <Link to="/formations" className="hover:text-brand-green">Nos formations</Link>
-            <Link to="/boutique" className="hover:text-brand-green">Boutique</Link>
-            <Link to="/contact" className="hover:text-brand-green">Contact</Link>
+            <Link to="/services" className="hover:text-brand-green-dark">Nos services</Link>
+            <Link to="/formations" className="hover:text-brand-green-dark">Nos formations</Link>
+            <Link to="/boutique" className="hover:text-brand-green-dark">Boutique</Link>
+            <Link to="/contact" className="hover:text-brand-green-dark">Contact</Link>
           </div>
         </div>
       </Container>

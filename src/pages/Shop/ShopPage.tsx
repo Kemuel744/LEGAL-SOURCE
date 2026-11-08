@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ShoppingBag } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-shop.jpg'
+import heroImage from '@/assets/images/heroes/hero-shop.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -58,7 +58,7 @@ export default function ShopPage() {
         <Container>
           <div className="rounded-lg border border-brand-border bg-white p-5 sm:p-6">
             <div className="flex items-start gap-3">
-              <ShoppingBag className="mt-0.5 h-5 w-5 shrink-0 text-brand-green" aria-hidden="true" />
+              <ShoppingBag className="mt-0.5 h-5 w-5 shrink-0 text-brand-green-dark" aria-hidden="true" />
               <div>
                 <p className="font-display text-sm font-bold text-brand-ink">
                   Comment commander ?
@@ -90,8 +90,8 @@ export default function ShopPage() {
               className={cn(
                 'rounded-full border px-4 py-1.5 font-display text-xs font-semibold transition-colors',
                 activeCategory === 'all'
-                  ? 'border-brand-green bg-brand-green text-white'
-                  : 'border-brand-border bg-white text-brand-ink hover:border-brand-green hover:text-brand-green',
+                  ? 'border-brand-green-dark bg-brand-green-dark text-white'
+                  : 'border-brand-border bg-white text-brand-ink hover:border-brand-green-dark hover:text-brand-green-dark',
               )}
             >
               Tout voir ({allProducts.length})
@@ -106,8 +106,8 @@ export default function ShopPage() {
                   className={cn(
                     'rounded-full border px-4 py-1.5 font-display text-xs font-semibold transition-colors',
                     activeCategory === cat.id
-                      ? 'border-brand-green bg-brand-green text-white'
-                      : 'border-brand-border bg-white text-brand-ink hover:border-brand-green hover:text-brand-green',
+                      ? 'border-brand-green-dark bg-brand-green-dark text-white'
+                      : 'border-brand-border bg-white text-brand-ink hover:border-brand-green-dark hover:text-brand-green-dark',
                   )}
                 >
                   {cat.label} ({count})

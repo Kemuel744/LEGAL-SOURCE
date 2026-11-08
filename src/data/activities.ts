@@ -1,15 +1,15 @@
 import type { Activity } from '@/types'
 
-import formationsImg from '@/assets/images/activities/formations.jpg'
-import auditsImg from '@/assets/images/activities/audits.jpg'
-import rhImg from '@/assets/images/activities/rh-securite.jpg'
-import hygieneImg from '@/assets/images/activities/hygiene.jpg'
-import energiesImg from '@/assets/images/activities/energies.jpg'
-import conseilImg from '@/assets/images/activities/conseil.jpg'
-import rseImg from '@/assets/images/activities/rse.jpg'
-import haccpImg from '@/assets/images/activities/haccp.jpg'
-import epiImg from '@/assets/images/activities/epi.jpg'
-import agricoleImg from '@/assets/images/activities/agricole.jpg'
+import formationsImg from '@/assets/images/activities/formations.webp'
+import auditsImg from '@/assets/images/activities/audits.webp'
+import rhImg from '@/assets/images/activities/rh-securite.webp'
+import hygieneImg from '@/assets/images/activities/hygiene.webp'
+import energiesImg from '@/assets/images/activities/energies.webp'
+import conseilImg from '@/assets/images/activities/conseil.webp'
+import rseImg from '@/assets/images/activities/rse.webp'
+import haccpImg from '@/assets/images/activities/haccp.webp'
+import epiImg from '@/assets/images/activities/epi.webp'
+import agricoleImg from '@/assets/images/activities/agricole.webp'
 
 /**
  * Domaines d’intervention — contenus issus du template officiel d’accueil.

@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import heroImage from '@/assets/images/heroes/hero-home.jpg'
-import aboutImage from '@/assets/images/about.jpg'
+import heroImage from '@/assets/images/heroes/hero-home.webp'
+import aboutImage from '@/assets/images/about.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -110,7 +110,7 @@ export default function HomePage() {
                 title="Un partenaire engagé à vos côtés"
                 description="Cabinet de conseil et de formation, LEGAL SOURCE intervient dans le domaine du QHSE pour aider les organisations à atteindre leurs objectifs de performance, de conformité et de développement durable."
               />
-              <div className="mt-5 rounded-lg border-l-4 border-brand-green bg-brand-sky p-5">
+              <div className="mt-5 rounded-lg border-l-4 border-brand-green-dark bg-brand-sky p-5">
                 <p className="font-display text-sm font-bold text-brand-ink">Notre mission</p>
                 <p className="mt-1.5 text-sm leading-relaxed text-brand-muted">
                   Vous apporter des solutions fiables, adaptées et innovantes pour un monde du
@@ -219,7 +219,7 @@ export default function HomePage() {
           <div className="mt-6">
             <Link
               to="/actualites"
-              className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+              className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
             >
               Lire nos actualités
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -6,7 +6,7 @@ import { cn } from '@/utils/format'
 
 const tones: Record<Activity['tone'], { panel: string; border: string; icon: string }> = {
   blue: { panel: 'bg-[#F1F7FC]', border: 'border-logo-blue', icon: 'bg-logo-blue' },
-  green: { panel: 'bg-[#F1F8F0]', border: 'border-logo-green', icon: 'bg-brand-green' },
+  green: { panel: 'bg-[#F1F8F0]', border: 'border-logo-green', icon: 'bg-brand-green-dark' },
   purple: { panel: 'bg-[#F7F2FB]', border: 'border-logo-purple', icon: 'bg-logo-purple' },
   orange: { panel: 'bg-[#FFF6EC]', border: 'border-logo-orange', icon: 'bg-logo-orange' },
   red: { panel: 'bg-[#FDF2F1]', border: 'border-logo-red', icon: 'bg-logo-red' },
@@ -58,7 +58,7 @@ export function ActivityCard({ activity }: ActivityCardProps) {
         </p>
         <Link
           to={`/activites#${activity.id}`}
-          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-xs font-semibold text-brand-green transition-colors hover:text-brand-green-dark"
+          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-xs font-semibold text-brand-green-dark transition-colors hover:text-brand-green-darker"
           aria-label={`Découvrir ${activity.title}`}
         >
           Découvrir

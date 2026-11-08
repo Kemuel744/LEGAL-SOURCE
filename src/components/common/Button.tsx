@@ -25,13 +25,13 @@ const base =
   'inline-flex items-center justify-center gap-2 rounded-md font-display font-semibold leading-none transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60'
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-brand-green text-white hover:bg-brand-green-dark',
+  primary: 'bg-brand-green-dark text-white hover:bg-brand-green-darker',
   outline: 'border border-white/70 text-white hover:bg-white/10 hover:border-white',
   navy: 'bg-brand-navy text-white hover:bg-brand-deep',
   outlineNavy:
-    'border border-brand-border bg-white text-brand-ink hover:border-brand-green hover:text-brand-green',
+    'border border-brand-border bg-white text-brand-ink hover:border-brand-green-dark hover:text-brand-green-dark',
   white: 'bg-white text-brand-navy hover:bg-brand-sky',
-  ghost: 'text-brand-green hover:text-brand-green-dark px-0',
+  ghost: 'text-brand-green-dark hover:text-brand-green-darker px-0',
 }
 
 const sizes: Record<Size, string> = {

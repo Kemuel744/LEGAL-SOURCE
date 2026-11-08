@@ -1,6 +1,6 @@
 import { ArrowRight, MessageCircle, Search, Users } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-services.jpg'
-import classroomImage from '@/assets/images/projects/formation-terrain.jpg'
+import heroImage from '@/assets/images/heroes/hero-services.webp'
+import classroomImage from '@/assets/images/projects/formation-terrain.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'

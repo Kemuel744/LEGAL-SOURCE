@@ -29,7 +29,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="mt-2 text-sm leading-relaxed text-brand-muted">{project.context}</p>
         <Link
           to={`/projets#${project.slug}`}
-          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
         >
           En savoir plus
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />

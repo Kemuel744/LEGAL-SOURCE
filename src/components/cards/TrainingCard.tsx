@@ -23,7 +23,7 @@ export function TrainingCard({ training, variant = 'compact' }: TrainingCardProp
             width={180}
             height={70}
           />
-          <span className="absolute left-3 top-3 rounded bg-brand-green px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
+          <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
             {training.category}
           </span>
         </div>
@@ -34,7 +34,7 @@ export function TrainingCard({ training, variant = 'compact' }: TrainingCardProp
           <p className="mt-2 text-sm leading-relaxed text-brand-muted">{training.description}</p>
           <Link
             to={`/formations#${training.slug}`}
-            className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+            className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
           >
             Voir la formation
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -59,7 +59,7 @@ export function TrainingCard({ training, variant = 'compact' }: TrainingCardProp
             width={180}
             height={70}
           />
-          <span className="absolute left-3 top-3 rounded bg-brand-green px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
+          <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
             {training.category}
           </span>
         </div>
@@ -77,7 +77,7 @@ export function TrainingCard({ training, variant = 'compact' }: TrainingCardProp
             <ul className="mt-2 space-y-1.5">
               {training.objectives.map((objective) => (
                 <li key={objective} className="flex items-start gap-2 text-sm text-brand-muted">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" aria-hidden="true" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-green-dark" aria-hidden="true" />
                   {objective}
                 </li>
               ))}

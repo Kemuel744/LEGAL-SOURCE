@@ -8,7 +8,7 @@ import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
-import heroImage from '@/assets/images/heroes/hero-services.jpg'
+import heroImage from '@/assets/images/heroes/hero-services.webp'
 
 export default function NewsPage() {
   useDocumentMeta({

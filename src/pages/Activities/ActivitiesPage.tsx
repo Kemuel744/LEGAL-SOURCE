@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import heroImage from '@/assets/images/heroes/hero-home.jpg'
+import heroImage from '@/assets/images/heroes/hero-home.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -51,7 +51,7 @@ export default function ActivitiesPage() {
                 <li key={activity.id}>
                   <a
                     href={`#${activity.id}`}
-                    className="inline-flex rounded-full border border-brand-border px-3 py-1.5 text-xs font-medium text-brand-muted transition-colors hover:border-brand-green hover:text-brand-green"
+                    className="inline-flex rounded-full border border-brand-border px-3 py-1.5 text-xs font-medium text-brand-muted transition-colors hover:border-brand-green-dark hover:text-brand-green-dark"
                   >
                     {activity.title}
                   </a>
@@ -100,7 +100,7 @@ export default function ActivitiesPage() {
                         <span className="font-semibold text-brand-ink">Prestation associée : </span>
                         <Link
                           to={`/services#${service.slug}`}
-                          className="font-medium text-brand-green hover:text-brand-green-dark"
+                          className="font-medium text-brand-green-dark hover:text-brand-green-darker"
                         >
                           {service.title}
                         </Link>

@@ -15,9 +15,11 @@ import '@fontsource/open-sans/700.css'
 import '@/styles/index.css'
 import App from '@/App'
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/LOCAL-SOURCES">
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
