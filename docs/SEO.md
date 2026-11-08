@@ -76,6 +76,8 @@ paramètre `structuredData` de `useDocumentMeta` sans modifier le HTML statique.
 - Open Graph et Twitter Cards avec image `og-image.jpg`.
 - `lang="fr"`, `geo.region=CG`, `geo.placename=Brazzaville`.
 - Fallback SPA pour les deep-links + test de non-régression au build.
+- Sur Netlify, rewrites SPA en HTTP 200 (`netlify.toml`) : les pages profondes
+  sont indexables sans passer par une page 404.
 - Images WebP, dimensions adaptées, `loading="lazy"` hors héros,
   `fetchPriority="high"` sur les héros, noms de fichiers descriptifs et
   attributs `alt` renseignés.

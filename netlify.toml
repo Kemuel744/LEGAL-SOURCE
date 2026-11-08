@@ -1,0 +1,32 @@
+# Déploiement Netlify — LEGAL SOURCE
+#
+# Netlify sert le site à la racine du domaine : le base path Vite doit donc être
+# `/` (contrairement à GitHub Pages, qui utilise /LOCAL-SOURCES/).
+# `URL` est fourni automatiquement par Netlify et devient l'URL canonique.
+
+[build]
+  command = "VITE_SITE_URL=$URL npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  VITE_BASE_PATH = "/"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 5173
+  port = 8888
+
+# Rewrites SPA : toute route inconnue est servie par index.html avec un statut
+# HTTP 200. Contrairement à GitHub Pages, les deep-links ne renvoient donc plus
+# de 404 et les robots peuvent indexer les pages profondes.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Les fichiers de `assets/` sont hashés par Vite : cache long et immuable.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

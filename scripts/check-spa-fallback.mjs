@@ -5,6 +5,13 @@
  */
 import { readFileSync } from 'node:fs'
 import assert from 'node:assert/strict'
+import { loadEnv } from 'vite'
+
+const env = loadEnv('production', process.cwd(), '')
+let base = env.VITE_BASE_PATH || '/'
+if (!base.startsWith('/')) base = `/${base}`
+if (!base.endsWith('/')) base = `${base}/`
+const prefix = base.replace(/\/$/, '')
 
 function extractScript(file, needle) {
   const html = readFileSync(file, 'utf8')
@@ -50,10 +57,10 @@ function restoreFromIndex(redirected) {
 }
 
 const cases = [
-  '/LOCAL-SOURCES/boutique/casque-de-securite',
-  '/LOCAL-SOURCES/actualites/iso-45001-les-fondamentaux',
-  '/LOCAL-SOURCES/services',
-  '/LOCAL-SOURCES/',
+  `${prefix}/boutique/casque-de-securite`,
+  `${prefix}/actualites/iso-45001-les-fondamentaux`,
+  `${prefix}/services`,
+  `${prefix}/`,
 ]
 
 for (const path of cases) {
