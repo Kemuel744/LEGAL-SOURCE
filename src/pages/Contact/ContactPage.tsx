@@ -37,9 +37,9 @@ const channels = [
 
 export default function ContactPage() {
   useDocumentMeta({
-    title: 'Contact',
+    title: 'Contact LEGAL SOURCE à Brazzaville, Congo',
     description:
-      'Contactez LEGAL SOURCE par téléphone, WhatsApp ou e-mail. Notre équipe répond à vos questions et prend en charge vos demandes.',
+      'Contactez LEGAL SOURCE à Brazzaville, au Congo, par téléphone, WhatsApp ou e-mail. Notre équipe répond à vos demandes de services, formations et produits.',
     path: '/contact',
   })
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
     <>
       <PageHero
         kicker="Contact"
-        title="Parlons de votre projet"
+        title="Contactez LEGAL SOURCE à Brazzaville, Congo"
         description="Notre équipe est à votre écoute pour répondre à vos questions, établir un devis ou vous accompagner dans votre démarche."
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'Contact' }]}
         compact

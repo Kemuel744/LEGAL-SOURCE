@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import heroImage from '@/assets/images/heroes/hero-home.webp'
+import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazzaville.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -15,9 +15,9 @@ import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
 export default function ActivitiesPage() {
   useDocumentMeta({
-    title: 'Nos activités — domaines d’intervention',
+    title: 'Nos activités et domaines d’intervention au Congo',
     description:
-      'Découvrez les domaines d’intervention de LEGAL SOURCE : formations, audits et certifications, RH et sécurité, hygiène, énergies durables, conseil, RSE, sécurité alimentaire et fourniture d’EPI.',
+      'Découvrez les activités de LEGAL SOURCE au Congo : formations, audits et certification, RH et sécurité, hygiène, énergies durables, conseil, RSE, sécurité alimentaire et fourniture d’EPI.',
     path: '/activites',
   })
 
@@ -28,7 +28,7 @@ export default function ActivitiesPage() {
     <>
       <PageHero
         kicker="Nos activités"
-        title="Des domaines d’intervention complémentaires"
+        title="Nos activités au Congo : des domaines d’intervention complémentaires"
         description="LEGAL SOURCE regroupe ses expertises par famille d’activités pour vous accompagner de manière globale, du diagnostic jusqu’à la mise en œuvre sur le terrain."
         image={heroImage}
         imageAlt="Équipe LEGAL SOURCE sur un site industriel"

@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import heroImage from '@/assets/images/heroes/hero-home.webp'
-import aboutImage from '@/assets/images/about.webp'
+import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazzaville.webp'
+import aboutImage from '@/assets/images/legal-source-accompagnement-entreprise-congo.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -20,9 +20,9 @@ import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 
 export default function HomePage() {
   useDocumentMeta({
-    title: 'LEGAL SOURCE — Ensemble pour une performance durable',
+    title: 'LEGAL SOURCE – Services et solutions professionnelles au Congo',
     description:
-      'LEGAL SOURCE vous accompagne dans la gestion de vos risques, le renforcement de vos compétences et la mise en conformité aux standards internationaux : QHSE, formations, audits, certifications et EPI.',
+      'LEGAL SOURCE est une entreprise de conseil et de formation à Brazzaville, au Congo. Découvrez ses services professionnels pour les entreprises au Congo : QHSE, audits, formations, certification, EPI et accompagnement de projets.',
     path: '/',
   })
 
@@ -36,16 +36,10 @@ export default function HomePage() {
     <>
       <PageHero
         kicker="Consulting · Management · Certification QHSE"
-        title={
-          <>
-            Ensemble pour
-            <br />
-            une performance durable
-          </>
-        }
-        description="LEGAL SOURCE vous accompagne dans la gestion de vos risques, le renforcement de vos compétences et la mise en conformité aux standards internationaux."
+        title="Bienvenue chez LEGAL SOURCE"
+        description="Entreprise de conseil et de formation à Brazzaville, LEGAL SOURCE met son expertise au service des organisations au Congo : services professionnels, solutions QHSE, formations et accompagnement à la certification."
         image={heroImage}
-        imageAlt="Ingénieur LEGAL SOURCE sur un site, équipé d’un casque et d’un gilet de sécurité"
+        imageAlt="Consultant LEGAL SOURCE sur un site industriel au Congo, équipé d’un casque et d’un gilet de sécurité"
         features={['Qualité', 'Santé & Sécurité', 'Environnement', 'Durabilité']}
       >
         <Button to="/services" size="lg">
@@ -61,8 +55,8 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             kicker="Nos activités"
-            title="Des solutions complètes pour tous vos besoins"
-            description="Découvrez nos domaines d’expertise, regroupés par famille d’activités, pour vous accompagner efficacement."
+            title="Nos activités, nos services et nos solutions"
+            description="Découvrez les activités, services professionnels et solutions de LEGAL SOURCE au Congo, regroupés par domaine d’expertise pour répondre à vos besoins."
           />
 
           <div className="mt-9 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-5">
@@ -108,7 +102,7 @@ export default function HomePage() {
               <SectionHeading
                 kicker="À propos de LEGAL SOURCE"
                 title="Un partenaire engagé à vos côtés"
-                description="Cabinet de conseil et de formation, LEGAL SOURCE intervient dans le domaine du QHSE pour aider les organisations à atteindre leurs objectifs de performance, de conformité et de développement durable."
+                description="Entreprise de conseil et de formation au Congo, LEGAL SOURCE met son expertise au service des organisations pour atteindre leurs objectifs de performance, de conformité et de développement durable."
               />
               <div className="mt-5 rounded-lg border-l-4 border-brand-green-dark bg-brand-sky p-5">
                 <p className="font-display text-sm font-bold text-brand-ink">Notre mission</p>

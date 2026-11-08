@@ -83,10 +83,24 @@ scripts/
   extract-assets.py     extraction des visuels depuis les templates
 docs/
   AUDIT.md              analyse initiale des ressources
+  SEO.md                stratégie, métadonnées et contrôle du référencement
   CONTENUS-A-CONFIRMER.md  données à valider avant production
 ```
 
 Les pages ne lisent pas directement `src/data` : elles passent par `src/services/catalogService.ts`, ce qui permettra de brancher une API sans réécrire les composants.
+
+## Référencement (SEO)
+
+Le SEO est intégré à l'architecture :
+
+- métadonnées uniques par page via `src/hooks/useDocumentMeta.ts` ;
+- titres `H1`/`H2`/`H3` structurés ;
+- `sitemap.xml`, `robots.txt` et fallback SPA générés au build ;
+- canonical, Open Graph et Twitter Cards ;
+- données structurées `Organization` / `ProfessionalService` dans `index.html` ;
+- images WebP avec attributs `alt` descriptifs.
+
+La stratégie complète, les mots-clés ciblés et la procédure Search Console / GA4 sont documentés dans `docs/SEO.md`.
 
 ## Déploiement
 

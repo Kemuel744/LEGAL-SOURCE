@@ -8,13 +8,13 @@ import { CtaBand } from '@/components/sections/CtaBand'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
-import heroImage from '@/assets/images/heroes/hero-services.webp'
+import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 
 export default function ProjectsPage() {
   useDocumentMeta({
-    title: 'Nos projets & réalisations',
+    title: 'Projets et réalisations au Congo',
     description:
-      'Découvrez les projets réalisés ou accompagnés par LEGAL SOURCE : audits, formations, agriculture durable et études d’impact environnemental.',
+      'Découvrez les projets et réalisations de LEGAL SOURCE au Congo : audits, formations, agriculture durable et études d’impact environnemental.',
     path: '/projets',
   })
 
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
     <>
       <PageHero
         kicker="Nos réalisations"
-        title="Des interventions concrètes au service de vos objectifs"
+        title="Nos réalisations au Congo : des interventions concrètes"
         description="LEGAL SOURCE accompagne les organisations dans des projets variés : audit et mise en conformité, formation, agriculture durable et études environnementales."
         image={heroImage}
         imageAlt="Équipe LEGAL SOURCE sur le terrain"

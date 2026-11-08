@@ -22,7 +22,7 @@ export const site = {
   tagline: 'Votre partenaire pour une performance durable',
   baseline: 'Consulting • Management • Certification QHSE',
   description:
-    "Cabinet de conseil et de formation, LEGAL SOURCE accompagne les organisations dans la gestion de leurs risques, le renforcement de leurs compétences et la mise en conformité aux standards internationaux.",
+    "Entreprise de conseil et de formation à Brazzaville, au Congo, LEGAL SOURCE accompagne les organisations dans la gestion de leurs risques, le renforcement de leurs compétences et la mise en conformité aux standards internationaux.",
   /** Origine du déploiement (ex. https://kemuel744.github.io). */
   url: siteOrigin,
   /** Chemin de base (ex. /LOCAL-SOURCES ou chaîne vide à la racine). */

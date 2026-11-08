@@ -50,9 +50,9 @@ export function Footer() {
               />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
-              Cabinet de conseil et de formation, LEGAL SOURCE accompagne les organisations dans
-              la gestion de leurs risques, le renforcement de leurs compétences et la mise en
-              conformité aux standards internationaux.
+              Entreprise de conseil et de formation au Congo, LEGAL SOURCE accompagne les
+              organisations dans la gestion de leurs risques, le renforcement de leurs compétences
+              et la mise en conformité aux standards internationaux.
             </p>
             {site.socials.length > 0 && (
               <ul className="mt-5 flex gap-3" aria-label="Réseaux sociaux">
@@ -147,7 +147,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-white/15 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {site.name}. Tous droits réservés.
+            © {year} {site.name} – Congo. Tous droits réservés.
           </p>
           <nav aria-label="Informations légales">
             <ul className="flex flex-wrap gap-x-4 gap-y-2">

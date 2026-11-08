@@ -1,5 +1,5 @@
 import { Mail, Phone } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-home.webp'
+import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazzaville.webp'
 import { site } from '@/config/site'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'

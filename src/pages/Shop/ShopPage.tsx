@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ShoppingBag } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-shop.webp'
+import heroImage from '@/assets/images/heroes/legal-source-boutique-epi-congo.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -17,9 +17,9 @@ import type { ProductCategory } from '@/types'
 
 export default function ShopPage() {
   useDocumentMeta({
-    title: 'Boutique EPI & Kits',
+    title: 'Boutique EPI et kits de sécurité au Congo',
     description:
-      'Équipements de protection individuelle, kits agricoles, kits d’hygiène, premiers secours et nettoyage. Commandez directement via WhatsApp.',
+      'Catalogue de produits professionnels au Congo : équipements de protection individuelle et kits pour les entreprises. Casques, gilets, chaussures, gants, hygiène, premiers secours et nettoyage. Commandez via WhatsApp.',
     path: '/boutique',
   })
 
@@ -35,7 +35,7 @@ export default function ShopPage() {
     <>
       <PageHero
         kicker="Boutique EPI & Kits"
-        title="Équipements de protection pour vos équipes"
+        title="Boutique EPI au Congo : équipements de protection pour vos équipes"
         description="Une sélection d’équipements de protection individuelle et de kits thématiques pour travailler en toute sécurité. Toute commande se fait directement via WhatsApp."
         image={heroImage}
         imageAlt="Équipements de protection individuelle LEGAL SOURCE"

@@ -1,5 +1,5 @@
 import { ArrowRight, Check } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-services.webp'
+import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 import ctaImage from '@/assets/images/projects/formation-terrain.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
@@ -23,9 +23,9 @@ const reasons = [
 
 export default function ServicesPage() {
   useDocumentMeta({
-    title: 'Nos services',
+    title: 'Services professionnels au Congo – Conseil, audit et formation',
     description:
-      'Conseil, coaching, audit, formation, accompagnement aux certifications et stratégie de développement durable : découvrez les services de LEGAL SOURCE et demandez un devis sur WhatsApp.',
+      'Conseil, coaching, audit, formation, accompagnement à la certification et stratégie de développement durable : découvrez les services professionnels de LEGAL SOURCE pour les entreprises au Congo.',
     path: '/services',
   })
 
@@ -35,7 +35,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         kicker="Nos services"
-        title="Des solutions sur mesure pour accompagner votre performance durable"
+        title="Services professionnels au Congo : des solutions sur mesure"
         description="LEGAL SOURCE vous conseille, vous accompagne et vous forme pour relever vos défis, optimiser vos ressources et atteindre vos objectifs en toute conformité."
         image={heroImage}
         imageAlt="Consultante et responsable échangeant lors d’un accompagnement LEGAL SOURCE"

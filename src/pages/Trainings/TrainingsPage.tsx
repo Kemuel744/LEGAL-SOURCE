@@ -1,5 +1,5 @@
 import { ArrowRight, MessageCircle, Search, Users } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/hero-services.webp'
+import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 import classroomImage from '@/assets/images/projects/formation-terrain.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -38,9 +38,9 @@ const steps = [
 
 export default function TrainingsPage() {
   useDocumentMeta({
-    title: 'Nos formations',
+    title: 'Formations professionnelles au Congo – Catalogue LEGAL SOURCE',
     description:
-      'Formations NEBOSH, IOSH, ISO 9001, ISO 14001, ISO 45001, HACCP et GLOBALG.A.P. : découvrez le catalogue LEGAL SOURCE et demandez des informations sur WhatsApp.',
+      'Formations professionnelles au Congo : NEBOSH, IOSH, ISO 9001, ISO 14001, ISO 45001, HACCP et GLOBALG.A.P. Découvrez le catalogue LEGAL SOURCE et demandez des informations.',
     path: '/formations',
   })
 
@@ -50,7 +50,7 @@ export default function TrainingsPage() {
     <>
       <PageHero
         kicker="Nos formations"
-        title="Renforcez les compétences de vos équipes"
+        title="Formations professionnelles au Congo : renforcez les compétences de vos équipes"
         description="Des formations aux référentiels internationaux, conçues pour être comprises, appropriées et appliquées au quotidien par vos équipes."
         image={heroImage}
         imageAlt="Session de formation et d’accompagnement LEGAL SOURCE"

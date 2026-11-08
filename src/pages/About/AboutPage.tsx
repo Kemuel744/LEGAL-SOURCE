@@ -1,6 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react'
-import aboutImage from '@/assets/images/about.webp'
-import heroImage from '@/assets/images/heroes/hero-services.webp'
+import aboutImage from '@/assets/images/legal-source-accompagnement-entreprise-congo.webp'
+import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 import directorImage from '@/assets/images/team/israel-eloye-ondele.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -63,9 +63,9 @@ const approach = [
 
 export default function AboutPage() {
   useDocumentMeta({
-    title: 'À propos',
+    title: 'À propos de LEGAL SOURCE – Conseil et formation au Congo',
     description:
-      'Découvrez LEGAL SOURCE : un cabinet de conseil et de formation engagé pour la performance durable, la conformité et la prévention des risques QHSE.',
+      'Découvrez LEGAL SOURCE, entreprise de conseil et de formation basée à Brazzaville, au Congo : expertise QHSE, accompagnement des organisations et prévention des risques.',
     path: '/a-propos',
   })
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
     <>
       <PageHero
         kicker="À propos"
-        title="Une expertise QHSE au service de votre performance"
+        title="Une expertise QHSE au service de votre performance au Congo"
         description="LEGAL SOURCE accompagne les organisations dans la gestion de leurs risques, le renforcement de leurs compétences et la mise en conformité aux standards internationaux."
         image={heroImage}
         imageAlt="Échange entre une consultante LEGAL SOURCE et un responsable d’entreprise"

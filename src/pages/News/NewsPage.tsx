@@ -8,13 +8,13 @@ import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
-import heroImage from '@/assets/images/heroes/hero-services.webp'
+import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 
 export default function NewsPage() {
   useDocumentMeta({
-    title: 'Actualités',
+    title: 'Actualités QHSE et conseils aux entreprises au Congo',
     description:
-      'Retrouvez les actualités, fiches pratiques et publications de LEGAL SOURCE sur le QHSE, la sécurité, l’environnement et la performance durable.',
+      'Retrouvez les actualités et publications de LEGAL SOURCE sur le QHSE, la sécurité, l’environnement, les formations et la performance durable des entreprises au Congo.',
     path: '/actualites',
   })
 
@@ -26,7 +26,7 @@ export default function NewsPage() {
     <>
       <PageHero
         kicker="Actualités"
-        title="Informations, conseils et actualités QHSE"
+        title="Actualités QHSE et conseils aux entreprises au Congo"
         description="Publications, fiches pratiques et annonces de LEGAL SOURCE pour accompagner vos démarches de qualité, santé, sécurité et environnement."
         image={heroImage}
         imageAlt="Équipe LEGAL SOURCE lors d’une session de formation"

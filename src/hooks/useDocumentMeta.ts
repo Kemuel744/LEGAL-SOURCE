@@ -47,8 +47,10 @@ export function useDocumentMeta({ title, description, path, image }: MetaOptions
     upsertMeta('property', 'og:description', description)
     upsertMeta('property', 'og:url', url)
     upsertMeta('property', 'og:image', imageUrl)
+    upsertMeta('property', 'og:image:alt', fullTitle)
     upsertMeta('name', 'twitter:title', fullTitle)
     upsertMeta('name', 'twitter:description', description)
     upsertMeta('name', 'twitter:image', imageUrl)
+    upsertMeta('name', 'twitter:image:alt', fullTitle)
   }, [title, description, path, image])
 }
