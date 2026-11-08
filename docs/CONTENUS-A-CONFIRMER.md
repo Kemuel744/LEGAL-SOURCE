@@ -13,7 +13,8 @@ Dernière mise à jour : 8 novembre 2026.
 | E-mail | `contact@legal-source.com` | Validation LEGAL SOURCE (8 nov. 2026) | ✅ Officiel | Aucune |
 | Adresse physique | `Brazzaville, Congo` | Validation LEGAL SOURCE (8 nov. 2026) | ✅ Officiel | Compléter l'adresse précise si disponible |
 | Horaires | « lundi au vendredi pendant les heures de bureau » | Rédaction interne | ⚠️ Non validé | Confirmer ou supprimer |
-| Raison sociale / mentions | `LEGAL SOURCE` | Template | ⚠️ À confirmer | Fournir RCCM, NIU, siège, directeur de publication |
+| Raison sociale / mentions | `LEGAL SOURCE` | Template | ⚠️ À confirmer | Fournir RCCM, NIU, siège |
+| Direction / directeur de publication | `Israël ELOYE ONDELE`, Directeur général | Validation LEGAL SOURCE | ✅ Officiel | Aucune |
 | Réseaux sociaux | Aucun | — | ⚠️ À fournir | Fournir les URL officielles |
 
 Fichier concerné : `src/config/site.ts`, `index.html` (JSON-LD).

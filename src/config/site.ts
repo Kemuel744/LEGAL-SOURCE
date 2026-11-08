@@ -32,6 +32,10 @@ export const site = {
     return `${siteOrigin}${basePath}/`
   },
   email: 'contact@legal-source.com',
+  director: {
+    name: 'Israël ELOYE ONDELE',
+    role: 'Directeur général',
+  },
   phone: {
     display: '+242 06 123 45 67',
     href: '+242061234567',

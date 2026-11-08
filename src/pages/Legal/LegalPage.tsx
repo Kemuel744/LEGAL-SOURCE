@@ -37,7 +37,11 @@ const pages: Record<LegalPageType, PageConfig> = {
       {
         heading: 'Directeur de la publication',
         content: [
-          'Le directeur de la publication est le représentant légal de LEGAL SOURCE. (à confirmer)',
+          'Directeur de la publication : ' +
+            site.director.name +
+            ', ' +
+            site.director.role +
+            '.',
         ],
       },
       {

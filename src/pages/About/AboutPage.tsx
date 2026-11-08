@@ -1,11 +1,13 @@
 import { ArrowRight, Check } from 'lucide-react'
 import aboutImage from '@/assets/images/about.webp'
 import heroImage from '@/assets/images/heroes/hero-services.webp'
+import directorImage from '@/assets/images/team/israel-eloye-ondele.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { CtaBand } from '@/components/sections/CtaBand'
+import { site } from '@/config/site'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 
 const values = [
@@ -164,6 +166,41 @@ export default function AboutPage() {
                 <p className="mt-2 text-sm leading-relaxed text-brand-muted">{value.description}</p>
               </article>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="section bg-brand-navy">
+        <Container>
+          <div className="grid items-center gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-14">
+            <div className="mx-auto w-full max-w-xs sm:max-w-sm">
+              <div className="overflow-hidden rounded-xl border border-white/15 shadow-card">
+                <img
+                  src={directorImage}
+                  alt={`Portrait de ${site.director.name}, ${site.director.role} de LEGAL SOURCE`}
+                  className="h-auto w-full object-cover"
+                  width={960}
+                  height={1280}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div>
+              <SectionHeading
+                kicker="Notre direction"
+                title={site.director.name}
+                description={site.director.role}
+                light
+              />
+              <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
+                La direction générale de LEGAL SOURCE est assurée par {site.director.name}.
+              </p>
+              <Button to="/contact" variant="outline" className="mt-7">
+                Prendre contact
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
