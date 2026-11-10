@@ -12,6 +12,7 @@
 import { activities } from '@/data/activities'
 import { services } from '@/data/services'
 import { trainings } from '@/data/trainings'
+import { trainingFamilies } from '@/data/trainingFamilies'
 import { products } from '@/data/products'
 import { projects } from '@/data/projects'
 import { news } from '@/data/news'
@@ -27,6 +28,14 @@ export const catalogService = {
   getTrainings: () => trainings,
   getTrainingBySlug: (slug: string) => trainings.find((training) => training.slug === slug) ?? null,
   getFeaturedTrainings: () => trainings.filter((training) => training.featured),
+  getTrainingFamilies: () =>
+    [...trainingFamilies].sort((a, b) => a.order - b.order),
+  getTrainingFamilyBySlug: (slug: string) =>
+    trainingFamilies.find((family) => family.slug === slug) ?? null,
+  getTrainingsByFamily: (familySlug: string) =>
+    trainings.filter((training) => training.familySlug === familySlug),
+  getTrainingsCountForFamily: (familySlug: string) =>
+    trainings.filter((training) => training.familySlug === familySlug).length,
 
   getProducts: () => products,
   getProductBySlug: (slug: string) => products.find((product) => product.slug === slug) ?? null,

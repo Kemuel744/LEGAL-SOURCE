@@ -28,7 +28,7 @@ export default function HomePage() {
 
   const activities = catalogService.getActivities()
   const services = catalogService.getServices().slice(0, 3)
-  const trainings = catalogService.getFeaturedTrainings()
+  const trainings = catalogService.getFeaturedTrainings().slice(0, 3)
   const products = catalogService.getFeaturedProducts()
   const projects = catalogService.getProjects().slice(0, 3)
 

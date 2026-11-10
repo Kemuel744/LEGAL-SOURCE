@@ -48,19 +48,70 @@ export interface Service {
   icon: IconName
 }
 
+/** Niveau indicatif d’une formation, repris du catalogue source. */
+export type TrainingLevel = 'Débutant' | 'Intermédiaire' | 'Avancé' | 'Tous niveaux'
+
+/**
+ * Catalogue thématique : regroupe les formations d’une même famille
+ * (NEBOSH, IOSH, ISEP, ISO, etc.).
+ */
+export interface TrainingFamily {
+  id: string
+  slug: string
+  name: string
+  shortName: string
+  tagline: string
+  description: string
+  image: string
+  imageAlt: string
+  icon: IconName
+  /** Ordre d’affichage dans le catalogue général. */
+  order: number
+  /** Texte commun de modalités, surchargeable formation par formation. */
+  modalities: string[]
+  /** Prérequis communs à la famille. */
+  prerequisites: string
+  /** Modalités d’évaluation communes à la famille. */
+  assessment: string
+}
+
 export interface Training {
   id: string
   slug: string
   title: string
+  /** Identifiant de la famille / du catalogue thématique. */
+  familySlug: string
   category: string
+  level: TrainingLevel
+  /** Nombre de leçons issu du catalogue source, lorsqu’il est renseigné. */
+  lessons: number | null
   description: string
   objectives: string[]
   audience: string[]
+  program: string[]
   modalities: string[]
+  prerequisites: string
+  assessment: string
   image: string
   imageAlt: string
   icon: IconName
   featured?: boolean
+}
+
+/** Organisme partenaire de LEGAL SOURCE. */
+export interface Partner {
+  id: string
+  name: string
+  role: string
+  description: string
+}
+
+/** Membre de l’équipe ou réseau de partenaires. */
+export interface TeamMember {
+  id: string
+  name: string
+  role: string
+  group: 'direction' | 'réseau' | 'formateurs' | 'partenaires'
 }
 
 export type ProductCategory =

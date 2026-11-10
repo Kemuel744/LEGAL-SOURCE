@@ -8,7 +8,17 @@ import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { site } from '@/config/site'
+import { partners, teamGroups, teamMembers } from '@/data/partners'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
+
+function initials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase())
+    .join('')
+}
 
 const values = [
   {
@@ -201,6 +211,84 @@ export default function AboutPage() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="section bg-brand-sky">
+        <Container>
+          <SectionHeading
+            kicker="Nos partenaires"
+            title="Un réseau d’organismes et d’experts reconnus"
+            description="LEGAL SOURCE s’appuie sur des partenaires internationaux et des cabinets d’expertise pour enrichir ses formations et ses accompagnements."
+            align="center"
+          />
+          <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {partners.map((partner) => (
+              <article
+                key={partner.id}
+                className="flex h-full flex-col rounded-lg border border-brand-border bg-white p-6 shadow-sm"
+              >
+                <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-green-dark">
+                  {partner.role}
+                </p>
+                <h3 className="mt-2 font-display text-base font-bold text-brand-ink">
+                  {partner.name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-brand-muted">
+                  {partner.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="section">
+        <Container>
+          <SectionHeading
+            kicker="Notre équipe"
+            title="Les personnes qui font vivre LEGAL SOURCE"
+            description="Une équipe de direction, un réseau de développement et des formateurs associés mobilisés selon les missions."
+            align="center"
+          />
+
+          <div className="mt-9 space-y-8">
+            {teamGroups.map((group) => {
+              const members = teamMembers.filter((member) => member.group === group.key)
+              if (members.length === 0) return null
+
+              return (
+                <div key={group.key}>
+                  <h3 className="font-display text-sm font-bold uppercase tracking-[0.14em] text-brand-green-dark">
+                    {group.label}
+                  </h3>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {members.map((member) => (
+                      <article
+                        key={member.id}
+                        className="flex items-start gap-4 rounded-lg border border-brand-border bg-white p-5 shadow-sm"
+                      >
+                        <span
+                          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-navy font-display text-sm font-bold text-white"
+                          aria-hidden="true"
+                        >
+                          {initials(member.name)}
+                        </span>
+                        <div>
+                          <h4 className="font-display text-sm font-bold text-brand-ink">
+                            {member.name}
+                          </h4>
+                          <p className="mt-1 text-sm leading-relaxed text-brand-muted">
+                            {member.role}
+                          </p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </Container>
       </section>

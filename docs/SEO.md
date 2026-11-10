@@ -34,11 +34,13 @@ Requêtes prioritaires (utilisation naturelle, sans bourrage) :
 | À propos | `/a-propos` | À propos de LEGAL SOURCE – Conseil et formation au Congo | Présentation de l'entreprise, de son expertise QHSE et de son accompagnement des organisations au Congo. |
 | Activités | `/activites` | Nos activités et domaines d'intervention au Congo \| LEGAL SOURCE | Formations, audits, certification, RH et sécurité, hygiène, énergies durables, conseil, RSE, sécurité alimentaire et EPI. |
 | Services | `/services` | Services professionnels au Congo – Conseil, audit et formation \| LEGAL SOURCE | Conseil, coaching, audit, formation et accompagnement à la certification pour les entreprises au Congo. |
-| Formations | `/formations` | Formations professionnelles au Congo – Catalogue LEGAL SOURCE | NEBOSH, IOSH, ISO 9001, ISO 14001, ISO 45001, HACCP et GLOBALG.A.P. |
+| Formations | `/formations` | Formations professionnelles au Congo – Catalogues LEGAL SOURCE | NEBOSH, IOSH, ISEP, ISO, ProQual, sécurité opérationnelle, incendie, santé au travail, environnement et agroalimentaire. |
+| Catalogue de formations | `/formations/catalogue/:familySlug` | Nom du catalogue – Catalogue de formations \| LEGAL SOURCE | Description de la famille de formations et liste des fiches associées. |
 | Boutique | `/boutique` | Boutique EPI et kits de sécurité au Congo \| LEGAL SOURCE | Catalogue de produits professionnels au Congo : équipements de protection individuelle et kits pour les entreprises. |
 | Projets | `/projets` | Projets et réalisations au Congo \| LEGAL SOURCE | Audits, formations, agriculture durable et études d'impact environnemental. |
 | Actualités | `/actualites` | Actualités QHSE et conseils aux entreprises au Congo \| LEGAL SOURCE | Publications sur le QHSE, la sécurité, l'environnement et la performance durable au Congo. |
 | Contact | `/contact` | Contact LEGAL SOURCE à Brazzaville, Congo \| LEGAL SOURCE | Téléphone, WhatsApp et e-mail pour les demandes de services, formations et produits. |
+| Formation | `/formations/:slug` | Titre de la formation – Formation au Congo \| LEGAL SOURCE | Description issue du catalogue des formations. |
 | Produit | `/boutique/:slug` | Nom du produit \| LEGAL SOURCE | Description du produit issue du catalogue. |
 | Article | `/actualites/:slug` | Titre de l'article \| LEGAL SOURCE | Extrait de l'article. |
 | Pages légales | `/mentions-legales`, etc. | Titre de la page \| LEGAL SOURCE | Description propre à chaque document. |
@@ -70,7 +72,7 @@ paramètre `structuredData` de `useDocumentMeta` sans modifier le HTML statique.
 ## 5. Technique
 
 - `sitemap.xml` généré au build depuis les routes statiques et les slugs des
-  données (`26` URL actuellement).
+  données (`128` URL actuellement, catalogues et fiches formations incluses).
 - `robots.txt` généré au build avec l'URL absolue du sitemap.
 - Balise `canonical` mise à jour à chaque navigation.
 - Open Graph et Twitter Cards avec image `og-image.jpg`.

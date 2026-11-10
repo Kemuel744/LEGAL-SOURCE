@@ -1,0 +1,546 @@
+CAHIER DES CHARGES 
+CONCEPTION ET DÉVELOPPEMENT DU SITE WEB DE LEGAL SOURCE 
+Version : 1.0 
+Date : 05 novembre 2026 
+Nature du projet : Site web vitrine statique et évolutif 
+Organisation : LEGAL SOURCE 
+ 
+1. PRÉSENTATION GÉNÉRALE DU PROJET 
+Le présent projet consiste à concevoir et développer un site web vitrine professionnel pour LEGAL 
+SOURCE. 
+Ce site aura pour vocation de présenter l'organisation, ses domaines d'intervention, ses services, 
+ses formations, ses réalisations ainsi que ses produits. 
+Il constituera une véritable vitrine numérique permettant aux visiteurs, entreprises, partenaires et 
+clients potentiels de découvrir les activités de LEGAL SOURCE et d'entrer facilement en contact avec 
+son équipe. 
+Le site sera initialement développé sous forme statique. Toutefois, son architecture devra être 
+pensée dès le départ pour permettre une évolution future vers une plateforme dynamique 
+intégrant notamment une administration, une gestion des produits, des commandes et des 
+contenus. 
+La particularité commerciale du projet repose sur l'utilisation de WhatsApp et de l'e-mail comme 
+principaux canaux de communication et de traitement des demandes. 
+2. OBJECTIFS DU PROJET 
+2.1. Objectif général 
+Développer une plateforme web institutionnelle moderne, professionnelle et accessible 
+permettant de renforcer la présence numérique de LEGAL SOURCE, de valoriser son expertise et de 
+faciliter les interactions avec ses clients et partenaires. 
+2.2. Objectifs spécifiques 
+Le site devra permettre de : 
+• 
+Présenter LEGAL SOURCE et son identité institutionnelle. 
+• 
+Mettre en valeur ses différents domaines d'activité. 
+• 
+Présenter les services et prestations proposés. 
+• 
+Valoriser les formations disponibles. 
+• 
+Exposer les produits commercialisés dans la boutique. 
+• 
+Faciliter les demandes de renseignements et de devis. 
+• 
+Permettre aux visiteurs de commander des produits via WhatsApp. 
+• 
+Faciliter les prises de contact par téléphone et par e-mail. 
+
+• 
+Améliorer la visibilité de LEGAL SOURCE sur les moteurs de recherche. 
+• 
+Préparer une future transformation vers un site dynamique. 
+3. IDENTITÉ VISUELLE ET DIRECTION ARTISTIQUE 
+Cette partie constitue une exigence fondamentale du projet. 
+Le site devra impérativement respecter l'identité visuelle officielle de LEGAL SOURCE ainsi que les 
+templates graphiques transmis comme références. 
+3.1. Respect du logo 
+Le logo officiel de LEGAL SOURCE devra être conservé sans modification. 
+Il est strictement interdit de : 
+• 
+Redessiner ou remplacer le logo. 
+• 
+Modifier ses couleurs. 
+• 
+Déformer ses proportions. 
+• 
+Modifier sa composition graphique. 
+• 
+Utiliser une autre identité graphique à sa place. 
+Le logo devra être utilisé dans les différentes parties du site conformément aux références visuelles 
+fournies. 
+3.2. Respect des couleurs 
+Les couleurs présentes dans les templates et dans l'identité visuelle officielle devront être 
+respectées. 
+Aucune nouvelle palette graphique ne devra être créée sans autorisation. 
+Les couleurs devront être centralisées dans le système de styles du projet afin de garantir leur 
+cohérence sur toutes les pages. 
+Les codes HEX exacts devront être extraits des ressources graphiques originales ou validés par 
+LEGAL SOURCE. 
+3.3. Typographie et éléments graphiques 
+Le développement devra respecter : 
+• 
+Les familles typographiques existantes. 
+• 
+Les tailles et hiérarchies de titres. 
+• 
+Les styles de boutons. 
+• 
+Les formes et proportions des composants. 
+• 
+Les icônes et illustrations. 
+• 
+Les espaces et alignements. 
+• 
+L'ambiance générale des templates. 
+
+3.4. Références graphiques 
+Les trois templates fournis constituent les principales références du développement : 
+1. Template de la page d'accueil. 
+2. Template de la boutique EPI et Kits. 
+3. Template de présentation des activités et services. 
+Le travail consiste à intégrer et adapter ces modèles dans un site web cohérent, fonctionnel et 
+responsive, sans dénaturer leur identité graphique. 
+4. ARCHITECTURE ET ARBORESCENCE DU SITE 
+Le site devra être organisé autour des pages suivantes. 
+4.1. Page d'accueil 
+La page d'accueil devra présenter : 
+• 
+Le logo et le menu principal. 
+• 
+Une bannière principale avec un message institutionnel. 
+• 
+Une présentation synthétique de LEGAL SOURCE. 
+• 
+Les principaux domaines d'intervention. 
+• 
+Une présentation des services. 
+• 
+Une sélection de formations. 
+• 
+Une sélection de produits. 
+• 
+Les points forts de l'organisation. 
+• 
+Les réalisations ou références disponibles. 
+• 
+Des boutons d'appel à l'action. 
+• 
+Le pied de page institutionnel. 
+4.2. Page À propos 
+Cette page présentera : 
+• 
+L'histoire de LEGAL SOURCE. 
+• 
+Sa présentation institutionnelle. 
+• 
+Sa mission. 
+• 
+Sa vision. 
+• 
+Ses valeurs. 
+• 
+Son organisation. 
+• 
+Son équipe, si les informations sont disponibles. 
+
+4.3. Page Nos activités 
+Cette page présentera les différents domaines d'intervention de LEGAL SOURCE. 
+Chaque activité devra disposer d'une présentation claire, accompagnée d'une description et 
+d'éléments visuels appropriés. 
+4.4. Page Nos services 
+Cette page permettra de découvrir les prestations proposées. 
+Chaque service devra comporter : 
+• 
+Son intitulé. 
+• 
+Une description. 
+• 
+Les objectifs. 
+• 
+Les avantages. 
+• 
+Les modalités d'intervention, si disponibles. 
+• 
+Un bouton de demande de renseignements ou de devis via WhatsApp. 
+4.5. Page Nos formations 
+Cette page présentera le catalogue des formations disponibles. 
+Chaque formation pourra comporter : 
+• 
+Le titre. 
+• 
+Une description. 
+• 
+Les objectifs pédagogiques. 
+• 
+Le public cible. 
+• 
+La durée, si elle est connue. 
+• 
+Les modalités de participation. 
+• 
+Un bouton de demande d'informations ou d'inscription via WhatsApp. 
+4.6. Page Boutique 
+La boutique constituera un espace de présentation des produits commercialisés par LEGAL SOURCE. 
+Elle devra permettre de : 
+• 
+Présenter les produits. 
+• 
+Organiser les produits par catégories. 
+• 
+Afficher les photographies. 
+• 
+Présenter les descriptions. 
+• 
+Afficher les prix lorsqu'ils sont communiqués. 
+
+• 
+Proposer une consultation détaillée des produits. 
+• 
+Permettre les demandes de commande via WhatsApp. 
+La boutique fonctionnera comme un catalogue commercial et non comme une plateforme de 
+commerce électronique transactionnelle. 
+4.7. Page Nos projets / Réalisations 
+Cette page permettra de présenter les projets réalisés ou accompagnés par LEGAL SOURCE. 
+Chaque réalisation pourra présenter : 
+• 
+Le titre du projet. 
+• 
+Le contexte. 
+• 
+Les objectifs. 
+• 
+Les interventions effectuées. 
+• 
+Les résultats communiqués. 
+• 
+Les photographies disponibles. 
+4.8. Page Actualités 
+Cette page permettra de publier des informations, annonces et articles relatifs aux activités de 
+LEGAL SOURCE. 
+Pour la première version, les publications seront intégrées sous forme de contenus statiques. 
+4.9. Page Contact 
+Cette page devra centraliser les différents moyens de communication : 
+• 
+Numéro de téléphone. 
+• 
+Numéro WhatsApp. 
+• 
+Adresse e-mail. 
+• 
+Adresse physique, si disponible. 
+• 
+Localisation géographique. 
+• 
+Liens vers les réseaux sociaux. 
+• 
+Formulaire de contact, uniquement si son fonctionnement réel est assuré. 
+4.10. Pages complémentaires 
+Le site devra également prévoir : 
+• 
+Mentions légales. 
+• 
+Politique de confidentialité. 
+• 
+Conditions générales applicables aux ventes, si nécessaire. 
+5. FONCTIONNEMENT DE WHATSAPP ET DE L'E-MAIL 
+
+L'intégration de WhatsApp constitue une fonctionnalité essentielle du projet. 
+5.1. Fonctionnement de la boutique 
+Chaque produit devra disposer d'un bouton « Commander sur WhatsApp ». 
+Lorsqu'un visiteur clique sur ce bouton, le site ouvre directement une conversation WhatsApp avec 
+le numéro officiel de LEGAL SOURCE. 
+Le message devra être automatiquement prérempli. 
+Exemple : 
+« Bonjour LEGAL SOURCE, je souhaite obtenir des informations concernant votre produit [Nom du 
+produit]. Pourriez-vous me communiquer les modalités de commande et de livraison ? » 
+5.2. Fonctionnement des services 
+Chaque service devra proposer un bouton permettant de contacter directement LEGAL SOURCE. 
+Exemple de message : 
+« Bonjour LEGAL SOURCE, je souhaite obtenir davantage d'informations concernant votre service 
+[Nom du service]. » 
+5.3. Fonctionnement des formations 
+Les visiteurs devront pouvoir demander des renseignements ou manifester leur intérêt pour une 
+formation directement sur WhatsApp. 
+5.4. Intégration de l'e-mail 
+Les liens e-mail devront utiliser le protocole mailto afin de permettre l'ouverture automatique du 
+logiciel de messagerie du visiteur. 
+Les objets des e-mails pourront être préremplis selon la page concernée. 
+5.5. Centralisation des coordonnées 
+Le numéro WhatsApp, les adresses e-mail, les numéros de téléphone et les liens des réseaux 
+sociaux devront être centralisés dans un fichier de configuration. 
+Cette organisation permettra de modifier facilement les coordonnées sans intervenir 
+individuellement sur chaque page. 
+6. EXIGENCES FONCTIONNELLES 
+Le site devra respecter les exigences suivantes : 
+• 
+Navigation simple et intuitive. 
+• 
+Menu principal accessible. 
+• 
+Navigation entre toutes les pages. 
+• 
+Boutons fonctionnels. 
+• 
+Liens WhatsApp opérationnels. 
+• 
+Liens e-mail opérationnels. 
+
+• 
+Liens téléphoniques cliquables. 
+• 
+Affichage correct des images. 
+• 
+Présentation homogène des contenus. 
+• 
+Pied de page cohérent sur toutes les pages. 
+• 
+Gestion correcte des pages inexistantes. 
+• 
+Adaptation aux différents écrans. 
+Aucune fonctionnalité fictive ou aucun bouton sans destination ne devra être livré. 
+7. EXIGENCES TECHNIQUES 
+7.1. Technologies recommandées 
+La réalisation devra s'appuyer sur des technologies modernes et maintenables. 
+Composant 
+Technologie 
+Frontend 
+React 
+Langage 
+TypeScript 
+Build 
+Vite 
+Styles 
+Tailwind CSS ou CSS structuré 
+Icônes 
+Lucide React 
+Navigation 
+React Router 
+Gestion des contenus JSON / TypeScript 
+Versionnement 
+Git / GitHub 
+Hébergement 
+Vercel, Netlify ou équivalent 
+Les technologies pourront être adaptées en fonction de l'analyse technique des templates 
+existants. 
+7.2. Architecture du projet 
+Le code devra être organisé de manière professionnelle. 
+Les composants devront être réutilisables. 
+Les pages, les ressources graphiques, les données et les paramètres devront être séparés. 
+Une architecture modulaire devra être privilégiée afin de faciliter la maintenance. 
+7.3. Responsive Design 
+Le site devra être parfaitement adapté : 
+• 
+Aux ordinateurs. 
+
+• 
+Aux ordinateurs portables. 
+• 
+Aux tablettes. 
+• 
+Aux smartphones Android. 
+• 
+Aux iPhone. 
+La version mobile devra bénéficier d'une attention particulière. 
+Les menus, images, tableaux, cartes et boutons devront s'adapter correctement aux différentes 
+tailles d'écran. 
+8. PRÉPARATION À LA FUTURE VERSION DYNAMIQUE 
+Même si la première version est statique, le développement devra anticiper les futures évolutions. 
+L'objectif est d'éviter une reconstruction complète du site lors du passage à une architecture 
+dynamique. 
+Les dispositions suivantes devront être prises : 
+1. Séparer les données des composants graphiques. 
+2. Centraliser les paramètres de configuration. 
+3. Organiser les produits dans des structures de données cohérentes. 
+4. Prévoir une structure similaire pour les services, formations, projets et actualités. 
+5. Prévoir une couche de communication avec de futures API. 
+6. Préparer l'intégration d'une base de données. 
+7. Prévoir une future interface d'administration. 
+8. Éviter les données commerciales écrites directement dans plusieurs composants. 
+9. Documenter les possibilités d'évolution technique. 
+Les futures fonctionnalités pourront comprendre : 
+• 
+Gestion des produits. 
+• 
+Gestion des catégories. 
+• 
+Gestion des stocks. 
+• 
+Gestion des commandes. 
+• 
+Gestion des clients. 
+• 
+Gestion des formations. 
+• 
+Gestion des actualités. 
+• 
+Gestion des utilisateurs. 
+• 
+Tableau de bord administrateur. 
+Ces fonctionnalités ne font pas partie de la première version. 
+
+9. RÉFÉRENCEMENT ET PERFORMANCE 
+Le site devra être optimisé pour les moteurs de recherche. 
+Les exigences comprennent : 
+• 
+Des titres uniques pour chaque page. 
+• 
+Des descriptions SEO. 
+• 
+Une structure correcte des titres H1, H2 et H3. 
+• 
+Des URL lisibles. 
+• 
+Des textes alternatifs pour les images. 
+• 
+Un sitemap.xml. 
+• 
+Un fichier robots.txt. 
+• 
+Une optimisation des images. 
+• 
+Un temps de chargement réduit. 
+• 
+Une bonne expérience mobile. 
+10. SÉCURITÉ ET FIABILITÉ 
+Le site devra respecter les bonnes pratiques de développement web. 
+Notamment : 
+• 
+Ne pas exposer de clés secrètes dans le code frontend. 
+• 
+Utiliser des liens externes sécurisés. 
+• 
+Vérifier les destinations des liens. 
+• 
+Éviter les dépendances inutiles. 
+• 
+Maintenir les bibliothèques utilisées. 
+• 
+Prévoir une gestion correcte des erreurs. 
+• 
+Respecter les règles applicables en matière de protection des données personnelles. 
+11. CONTENUS ET RESSOURCES À FOURNIR 
+Pour réaliser correctement le projet, LEGAL SOURCE devra mettre à disposition : 
+• 
+Le logo officiel en bonne résolution. 
+• 
+Les templates graphiques originaux. 
+• 
+Les photographies institutionnelles. 
+• 
+Les descriptions des activités. 
+• 
+Les descriptions des services. 
+• 
+Les informations relatives aux formations. 
+
+• 
+Les photographies des produits. 
+• 
+Les descriptions et prix éventuels. 
+• 
+Les coordonnées officielles. 
+• 
+Les liens des réseaux sociaux. 
+• 
+Les informations relatives aux réalisations. 
+• 
+Les contenus juridiques nécessaires. 
+Le développeur ne devra pas inventer des certifications, des références, des témoignages, des prix 
+ou des informations commerciales. 
+Tout contenu manquant devra être signalé et identifié comme provisoire. 
+12. LIVRABLES ATTENDUS 
+À la fin du projet, les éléments suivants devront être livrés : 
+1. Le code source complet du site. 
+2. L'ensemble des pages développées. 
+3. Les composants réutilisables. 
+4. Les ressources graphiques intégrées. 
+5. Les fonctionnalités WhatsApp et e-mail. 
+6. La version responsive. 
+7. Les fichiers de configuration. 
+8. Le fichier README. 
+9. La documentation technique. 
+10. Les instructions d'installation. 
+11. Les instructions de lancement en environnement local. 
+12. Les instructions de compilation et de déploiement. 
+13. La version de production prête à être hébergée. 
+13. PHASES DE RÉALISATION 
+Le projet sera organisé en dix phases. 
+Phase Description 
+1 
+Analyse des templates et des ressources 
+2 
+Validation du cahier des charges 
+3 
+Définition de l'architecture technique 
+
+4 
+Mise en place du projet 
+5 
+Développement des composants communs 
+6 
+Développement des différentes pages 
+7 
+Intégration WhatsApp et e-mail 
+8 
+Responsive Design et optimisation SEO 
+9 
+Tests, corrections et validation 
+10 
+Déploiement et livraison 
+14. TESTS ET CRITÈRES DE VALIDATION 
+Le projet sera considéré comme techniquement réceptionnable lorsque : 
+• 
+Toutes les pages prévues seront accessibles. 
+• 
+Le logo officiel sera correctement intégré. 
+• 
+Les couleurs et l'identité visuelle seront respectées. 
+• 
+Les templates auront été fidèlement exploités. 
+• 
+Le site sera responsive. 
+• 
+Les liens WhatsApp fonctionneront. 
+• 
+Les liens e-mail fonctionneront. 
+• 
+Les boutons de commande seront opérationnels. 
+• 
+Les contenus seront correctement affichés. 
+• 
+Aucune erreur bloquante ne sera constatée. 
+• 
+Le site pourra être compilé et déployé. 
+• 
+La documentation technique sera disponible. 
+15. INFORMATIONS RESTANT À CONFIRMER 
+Avant le développement, les informations suivantes devront être validées : 
+Informations 
+Statut 
+Adresse e-mail officielle 
+À confirmer 
+Adresse physique 
+À confirmer 
+Réseaux sociaux 
+À confirmer 
+Liste définitive des activités À valider 
+Catalogue des formations 
+À fournir 
+
+Catalogue des produits 
+À fournir 
+Prix des produits 
+À confirmer 
+Nom de domaine 
+À confirmer 
+Hébergement 
+À confirmer 
+16. DISPOSITIONS FINALES 
+Le présent cahier des charges constitue le document de référence pour la conception et le 
+développement de la première version du site web de LEGAL SOURCE. 
+Toute réalisation devra respecter les exigences fonctionnelles, techniques et graphiques définies 
+dans ce document. 
+Une attention particulière devra être accordée à la préservation de l'identité visuelle officielle. 
+La première version sera statique, mais son architecture devra permettre une évolution progressive 
+vers une plateforme dynamique sans remettre en cause l'ensemble du travail réalisé. 
+L'objectif final est de disposer d'un site institutionnel fiable, professionnel, évolutif et représentant 
+fidèlement LEGAL SOURCE. 
+ 

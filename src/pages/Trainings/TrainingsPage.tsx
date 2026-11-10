@@ -1,11 +1,10 @@
-import { ArrowRight, MessageCircle, Search, Users } from 'lucide-react'
+import { ArrowRight, GraduationCap, Search, Users } from 'lucide-react'
 import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
-import classroomImage from '@/assets/images/projects/formation-terrain.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { TrainingCard } from '@/components/cards/TrainingCard'
+import { AppIcon } from '@/components/common/AppIcon'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
@@ -15,52 +14,49 @@ import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 const steps = [
   {
     number: '01',
-    title: 'Vous nous écrivez',
+    title: 'Choisissez un catalogue',
     description:
-      'Indiquez la formation qui vous intéresse, le nombre de participants et vos contraintes de calendrier via WhatsApp.',
-    Icon: MessageCircle,
-  },
-  {
-    number: '02',
-    title: 'Nous construisons la réponse',
-    description:
-      'Nous précisons le programme, les modalités et le calendrier adaptés à votre contexte.',
+      'Les formations sont regroupées par famille : NEBOSH, IOSH, ISEP, ISO, ProQual et parcours LEGAL SOURCE.',
     Icon: Search,
   },
   {
-    number: '03',
-    title: 'La session est organisée',
+    number: '02',
+    title: 'Consultez la fiche',
     description:
-      'La formation est planifiée avec vos équipes, en tenant compte de vos impératifs opérationnels.',
+      'Chaque formation présente ses objectifs, son public, son programme indicatif et ses modalités.',
+    Icon: GraduationCap,
+  },
+  {
+    number: '03',
+    title: 'Construisons la session',
+    description:
+      'Nous adaptons le contenu, le calendrier et les modalités à votre organisation et à vos équipes.',
     Icon: Users,
   },
 ]
 
 export default function TrainingsPage() {
   useDocumentMeta({
-    title: 'Formations professionnelles au Congo – Catalogue LEGAL SOURCE',
+    title: 'Formations professionnelles au Congo – Catalogues LEGAL SOURCE',
     description:
-      'Formations professionnelles au Congo : NEBOSH, IOSH, ISO 9001, ISO 14001, ISO 45001, HACCP et GLOBALG.A.P. Découvrez le catalogue LEGAL SOURCE et demandez des informations.',
+      'Catalogues de formations au Congo : NEBOSH, IOSH, ISEP, ISO, ProQual, sécurité opérationnelle, incendie, santé au travail, environnement et agroalimentaire. Découvrez les fiches détaillées LEGAL SOURCE.',
     path: '/formations',
   })
 
-  const trainings = catalogService.getTrainings()
+  const families = catalogService.getTrainingFamilies()
+  const totalTrainings = catalogService.getTrainings().length
 
   return (
     <>
       <PageHero
         kicker="Nos formations"
-        title="Formations professionnelles au Congo : renforcez les compétences de vos équipes"
-        description="Des formations aux référentiels internationaux, conçues pour être comprises, appropriées et appliquées au quotidien par vos équipes."
+        title="Des catalogues de formation organisés par famille de métiers"
+        description="Santé-sécurité, environnement, qualité, agroalimentaire, management : retrouvez les formations LEGAL SOURCE regroupées par référentiel et par domaine, avec une fiche détaillée pour chacune."
         image={heroImage}
         imageAlt="Session de formation et d’accompagnement LEGAL SOURCE"
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'Nos formations' }]}
       >
-        <Button
-          href={whatsappLink(whatsappMessages.general())}
-          external
-          size="lg"
-        >
+        <Button href={whatsappLink(whatsappMessages.general())} external size="lg">
           <WhatsAppIcon className="h-5 w-5" />
           Demander le catalogue
         </Button>
@@ -69,79 +65,181 @@ export default function TrainingsPage() {
         </Button>
       </PageHero>
 
+      <section className="border-b border-brand-border bg-white">
+        <Container>
+          <dl className="grid grid-cols-2 gap-4 py-5 sm:grid-cols-4 sm:gap-6">
+            <div>
+              <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                Catalogues
+              </dt>
+              <dd className="mt-1 font-display text-lg font-bold text-brand-ink">
+                {families.length}
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                Formations référencées
+              </dt>
+              <dd className="mt-1 font-display text-lg font-bold text-brand-ink">
+                {totalTrainings}
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                Référentiels
+              </dt>
+              <dd className="mt-1 font-display text-lg font-bold text-brand-ink">
+                NEBOSH, IOSH, ISEP, ISO
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                Modalités
+              </dt>
+              <dd className="mt-1 font-display text-lg font-bold text-brand-ink">
+                Intra-entreprise
+              </dd>
+            </div>
+          </dl>
+        </Container>
+      </section>
+
       <section className="section">
         <Container>
           <SectionHeading
-            kicker="Catalogue"
-            title="Des parcours adaptés à vos enjeux"
-            description="Les programmes détaillés, durées et modalités sont communiqués sur demande afin de construire une réponse adaptée à votre organisation."
+            kicker="Catalogues thématiques"
+            title="Les formations de la même famille, réunies dans un même catalogue"
+            description="Choisissez une famille pour découvrir ses formations, leurs niveaux, leur nombre de leçons et le détail de chaque programme."
             align="center"
           />
 
-          <div className="mx-auto mt-9 max-w-4xl space-y-6">
-            {trainings.map((training) => (
-              <TrainingCard key={training.id} training={training} variant="detailed" />
-            ))}
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {families.map((family) => {
+              const familyTrainings = catalogService.getTrainingsByFamily(family.slug)
+              const preview = familyTrainings.slice(0, 3)
+
+              return (
+                <article
+                  key={family.id}
+                  className="group flex h-full flex-col overflow-hidden rounded-xl border border-brand-border bg-white shadow-sm transition-shadow hover:shadow-card"
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={family.image}
+                      alt={family.imageAlt}
+                      className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/25 to-transparent"
+                      aria-hidden="true"
+                    />
+                    <div className="absolute inset-x-4 bottom-3 flex items-end justify-between gap-3">
+                      <div className="flex items-center gap-2.5">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/95 text-brand-green-dark">
+                          <AppIcon name={family.icon} className="h-4 w-4" />
+                        </span>
+                        <h3 className="font-display text-base font-bold leading-tight text-white">
+                          {family.shortName}
+                        </h3>
+                      </div>
+                      <span className="rounded-full bg-white/95 px-2.5 py-1 font-display text-[11px] font-bold text-brand-navy">
+                        {familyTrainings.length} formation{familyTrainings.length > 1 ? 's' : ''}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-5">
+                    <p className="font-display text-xs font-bold uppercase tracking-[0.14em] text-brand-green-dark">
+                      {family.tagline}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-brand-muted">
+                      {family.description}
+                    </p>
+
+                    <ul className="mt-4 space-y-1.5">
+                      {preview.map((training) => (
+                        <li
+                          key={training.id}
+                          className="flex items-start gap-2 text-xs leading-relaxed text-brand-ink"
+                        >
+                          <span
+                            className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-green-dark"
+                            aria-hidden="true"
+                          />
+                          <span className="line-clamp-1">{training.title}</span>
+                        </li>
+                      ))}
+                      {familyTrainings.length > preview.length && (
+                        <li className="pl-3 text-xs text-brand-muted">
+                          + {familyTrainings.length - preview.length} autres formations
+                        </li>
+                      )}
+                    </ul>
+
+                    <Button
+                      to={`/formations/catalogue/${family.slug}`}
+                      variant="outlineNavy"
+                      className="mt-5 w-full"
+                    >
+                      Ouvrir le catalogue
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </Button>
+                  </div>
+                </article>
+              )
+            })}
           </div>
 
-          <p className="mx-auto mt-6 max-w-4xl text-xs leading-relaxed text-brand-muted">
-            Les intitulés de formations présentés correspondent aux référentiels cités dans les
-            supports officiels de LEGAL SOURCE. Les programmes, prérequis, durées et tarifs
-            définitifs sont à confirmer auprès de l’équipe.
+          <p className="mx-auto mt-10 max-w-4xl text-xs leading-relaxed text-brand-muted">
+            Les intitulés et le nombre de leçons proviennent du catalogue de formations LEGAL
+            SOURCE. Les programmes présentés sont indicatifs et reformulés à partir des référentiels
+            publics cités (NEBOSH, IOSH, ISEP, ISO, ProQual) ; ils sont adaptés avec vous avant
+            chaque session. Les durées, tarifs et modalités de certification sont communiqués sur
+            demande.
           </p>
         </Container>
       </section>
 
       <section className="section bg-brand-sky">
         <Container>
-          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-            <img
-              src={classroomImage}
-              alt="Formation en salle animée par LEGAL SOURCE"
-              className="w-full rounded-xl object-cover shadow-card"
-              loading="lazy"
-              width={169}
-              height={90}
+          <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+            <SectionHeading
+              kicker="Comment ça marche ?"
+              title="Du catalogue à votre session"
+              description="Un parcours simple, sans engagement, pour construire la formation qui correspond réellement à vos besoins."
             />
-            <div>
-              <SectionHeading
-                kicker="Comment s’inscrire ?"
-                title="Un échange simple, une réponse adaptée"
-                description="Nous privilégions un échange direct pour comprendre votre besoin avant de vous proposer une session."
-              />
-              <ol className="mt-6 space-y-4">
-                {steps.map((step) => (
-                  <li key={step.number} className="flex gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-brand-navy shadow-sm">
-                      <step.Icon className="h-5 w-5" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <p className="font-display text-sm font-bold text-brand-ink">
-                        {step.number} — {step.title}
-                      </p>
-                      <p className="mt-1 text-sm leading-relaxed text-brand-muted">
-                        {step.description}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Button
-                  href={whatsappLink(
-                    whatsappMessages.training('de votre catalogue de formations'),
-                  )}
-                  external
+            <ol className="space-y-4">
+              {steps.map((step) => (
+                <li
+                  key={step.number}
+                  className="flex gap-4 rounded-lg border border-brand-border bg-white p-5 shadow-sm"
                 >
-                  <WhatsAppIcon className="h-4 w-4" />
-                  Échanger sur WhatsApp
-                </Button>
-                <Button to="/contact" variant="outlineNavy">
-                  Nous écrire
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Button>
-              </div>
-            </div>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-green-light text-brand-green-dark">
+                    <step.Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="font-display text-sm font-bold text-brand-ink">
+                      {step.number} — {step.title}
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-brand-muted">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button href={whatsappLink(whatsappMessages.general())} external>
+              <WhatsAppIcon className="h-4 w-4" />
+              Échanger sur WhatsApp
+            </Button>
+            <Button to="/contact" variant="outlineNavy">
+              Nous écrire
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Button>
           </div>
         </Container>
       </section>

@@ -47,6 +47,8 @@ function extractSlugs(filePath) {
 
 const productSlugs = extractSlugs('src/data/products.ts')
 const newsSlugs = extractSlugs('src/data/news.ts')
+const trainingSlugs = extractSlugs('src/data/trainings.ts')
+const familySlugs = extractSlugs('src/data/trainingFamilies.ts')
 
 const entries = [
   ...staticRoutes,
@@ -59,6 +61,16 @@ const entries = [
     path: `/actualites/${slug}`,
     priority: '0.6',
     changefreq: 'yearly',
+  })),
+  ...familySlugs.map((slug) => ({
+    path: `/formations/catalogue/${slug}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+  })),
+  ...trainingSlugs.map((slug) => ({
+    path: `/formations/${slug}`,
+    priority: '0.7',
+    changefreq: 'monthly',
   })),
 ]
 

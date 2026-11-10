@@ -44,14 +44,32 @@ Fichier concerné : `src/data/products.ts`.
 
 ## 4. Formations
 
+Source : `Informations et Inspirations sur la partie formation/Legal source.xlsx`, feuille `Formation`.
+
 | Élément | Statut | Action |
 |---|---|---|
-| Intitulés NEBOSH, IOSH, ISO 9001/14001/45001, HACCP, GLOBALG.A.P. | ⚠️ Repris du template | Valider le catalogue |
-| Programmes, durées, prérequis, tarifs | Absents | Fournir les fiches détaillées |
-| Modalités (intra, calendrier) | ⚠️ Formulations génériques | Confirmer |
-| Accréditations et partenariats | Non mentionnés | Fournir les justificatifs si utilisés |
+| Catalogue de 89 formations réparties en 11 catalogues thématiques | ✅ Intégré depuis l’Excel | Valider la liste publiée |
+| Intitulés et nombre de leçons | ✅ Repris de l’Excel | Corriger les coquilles éventuelles |
+| Niveaux (débutant, intermédiaire, avancé) | ⚠️ Repris de l’Excel (`Filters (level)`) | Valider les niveaux manquants |
+| Descriptions, objectifs et programmes | ⚠️ Reformulés à partir des référentiels publics (NEBOSH, IOSH, ISEP, ISO, ProQual, HACCP) | Faire valider par les formateurs |
+| Durées | Non renseignées | Fournir les durées par formation |
+| Prix | Colonne vide dans l’Excel | Fournir la grille tarifaire |
+| Prérequis et certification | ⚠️ Formulations génériques par famille | Confirmer selon chaque référentiel |
+| Lignes exclues | Tests, extensions, doublons de version, unités DN/DI détachées | Confirmer les exclusions |
 
-Fichier concerné : `src/data/trainings.ts`.
+Fichiers concernés : `src/data/trainings.ts`, `src/data/trainingFamilies.ts`.
+
+## 4 bis. Partenaires et équipe
+
+Source : feuille `Partenaire` de l’Excel.
+
+| Élément | Statut | Action |
+|---|---|---|
+| 6 organismes partenaires | ⚠️ Publiés depuis l’Excel | Valider les noms et descriptions |
+| 10 membres de l’équipe / du réseau | ⚠️ Publiés depuis l’Excel | Obtenir l’accord des personnes citées |
+| Rôles et orthographe des noms | ⚠️ Normalisés | Vérifier les intitulés exacts |
+
+Fichier concerné : `src/data/partners.ts`.
 
 ## 5. Réalisations et références
 
