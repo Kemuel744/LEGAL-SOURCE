@@ -2,7 +2,7 @@
 
 Ce document recense les informations provisoires ou non sourcées publiées sur le site. Chaque ligne doit être validée par LEGAL SOURCE avant diffusion commerciale.
 
-Dernière mise à jour : 8 novembre 2026.
+Dernière mise à jour : 11 novembre 2026.
 
 ## 1. Coordonnées et identité
 
@@ -25,7 +25,7 @@ Fichier concerné : `src/config/site.ts`, `index.html` (JSON-LD).
 |---|---|---|---|
 | URL publique | `https://kemuel744.github.io/LOCAL-SOURCES/` | ✅ Technique | Remplacer par le domaine définitif |
 | Domaine `legal-source.com` | Non acquis (redirige vers un placeur de domaine) | ❌ Bloquant SEO | Acquérir le domaine ou en choisir un autre |
-| Hébergement | GitHub Pages | ✅ Technique | Décider de la cible finale (GitHub Pages, Netlify, Vercel…) |
+| Hébergement | GitHub Pages | ✅ Technique | Hébergement confirmé : GitHub Pages |
 
 Fichiers concernés : `.env`, `index.html`, `scripts/generate-static.mjs`.
 
@@ -87,12 +87,12 @@ Fichier concerné : `src/data/projects.ts`.
 |---|---|---|
 | Textes « À propos », valeurs, histoire | ⚠️ Rédaction interne | Validation client |
 | Formulations « expertise reconnue », « équipe d'experts expérimentés » | ⚠️ Non sourcées | Valider ou reformuler |
-| Mentions légales | ⚠️ Document provisoire | Relecture juridique |
+| Mentions légales | ⚠️ Document provisoire | Relecture juridique ; hébergement GitHub Pages confirmé |
 | Politique de confidentialité | ⚠️ Document provisoire | Relecture juridique |
 | Conditions générales | ⚠️ Document provisoire | Relecture juridique |
 | Article d'actualité de lancement | ✅ Publié | Vérifier la date |
 
-Fichiers concernés : `src/pages/Legal/LegalPage.tsx`, `src/pages/About/AboutPage.tsx`, `src/data/news.ts`.
+Fichiers concernés : `src/data/legal.ts`, `src/components/common/LegalContent.tsx`, `src/pages/Legal/LegalPage.tsx`, `src/pages/About/AboutPage.tsx`, `src/data/news.ts`.
 
 ## 7. Images et droits
 

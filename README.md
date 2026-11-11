@@ -60,7 +60,7 @@ L'application utilise `BrowserRouter`. Sur GitHub Pages, un accès direct à `/b
 
 - `404.html` est **généré au build** par `scripts/generate-static.mjs` (ne pas le recréer dans `public/`).
 - Le script tient compte de `VITE_BASE_PATH` : le nombre de segments à conserver est calculé automatiquement.
-- Limite connue : GitHub Pages renvoie un statut HTTP 404 avant l'exécution du script. Les robots sociaux ne verront donc pas les métadonnées des pages profondes. Le déploiement Netlify (`netlify.toml`) corrige cette limite grâce à des rewrites SPA en HTTP 200.
+- Limite connue : GitHub Pages renvoie un statut HTTP 404 avant l'exécution du script. Les robots sociaux ne verront donc pas les métadonnées des pages profondes.
 
 ## Architecture
 
@@ -85,7 +85,6 @@ docs/
   AUDIT.md              analyse initiale des ressources
   SEO.md                stratégie, métadonnées et contrôle du référencement
   CONTENUS-A-CONFIRMER.md  données à valider avant production
-netlify.toml            build, rewrites SPA et cache Netlify
 ```
 
 Les pages ne lisent pas directement `src/data` : elles passent par `src/services/catalogService.ts`, ce qui permettra de brancher une API sans réécrire les composants.
@@ -108,29 +107,6 @@ La stratégie complète, les mots-clés ciblés et la procédure Search Console 
 Le workflow `.github/workflows/deploy.yml` construit et publie le site sur GitHub Pages à chaque push sur `main`.
 
 Prérequis dans le dépôt GitHub : **Settings → Pages → Source = GitHub Actions**.
-
-### Netlify
-
-Le fichier `netlify.toml` configure un déploiement à la racine du domaine avec
-rewrites SPA (les deep-links répondent en HTTP 200, contrairement à GitHub Pages).
-
-Deux méthodes :
-
-1. **Intégration Git (recommandée)** : dans Netlify, « Add new site → Import an
-   existing project → GitHub », sélectionner le dépôt. Netlify lit `netlify.toml`,
-   exécute `npm run build` et publie `dist/`. Chaque push sur `main` redéploie.
-2. **CLI** :
-
-```bash
-npx netlify-cli login
-npx netlify-cli init       # lier le dépôt au site Netlify
-npx netlify-cli deploy --build --prod
-```
-
-Netlify fournit automatiquement `URL` au build : `netlify.toml` l'utilise pour
-`VITE_SITE_URL` et force `VITE_BASE_PATH=/`. Le canonical, le sitemap et les
-données structurées pointent donc vers le domaine Netlify. En cas de domaine
-personnalisé, Netlify met à jour `URL` automatiquement.
 
 Pour un autre hébergeur :
 

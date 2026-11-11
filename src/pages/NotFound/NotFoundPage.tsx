@@ -9,6 +9,7 @@ export default function NotFoundPage() {
     title: 'Page introuvable',
     description: "La page que vous recherchez n’existe pas ou a été déplacée.",
     path: '/404',
+    robots: 'noindex, follow',
   })
 
   const navigate = useNavigate()

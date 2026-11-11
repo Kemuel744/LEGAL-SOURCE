@@ -4,7 +4,7 @@ Ce document décrit le référencement intégré au site. Les métadonnées ne s
 ajoutées après coup : elles sont produites par l'architecture React (hook
 `useDocumentMeta`), le HTML statique et les scripts de génération exécutés au build.
 
-Dernière mise à jour : 8 novembre 2026.
+Dernière mise à jour : 11 novembre 2026.
 
 ## 1. Positionnement
 
@@ -43,7 +43,7 @@ Requêtes prioritaires (utilisation naturelle, sans bourrage) :
 | Formation | `/formations/:slug` | Titre de la formation – Formation au Congo \| LEGAL SOURCE | Description issue du catalogue des formations. |
 | Produit | `/boutique/:slug` | Nom du produit \| LEGAL SOURCE | Description du produit issue du catalogue. |
 | Article | `/actualites/:slug` | Titre de l'article \| LEGAL SOURCE | Extrait de l'article. |
-| Pages légales | `/mentions-legales`, etc. | Titre de la page \| LEGAL SOURCE | Description propre à chaque document. |
+| Pages légales | `/mentions-legales`, etc. | Titre de la page \| LEGAL SOURCE | Description propre à chaque document, mise à jour via `useDocumentMeta` (`og:type=article`, `article:modified_time`, `robots=index, follow`). |
 
 Le suffixe `| LEGAL SOURCE` est ajouté automatiquement par `useDocumentMeta`
 sauf lorsque le titre contient déjà le nom du site.
@@ -78,8 +78,6 @@ paramètre `structuredData` de `useDocumentMeta` sans modifier le HTML statique.
 - Open Graph et Twitter Cards avec image `og-image.jpg`.
 - `lang="fr"`, `geo.region=CG`, `geo.placename=Brazzaville`.
 - Fallback SPA pour les deep-links + test de non-régression au build.
-- Sur Netlify, rewrites SPA en HTTP 200 (`netlify.toml`) : les pages profondes
-  sont indexables sans passer par une page 404.
 - Images WebP, dimensions adaptées, `loading="lazy"` hors héros,
   `fetchPriority="high"` sur les héros, noms de fichiers descriptifs et
   attributs `alt` renseignés.

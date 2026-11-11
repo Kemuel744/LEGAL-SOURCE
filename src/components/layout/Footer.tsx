@@ -2,40 +2,19 @@ import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import logoWhite from '@/assets/logos/legal-source-logo-white.png'
 import { site } from '@/config/site'
+import { domainLinks, legalLinks, quickLinks } from '@/config/links'
 import { Container } from '@/components/common/Container'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
-const quickLinks = [
-  { label: 'Accueil', to: '/' },
-  { label: 'À propos', to: '/a-propos' },
-  { label: 'Nos activités', to: '/activites' },
-  { label: 'Nos services', to: '/services' },
-  { label: 'Nos formations', to: '/formations' },
-  { label: 'Actualités', to: '/actualites' },
-  { label: 'Contact', to: '/contact' },
-]
-
-const domains = [
-  { label: 'QHSE', to: '/activites#audits-certification' },
-  { label: 'Environnement', to: '/activites#hygiene-environnement' },
-  { label: 'Sécurité alimentaire', to: '/activites#securite-alimentaire' },
-  { label: 'RSE & ESG', to: '/activites#rse-esg' },
-  { label: 'Développement durable', to: '/activites#energies-durables' },
-  { label: 'Boutique EPI & Kits', to: '/boutique' },
-]
-
-const legalLinks = [
-  { label: 'Mentions légales', to: '/mentions-legales' },
-  { label: 'Politique de confidentialité', to: '/politique-de-confidentialite' },
-  { label: 'Conditions générales', to: '/conditions-generales' },
-]
+const footerLink =
+  'rounded-sm text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy'
 
 export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-brand-navy text-white">
+    <footer className="bg-brand-navy text-white print:hidden">
       <Container>
         <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.9fr_1.1fr] lg:gap-8 lg:py-14">
           <div>
@@ -62,7 +41,7 @@ export function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 rounded border border-white/20 px-3 py-1.5 text-xs text-white/80 hover:border-white/50 hover:text-white"
+                      className={`inline-flex items-center gap-1 rounded border border-white/20 px-3 py-1.5 text-xs hover:border-white/50 ${footerLink}`}
                     >
                       {social.label}
                       <ArrowUpRight className="h-3 w-3" aria-hidden="true" />
@@ -80,7 +59,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-white/70 transition-colors hover:text-white">
+                  <Link to={link.to} className={footerLink}>
                     {link.label}
                   </Link>
                 </li>
@@ -93,9 +72,9 @@ export function Footer() {
               Nos domaines
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {domains.map((link) => (
+              {domainLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-white/70 transition-colors hover:text-white">
+                  <Link to={link.to} className={footerLink}>
                     {link.label}
                   </Link>
                 </li>
@@ -115,7 +94,7 @@ export function Footer() {
               <li>
                 <a
                   href={site.phoneHref}
-                  className="flex items-center gap-2.5 text-white/70 transition-colors hover:text-white"
+                  className={`flex items-center gap-2.5 ${footerLink}`}
                 >
                   <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
                   {site.phone.display}
@@ -126,7 +105,7 @@ export function Footer() {
                   href={whatsappLink(whatsappMessages.contact())}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-white/70 transition-colors hover:text-white"
+                  className={`flex items-center gap-2.5 ${footerLink}`}
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
                   WhatsApp
@@ -135,7 +114,7 @@ export function Footer() {
               <li>
                 <a
                   href={site.emailHref}
-                  className="flex items-center gap-2.5 text-white/70 transition-colors hover:text-white"
+                  className={`flex items-center gap-2.5 ${footerLink}`}
                 >
                   <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                   {site.email}
@@ -153,7 +132,7 @@ export function Footer() {
             <ul className="flex flex-wrap gap-x-4 gap-y-2">
               {legalLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="transition-colors hover:text-white">
+                  <Link to={link.to} className={footerLink}>
                     {link.label}
                   </Link>
                 </li>

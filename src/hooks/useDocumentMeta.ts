@@ -7,6 +7,12 @@ type MetaOptions = {
   /** Chemin de la page, commençant par « / ». */
   path: string
   image?: string
+  /** Type Open Graph de la page. */
+  type?: 'website' | 'article'
+  /** Date ISO de dernière mise à jour (pages éditoriales et légales). */
+  updatedAt?: string
+  /** Directives d’indexation. */
+  robots?: string
 }
 
 function upsertMeta(attribute: 'name' | 'property', key: string, content: string) {
@@ -17,6 +23,10 @@ function upsertMeta(attribute: 'name' | 'property', key: string, content: string
     document.head.appendChild(element)
   }
   element.setAttribute('content', content)
+}
+
+function removeMeta(attribute: 'name' | 'property', key: string) {
+  document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`)?.remove()
 }
 
 function upsertCanonical(href: string) {
@@ -30,7 +40,15 @@ function upsertCanonical(href: string) {
 }
 
 /** Applique les métadonnées SEO et Open Graph de la page courante. */
-export function useDocumentMeta({ title, description, path, image }: MetaOptions) {
+export function useDocumentMeta({
+  title,
+  description,
+  path,
+  image,
+  type = 'website',
+  updatedAt,
+  robots = 'index, follow',
+}: MetaOptions) {
   useEffect(() => {
     const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`
     const url = `${site.url}${site.basePath}${path === '/' ? '/' : path}`
@@ -42,7 +60,9 @@ export function useDocumentMeta({ title, description, path, image }: MetaOptions
 
     document.title = fullTitle
     upsertMeta('name', 'description', description)
+    upsertMeta('name', 'robots', robots)
     upsertCanonical(url)
+    upsertMeta('property', 'og:type', type)
     upsertMeta('property', 'og:title', fullTitle)
     upsertMeta('property', 'og:description', description)
     upsertMeta('property', 'og:url', url)
@@ -52,5 +72,11 @@ export function useDocumentMeta({ title, description, path, image }: MetaOptions
     upsertMeta('name', 'twitter:description', description)
     upsertMeta('name', 'twitter:image', imageUrl)
     upsertMeta('name', 'twitter:image:alt', fullTitle)
-  }, [title, description, path, image])
+
+    if (updatedAt) {
+      upsertMeta('property', 'article:modified_time', updatedAt)
+    } else {
+      removeMeta('property', 'article:modified_time')
+    }
+  }, [title, description, path, image, type, updatedAt, robots])
 }

@@ -43,6 +43,14 @@
   svg {
     shape-rendering: geometricPrecision;
   }
+
+  /* Anneau de focus homogène pour tous les éléments interactifs.
+     Les composants peuvent le surcharger (notamment sur fond sombre). */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:not([tabindex='-1']):focus-visible {
+    @apply outline-none ring-2 ring-brand-green ring-offset-2;
+  }
 }
 
 /* Sharpness boost on HiDPI / 4K screens */
@@ -67,20 +75,69 @@
     @apply py-10 sm:py-12;
   }
 
+  .legal-content section + section {
+    @apply mt-9 border-t border-brand-border pt-9;
+  }
+
   .legal-content h2 {
-    @apply mt-8 font-display text-lg font-bold text-brand-ink;
+    @apply scroll-mt-28 font-display text-lg font-bold leading-snug text-brand-ink sm:text-xl;
   }
 
   .legal-content h3 {
-    @apply mt-6 font-display text-base font-bold text-brand-ink;
+    @apply mt-6 scroll-mt-28 font-display text-base font-bold text-brand-ink;
   }
 
   .legal-content p {
-    @apply mt-3 text-sm leading-relaxed text-brand-muted;
+    @apply mt-3 text-pretty text-[15px] leading-7 text-brand-muted;
   }
 
   .legal-content ul {
-    @apply mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-brand-muted;
+    @apply mt-3 list-disc space-y-2 pl-5 text-[15px] leading-7 text-brand-muted;
+  }
+
+  .legal-content a {
+    @apply underline underline-offset-4 hover:text-brand-green-dark;
+  }
+}
+
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  html {
+    font-size: 11pt;
+  }
+
+  body {
+    @apply bg-white text-black;
+  }
+
+  .section {
+    @apply py-0;
+  }
+
+  .legal-content {
+    max-width: none;
+  }
+
+  .legal-content section {
+    break-inside: avoid;
+  }
+
+  .legal-content h2 {
+    break-after: avoid;
+  }
+
+  a[href] {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .legal-content a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.85em;
+    word-break: break-all;
   }
 }
 
