@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Check,
   ClipboardCheck,
+  Award,
   Clock3,
   MessageCircle,
   Search,
@@ -261,6 +262,95 @@ export default function TrainingDetailPage() {
                 </div>
               </section>
 
+              {(training.qualification || training.duration || training.recognition) && (
+                <section className="mt-10 rounded-lg border border-brand-border bg-brand-sky p-5 sm:p-6">
+                  <h2 className="font-display text-xl font-bold text-brand-ink">
+                    Repères sur la qualification
+                  </h2>
+                  <dl className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {training.qualification && (
+                      <div className="sm:col-span-2">
+                        <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                          Niveau
+                        </dt>
+                        <dd className="mt-1 text-sm leading-relaxed text-brand-ink">
+                          {training.qualification}
+                        </dd>
+                      </div>
+                    )}
+                    {training.duration && (
+                      <div>
+                        <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                          Durée de référence
+                        </dt>
+                        <dd className="mt-1 text-sm leading-relaxed text-brand-ink">
+                          {training.duration}
+                        </dd>
+                      </div>
+                    )}
+                    {training.recognition && (
+                      <div>
+                        <dt className="font-display text-[11px] font-bold uppercase tracking-wider text-brand-muted">
+                          Reconnaissance
+                        </dt>
+                        <dd className="mt-1 text-sm leading-relaxed text-brand-ink">
+                          {training.recognition}
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
+                </section>
+              )}
+
+              {training.units && training.units.length > 0 && (
+                <section className="mt-10">
+                  <h2 className="font-display text-xl font-bold text-brand-ink sm:text-2xl">
+                    Structure et contenu de la qualification
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-muted">
+                    Unités, modules ou éléments définis par le référentiel de l’organisme
+                    certificateur.
+                  </p>
+                  <ol className="mt-5 grid gap-3">
+                    {training.units.map((unit) => (
+                      <li
+                        key={unit.title}
+                        className="rounded-lg border border-brand-border bg-white p-4"
+                      >
+                        <h3 className="font-display text-sm font-bold text-brand-ink">
+                          {unit.title}
+                        </h3>
+                        <p className="mt-1 text-sm leading-relaxed text-brand-muted">
+                          {unit.detail}
+                        </p>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+              )}
+
+              {training.highlights && training.highlights.length > 0 && (
+                <section className="mt-10">
+                  <h2 className="font-display text-xl font-bold text-brand-ink sm:text-2xl">
+                    Points clés
+                  </h2>
+                  <ul className="mt-5 space-y-2.5">
+                    {training.highlights.map((highlight) => (
+                      <li
+                        key={highlight}
+                        className="flex items-start gap-2.5 text-sm leading-relaxed text-brand-muted"
+                      >
+                        <Award
+                          className="mt-0.5 h-4 w-4 shrink-0 text-brand-green-dark"
+                          aria-hidden="true"
+                        />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
               <section className="mt-10 grid gap-5 sm:grid-cols-2">
                 <div className="rounded-lg border border-brand-border bg-white p-5 sm:p-6">
                   <h2 className="font-display text-xl font-bold text-brand-ink">Prérequis</h2>
@@ -325,6 +415,14 @@ export default function TrainingDetailPage() {
                       {training.level}
                     </dd>
                   </div>
+                  {training.duration && (
+                    <div className="flex items-start justify-between gap-4 py-3">
+                      <dt className="text-sm text-brand-muted">Durée de référence</dt>
+                      <dd className="text-right text-sm font-semibold text-brand-ink">
+                        {training.duration}
+                      </dd>
+                    </div>
+                  )}
                   <div className="flex items-start justify-between gap-4 py-3">
                     <dt className="text-sm text-brand-muted">Nombre de leçons</dt>
                     <dd className="text-right text-sm font-semibold text-brand-ink">

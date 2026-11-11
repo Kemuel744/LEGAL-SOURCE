@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ArrowRight, GraduationCap, Search, Users } from 'lucide-react'
 import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 import { Button } from '@/components/common/Button'
@@ -5,10 +6,13 @@ import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { AppIcon } from '@/components/common/AppIcon'
+import { SearchField } from '@/components/common/SearchField'
+import { TrainingCard } from '@/components/cards/TrainingCard'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
+import { matchesQuery } from '@/utils/search'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
 const steps = [
@@ -44,7 +48,23 @@ export default function TrainingsPage() {
   })
 
   const families = catalogService.getTrainingFamilies()
-  const totalTrainings = catalogService.getTrainings().length
+  const allTrainings = catalogService.getTrainings()
+  const totalTrainings = allTrainings.length
+  const [query, setQuery] = useState('')
+  const searching = query.trim().length > 0
+  const results = searching
+    ? allTrainings.filter((training) =>
+        matchesQuery(query, [
+          training.title,
+          training.category,
+          training.level,
+          training.description,
+          training.qualification,
+          ...training.objectives,
+          ...training.program,
+        ]),
+      )
+    : []
 
   return (
     <>
@@ -113,6 +133,34 @@ export default function TrainingsPage() {
             align="center"
           />
 
+          <div className="mx-auto mt-8 max-w-2xl">
+            <SearchField
+              value={query}
+              onChange={setQuery}
+              label="Rechercher une formation"
+              placeholder="Rechercher une formation : NEBOSH, ISO 45001, incendie, audit…"
+              status={
+                searching
+                  ? `${results.length} formation${results.length > 1 ? 's' : ''} trouvée${results.length > 1 ? 's' : ''}`
+                  : `${totalTrainings} formations référencées`
+              }
+            />
+          </div>
+
+          {searching ? (
+            results.length > 0 ? (
+              <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {results.map((training) => (
+                  <TrainingCard key={training.id} training={training} />
+                ))}
+              </div>
+            ) : (
+              <p className="mt-10 text-center text-sm text-brand-muted">
+                Aucune formation ne correspond à « {query.trim()} ». Essayez un autre mot-clé ou
+                parcourez les catalogues.
+              </p>
+            )
+          ) : (
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {families.map((family) => {
               const familyTrainings = catalogService.getTrainingsByFamily(family.slug)
@@ -190,6 +238,7 @@ export default function TrainingsPage() {
               )
             })}
           </div>
+          )}
 
           <p className="mx-auto mt-10 max-w-4xl text-xs leading-relaxed text-brand-muted">
             Les intitulés et le nombre de leçons proviennent du catalogue de formations LEGAL

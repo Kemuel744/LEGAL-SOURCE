@@ -244,15 +244,20 @@ export default function AboutPage() {
                 className="flex h-full flex-col rounded-lg border border-brand-border bg-white p-6 shadow-sm"
               >
                 {partner.logo && (
-                  <img
-                    src={partner.logo}
-                    alt={`Logo ${partner.name}`}
-                    className="mb-4 h-16 w-16 rounded-md object-contain"
-                    width={64}
-                    height={64}
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div
+                    className={`mb-4 flex h-20 items-center justify-center rounded-md border border-brand-border px-4 ${
+                      partner.logoOnDark ? 'bg-brand-navy' : 'bg-white'
+                    }`}
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={`Logo ${partner.name}`}
+                      className="max-h-14 w-auto max-w-full object-contain"
+                      height={56}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                 )}
                 <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-green-dark">
                   {partner.role}

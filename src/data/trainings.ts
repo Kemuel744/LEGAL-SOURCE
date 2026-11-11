@@ -1,5 +1,6 @@
 import type { Training, TrainingLevel } from '@/types'
 import { trainingFamilies } from '@/data/trainingFamilies'
+import { trainingEnrichment } from '@/data/trainingEnrichment'
 
 type Seed = {
   slug: string
@@ -2386,7 +2387,7 @@ const managementConformite: Seed[] = [
  * publics des référentiels cités ; ils restent indicatifs et sont adaptés
  * par LEGAL SOURCE avant chaque session.
  */
-export const trainings: Training[] = [
+const baseTrainings: Training[] = [
   ...nebosh.map((seed) => build('nebosh', seed)),
   ...iosh.map((seed) => build('iosh', seed)),
   ...isep.map((seed) => build('isep', seed)),
@@ -2399,3 +2400,9 @@ export const trainings: Training[] = [
   ...agroalimentaire.map((seed) => build('agroalimentaire', seed)),
   ...managementConformite.map((seed) => build('management-conformite', seed)),
 ]
+
+/** Catalogue complet, enrichi des informations de référentiel lorsqu’elles existent. */
+export const trainings: Training[] = baseTrainings.map((training) => ({
+  ...training,
+  ...trainingEnrichment[training.slug],
+}))

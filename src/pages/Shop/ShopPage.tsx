@@ -4,6 +4,7 @@ import heroImage from '@/assets/images/heroes/legal-source-boutique-epi-congo.we
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
+import { SearchField } from '@/components/common/SearchField'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { ProductCard } from '@/components/cards/ProductCard'
 import { CtaBand } from '@/components/sections/CtaBand'
@@ -11,6 +12,7 @@ import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
 import { productCategories } from '@/types'
+import { matchesQuery } from '@/utils/search'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 import { cn } from '@/utils/format'
 import type { ProductCategory } from '@/types'
@@ -26,10 +28,13 @@ export default function ShopPage() {
   const allProducts = catalogService.getProducts()
   const [activeCategory, setActiveCategory] = useState<ProductCategory | 'all'>('all')
 
-  const filtered =
-    activeCategory === 'all'
-      ? allProducts
-      : allProducts.filter((p) => p.category === activeCategory)
+  const [query, setQuery] = useState('')
+
+  const filtered = allProducts
+    .filter((p) => activeCategory === 'all' || p.category === activeCategory)
+    .filter((p) =>
+      matchesQuery(query, [p.name, p.description, p.longDescription, p.badge, ...p.features]),
+    )
 
   return (
     <>
@@ -82,6 +87,20 @@ export default function ShopPage() {
             description="Filtrez par catégorie pour trouver rapidement l’équipement dont vous avez besoin."
           />
 
+          <div className="mt-6 max-w-xl">
+            <SearchField
+              value={query}
+              onChange={setQuery}
+              label="Rechercher un produit"
+              placeholder="Rechercher un produit : casque, gants, kit premiers secours…"
+              status={
+                query.trim()
+                  ? `${filtered.length} produit${filtered.length > 1 ? 's' : ''} trouvé${filtered.length > 1 ? 's' : ''}`
+                  : undefined
+              }
+            />
+          </div>
+
           {/* Filtres par catégorie */}
           <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtrer par catégorie">
             <button
@@ -125,7 +144,7 @@ export default function ShopPage() {
 
           {filtered.length === 0 && (
             <p className="mt-10 text-center text-sm text-brand-muted">
-              Aucun produit dans cette catégorie pour le moment.
+              Aucun produit ne correspond à votre recherche ou à cette catégorie.
             </p>
           )}
 

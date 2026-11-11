@@ -75,6 +75,12 @@ export interface TrainingFamily {
   assessment: string
 }
 
+/** Unité, module ou élément d’un référentiel de formation. */
+export interface TrainingUnit {
+  title: string
+  detail: string
+}
+
 export interface Training {
   id: string
   slug: string
@@ -96,6 +102,16 @@ export interface Training {
   imageAlt: string
   icon: IconName
   featured?: boolean
+  /** Niveau de la qualification dans son référentiel. */
+  qualification?: string
+  /** Durée de référence du programme. */
+  duration?: string
+  /** Reconnaissance professionnelle ou adhésion associée. */
+  recognition?: string
+  /** Unités, modules ou éléments du référentiel. */
+  units?: TrainingUnit[]
+  /** Points d’attention propres à la formation. */
+  highlights?: string[]
 }
 
 /** Organisme partenaire de LEGAL SOURCE. */
@@ -106,6 +122,8 @@ export interface Partner {
   description: string
   /** Logo optionnel de l’organisme. */
   logo?: string
+  /** Vrai si le logo comporte du texte blanc : il est alors posé sur fond sombre. */
+  logoOnDark?: boolean
   /** Accréditations reconnues de l’organisme (logos). */
   accreditations?: Array<{ name: string; logo: string }>
 }

@@ -1,5 +1,10 @@
+import apiciLogo from '@/assets/images/partners/apici.webp'
 import aqcLogo from '@/assets/images/partners/aqc.webp'
+import astutisLogo from '@/assets/images/partners/astutis.svg'
 import egacLogo from '@/assets/images/partners/egac.webp'
+import gesdLogo from '@/assets/images/partners/gesd.webp'
+import qualicerteLogo from '@/assets/images/partners/qualicerte.webp'
+import sheildsLogo from '@/assets/images/partners/sheilds.webp'
 import uafLogo from '@/assets/images/partners/uaf.webp'
 import kemuelImage from '@/assets/images/team/kemuel-zenas-bidikou.webp'
 import merciaImage from '@/assets/images/team/mercia-ngoka.webp'
@@ -17,13 +22,15 @@ export const partners: Partner[] = [
     role: 'ONG partenaire',
     description:
       'Organisation non gouvernementale partenaire, engagée sur les enjeux de développement et de responsabilité sociétale.',
+    logo: gesdLogo,
   },
   {
-    id: 'astitus',
-    name: 'Astitus',
+    id: 'astutis',
+    name: 'Astutis',
     role: 'Centre de formation international',
     description:
       'Centre de formation international de référence, présent dans plus de 180 pays et basé au Royaume-Uni.',
+    logo: astutisLogo,
   },
   {
     id: 'sheilds',
@@ -31,6 +38,7 @@ export const partners: Partner[] = [
     role: 'Centre de formation international',
     description:
       'Centre de formation international de référence, implanté en Afrique du Sud, à Dubaï et au Royaume-Uni.',
+    logo: sheildsLogo,
   },
   {
     id: 'aqc',
@@ -50,6 +58,7 @@ export const partners: Partner[] = [
     role: 'Cabinet d’expertise QHSE',
     description:
       'Cabinet d’expertise QHSE ivoirien partenaire, mobilisé sur les missions de conseil et d’accompagnement.',
+    logo: qualicerteLogo,
   },
   {
     id: 'apici',
@@ -57,6 +66,8 @@ export const partners: Partner[] = [
     role: 'Cabinet d’expertise agricole',
     description:
       'Cabinet d’expertise agricole ivoirien partenaire, intervenant sur les projets et démarches agricoles durables.',
+    logo: apiciLogo,
+    logoOnDark: true,
   },
 ]
 
@@ -96,7 +107,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 'james-king',
     name: 'James King',
-    role: 'Business developer — Astitus',
+    role: 'Business developer — Astutis',
     group: 'partenaires',
   },
   {

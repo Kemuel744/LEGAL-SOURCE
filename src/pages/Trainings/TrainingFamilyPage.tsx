@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Button } from '@/components/common/Button'
@@ -5,16 +6,28 @@ import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { AppIcon } from '@/components/common/AppIcon'
+import { SearchField } from '@/components/common/SearchField'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
+import { matchesQuery } from '@/utils/search'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
 export default function TrainingFamilyPage() {
   const { familySlug } = useParams<{ familySlug: string }>()
   const family = familySlug ? catalogService.getTrainingFamilyBySlug(familySlug) : null
   const familyTrainings = familySlug ? catalogService.getTrainingsByFamily(familySlug) : []
+  const [query, setQuery] = useState('')
+  const visibleTrainings = familyTrainings.filter((training) =>
+    matchesQuery(query, [
+      training.title,
+      training.level,
+      training.description,
+      ...training.objectives,
+      ...training.program,
+    ]),
+  )
 
   useDocumentMeta({
     title: family
@@ -110,8 +123,28 @@ export default function TrainingFamilyPage() {
             </div>
           </div>
 
+          <div className="mt-6 max-w-xl">
+            <SearchField
+              value={query}
+              onChange={setQuery}
+              label={`Rechercher dans le catalogue ${family.shortName}`}
+              placeholder={`Rechercher dans ${family.shortName}…`}
+              status={
+                query.trim()
+                  ? `${visibleTrainings.length} formation${visibleTrainings.length > 1 ? 's' : ''} sur ${familyTrainings.length}`
+                  : undefined
+              }
+            />
+          </div>
+
+          {visibleTrainings.length === 0 && (
+            <p className="mt-8 text-sm text-brand-muted">
+              Aucune formation ne correspond à votre recherche dans ce catalogue.
+            </p>
+          )}
+
           <div className="mt-8 space-y-4">
-            {familyTrainings.map((training, index) => (
+            {visibleTrainings.map((training, index) => (
               <article
                 key={training.id}
                 className="rounded-xl border border-brand-border bg-white p-5 shadow-sm sm:p-6"
