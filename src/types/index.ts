@@ -104,6 +104,10 @@ export interface Partner {
   name: string
   role: string
   description: string
+  /** Logo optionnel de l’organisme. */
+  logo?: string
+  /** Accréditations reconnues de l’organisme (logos). */
+  accreditations?: Array<{ name: string; logo: string }>
 }
 
 /** Membre de l’équipe ou réseau de partenaires. */

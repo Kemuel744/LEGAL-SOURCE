@@ -203,9 +203,23 @@ export default function AboutPage() {
                 description={site.director.role}
                 light
               />
-              <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
+              <p className="mt-5 max-w-xl text-sm font-semibold leading-relaxed text-white sm:text-base">
+                {site.director.profile}
+              </p>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
                 La direction générale de LEGAL SOURCE est assurée par {site.director.name}.
               </p>
+              <h3 className="mt-6 font-display text-xs font-bold uppercase tracking-[0.14em] text-brand-green">
+                Certifications et qualifications
+              </h3>
+              <ul className="mt-3 max-w-xl space-y-2">
+                {site.director.credentials.map((credential) => (
+                  <li key={credential} className="flex items-start gap-2.5 text-sm text-white/80">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" aria-hidden="true" />
+                    {credential}
+                  </li>
+                ))}
+              </ul>
               <Button to="/contact" variant="outline" className="mt-7">
                 Prendre contact
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -229,6 +243,17 @@ export default function AboutPage() {
                 key={partner.id}
                 className="flex h-full flex-col rounded-lg border border-brand-border bg-white p-6 shadow-sm"
               >
+                {partner.logo && (
+                  <img
+                    src={partner.logo}
+                    alt={`Logo ${partner.name}`}
+                    className="mb-4 h-16 w-16 rounded-md object-contain"
+                    width={64}
+                    height={64}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
                 <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-green-dark">
                   {partner.role}
                 </p>
@@ -238,6 +263,27 @@ export default function AboutPage() {
                 <p className="mt-2 text-sm leading-relaxed text-brand-muted">
                   {partner.description}
                 </p>
+                {partner.accreditations && partner.accreditations.length > 0 && (
+                  <div className="mt-auto pt-5">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-muted">
+                      Accréditations
+                    </p>
+                    <ul className="mt-2 flex flex-wrap items-center gap-4">
+                      {partner.accreditations.map((item) => (
+                        <li key={item.name}>
+                          <img
+                            src={item.logo}
+                            alt={`Logo ${item.name}`}
+                            className="h-12 w-auto object-contain"
+                            height={48}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </article>
             ))}
           </div>

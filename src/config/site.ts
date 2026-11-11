@@ -35,6 +35,18 @@ export const site = {
   director: {
     name: 'Israël ELOYE ONDELE',
     role: 'Directeur général',
+    /** Profil professionnel. Source : visuel « Infos sur Israël ELOYE ONDELE ». */
+    profile: 'Ingénieur agronome, Forêt et Environnement',
+    credentials: [
+      'International QHSE Executive',
+      'Chartered Membership of IOSH (CMIOSH)',
+      'NEBOSH International Diploma for Occupational Health and Safety',
+      'NEBOSH International Diploma in Environmental Management',
+      'NEBOSH Process Safety Management (PSM)',
+      'NEBOSH International General Certificate',
+      'IRCA Certified Lead Auditor (ISO 9001, ISO 14001, ISO 22000, ISO 45001)',
+      'Data Analyst Certified',
+    ],
   },
   phone: {
     display: '+242 06 123 45 67',

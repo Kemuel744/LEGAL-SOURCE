@@ -1,3 +1,6 @@
+import aqcLogo from '@/assets/images/partners/aqc.webp'
+import egacLogo from '@/assets/images/partners/egac.webp'
+import uafLogo from '@/assets/images/partners/uaf.webp'
 import kemuelImage from '@/assets/images/team/kemuel-zenas-bidikou.webp'
 import merciaImage from '@/assets/images/team/mercia-ngoka.webp'
 import type { Partner, TeamMember } from '@/types'
@@ -35,6 +38,11 @@ export const partners: Partner[] = [
     role: 'Organisme de certification',
     description:
       'Organisme de certification international intervenant sur les référentiels ISO.',
+    logo: aqcLogo,
+    accreditations: [
+      { name: 'EGAC', logo: egacLogo },
+      { name: 'UAF — United Accreditation Foundation', logo: uafLogo },
+    ],
   },
   {
     id: 'qualicerte',
