@@ -112,6 +112,8 @@ export interface TeamMember {
   name: string
   role: string
   group: 'direction' | 'réseau' | 'formateurs' | 'partenaires'
+  /** Portrait optionnel (sinon les initiales sont affichées). */
+  image?: string
 }
 
 export type ProductCategory =

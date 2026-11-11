@@ -1,3 +1,5 @@
+import kemuelImage from '@/assets/images/team/kemuel-zenas-bidikou.webp'
+import merciaImage from '@/assets/images/team/mercia-ngoka.webp'
 import type { Partner, TeamMember } from '@/types'
 
 /**
@@ -59,15 +61,17 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'kemuel',
-    name: 'Kemuel',
+    name: 'Kemuel Zenas BIDIKOU',
     role: 'Partenaire — développement du réseau informatique et digital',
     group: 'réseau',
+    image: kemuelImage,
   },
   {
     id: 'mercia-ngoka',
     name: 'Mercia Ngoka',
     role: 'Partenaire — développement commercial et marketing, francophonie',
     group: 'réseau',
+    image: merciaImage,
   },
   {
     id: 'uju-ojingwa',

@@ -269,12 +269,24 @@ export default function AboutPage() {
                         key={member.id}
                         className="flex items-start gap-4 rounded-lg border border-brand-border bg-white p-5 shadow-sm"
                       >
-                        <span
-                          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-navy font-display text-sm font-bold text-white"
-                          aria-hidden="true"
-                        >
-                          {initials(member.name)}
-                        </span>
+                        {member.image ? (
+                          <img
+                            src={member.image}
+                            alt={`Portrait de ${member.name}`}
+                            className="h-16 w-16 shrink-0 rounded-full border border-brand-border object-cover object-top"
+                            width={64}
+                            height={64}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        ) : (
+                          <span
+                            className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-brand-navy font-display text-base font-bold text-white"
+                            aria-hidden="true"
+                          >
+                            {initials(member.name)}
+                          </span>
+                        )}
                         <div>
                           <h4 className="font-display text-sm font-bold text-brand-ink">
                             {member.name}
