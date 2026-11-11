@@ -23,7 +23,7 @@ Fichier concerné : `src/config/site.ts`, `index.html` (JSON-LD).
 
 | Donnée | Valeur actuelle | Statut | Action |
 |---|---|---|---|
-| URL publique | `https://kemuel744.github.io/LOCAL-SOURCES/` | ✅ Technique | Remplacer par le domaine définitif |
+| URL publique | `https://kemuel744.github.io/LEGAL-SOURCE/` | ✅ Technique | Remplacer par le domaine définitif |
 | Domaine `legal-source.com` | Non acquis (redirige vers un placeur de domaine) | ❌ Bloquant SEO | Acquérir le domaine ou en choisir un autre |
 | Hébergement | GitHub Pages | ✅ Technique | Hébergement confirmé : GitHub Pages |
 

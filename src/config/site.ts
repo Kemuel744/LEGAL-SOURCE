@@ -25,7 +25,7 @@ export const site = {
     "Entreprise de conseil et de formation à Brazzaville, au Congo, LEGAL SOURCE accompagne les organisations dans la gestion de leurs risques, le renforcement de leurs compétences et la mise en conformité aux standards internationaux.",
   /** Origine du déploiement (ex. https://kemuel744.github.io). */
   url: siteOrigin,
-  /** Chemin de base (ex. /LOCAL-SOURCES ou chaîne vide à la racine). */
+  /** Chemin de base (ex. /LEGAL-SOURCE ou chaîne vide à la racine). */
   basePath,
   /** URL absolue de la racine du site, avec slash final. */
   get absoluteUrl() {

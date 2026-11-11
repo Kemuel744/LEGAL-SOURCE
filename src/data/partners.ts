@@ -67,7 +67,6 @@ export const partners: Partner[] = [
     description:
       'Cabinet d’expertise agricole ivoirien partenaire, intervenant sur les projets et démarches agricoles durables.',
     logo: apiciLogo,
-    logoOnDark: true,
   },
 ]
 

@@ -24,7 +24,7 @@ npm ci
 npm run dev
 ```
 
-Le site de développement est servi sur `http://localhost:5173/LOCAL-SOURCES/` avec la configuration par défaut.
+Le site de développement est servi sur `http://localhost:5173/LEGAL-SOURCE/` avec la configuration par défaut.
 
 ## Scripts
 
@@ -44,10 +44,10 @@ Toutes les URL publiques sont pilotées par deux variables, pour éviter les val
 
 ```dotenv
 VITE_SITE_URL=https://kemuel744.github.io
-VITE_BASE_PATH=/LOCAL-SOURCES/
+VITE_BASE_PATH=/LEGAL-SOURCE/
 ```
 
-- **GitHub Pages (site de projet)** : conserver `VITE_BASE_PATH=/LOCAL-SOURCES/` et `VITE_SITE_URL=https://kemuel744.github.io`.
+- **GitHub Pages (site de projet)** : conserver `VITE_BASE_PATH=/LEGAL-SOURCE/` et `VITE_SITE_URL=https://kemuel744.github.io`.
 - **Domaine dédié / hébergement racine** : mettre `VITE_BASE_PATH=/` et `VITE_SITE_URL=https://www.le-domaine.fr`.
 
 Après modification, relancer `npm run build`. Le canonical, les balises Open Graph, le JSON-LD, `robots.txt`, `sitemap.xml` et le fallback 404 sont alors alignés sur la nouvelle URL.

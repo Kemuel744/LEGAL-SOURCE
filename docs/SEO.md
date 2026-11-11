@@ -87,7 +87,7 @@ paramètre `structuredData` de `useDocumentMeta` sans modifier le HTML statique.
 L'intégration est préparée mais reste inactive tant que les identifiants ne sont
 pas fournis :
 
-1. **Search Console** : ajouter la propriété `https://kemuel744.github.io/LOCAL-SOURCES/`
+1. **Search Console** : ajouter la propriété `https://kemuel744.github.io/LEGAL-SOURCE/`
    (ou le domaine définitif), puis déposer le fichier de vérification dans
    `public/` ou ajouter la balise meta de vérification dans `index.html`.
 2. **Analytics 4** : créer une propriété GA4, puis ajouter le script de mesure
