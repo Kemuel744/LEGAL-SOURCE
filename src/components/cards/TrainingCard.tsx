@@ -1,6 +1,7 @@
 import { ArrowRight, GraduationCap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Training } from '@/types'
+import { ContentCover } from '@/components/common/ContentCover'
 
 type TrainingCardProps = {
   training: Training
@@ -20,13 +21,12 @@ export function TrainingCard({ training }: TrainingCardProps) {
           tabIndex={-1}
           aria-hidden="true"
         >
-          <img
-            src={training.image}
-            alt=""
-            className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-            width={180}
-            height={70}
+          <ContentCover
+            variant="card"
+            icon={training.icon}
+            kicker={training.category}
+            toneKey={training.familySlug}
+            className="h-40 w-full transition-transform duration-500 group-hover:scale-105"
           />
         </Link>
         <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">

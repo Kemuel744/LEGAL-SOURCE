@@ -6,6 +6,7 @@ import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { AppIcon } from '@/components/common/AppIcon'
+import { ContentCover } from '@/components/common/ContentCover'
 import { SearchField } from '@/components/common/SearchField'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { CtaBand } from '@/components/sections/CtaBand'
@@ -45,8 +46,15 @@ export default function TrainingFamilyPage() {
         kicker="Catalogue de formations"
         title={family.name}
         description={family.description}
-        image={family.image}
-        imageAlt={family.imageAlt}
+        cover={
+          <ContentCover
+            icon={family.icon}
+            kicker="Catalogue de formations"
+            title={family.name}
+            toneKey={family.slug}
+            className="h-56 rounded-xl border border-white/10 sm:h-72 lg:h-[360px]"
+          />
+        }
         crumbs={[
           { label: 'Accueil', to: '/' },
           { label: 'Nos formations', to: '/formations' },

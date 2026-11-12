@@ -12,6 +12,8 @@ type PageHeroProps = {
   description?: ReactNode
   image?: string
   imageAlt?: string
+  /** Panneau visuel procédural, utilisé lorsqu’aucune photo dédiée n’existe. */
+  cover?: ReactNode
   crumbs?: Crumb[]
   features?: string[]
   children?: ReactNode
@@ -25,6 +27,7 @@ export function PageHero({
   description,
   image,
   imageAlt,
+  cover,
   crumbs,
   features,
   children,
@@ -41,7 +44,7 @@ export function PageHero({
         <div
           className={cn(
             'grid items-center gap-8',
-            image ? 'lg:grid-cols-[1.05fr_0.95fr] lg:gap-12' : '',
+            image || cover ? 'lg:grid-cols-[1.05fr_0.95fr] lg:gap-12' : '',
             compact ? 'py-10 lg:py-12' : 'py-12 lg:py-16',
           )}
         >
@@ -84,22 +87,24 @@ export function PageHero({
             {children && <div className="mt-7 flex flex-wrap items-center gap-3">{children}</div>}
           </div>
 
-          {image && (
+          {(image || cover) && (
             <div className="relative">
-              <div className="relative h-56 overflow-hidden rounded-xl border border-white/10 sm:h-72 lg:h-[360px]">
-                <img
-                  src={image}
-                  alt={imageAlt ?? ''}
-                  className="h-full w-full object-cover [image-rendering:high-quality] will-change-[opacity]"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-brand-navy/80 via-brand-navy/15 to-transparent"
-                  aria-hidden="true"
-                />
-              </div>
+              {cover ?? (
+                <div className="relative h-56 overflow-hidden rounded-xl border border-white/10 sm:h-72 lg:h-[360px]">
+                  <img
+                    src={image}
+                    alt={imageAlt ?? ''}
+                    className="h-full w-full object-cover [image-rendering:high-quality] will-change-[opacity]"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-r from-brand-navy/80 via-brand-navy/15 to-transparent"
+                    aria-hidden="true"
+                  />
+                </div>
+              )}
 
               {features && features.length > 0 && (
                 <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 lg:absolute lg:-right-2 lg:top-8 lg:mt-0 lg:block lg:space-y-2 lg:rounded-lg lg:bg-brand-navy/55 lg:px-5 lg:py-4 lg:backdrop-blur-sm">

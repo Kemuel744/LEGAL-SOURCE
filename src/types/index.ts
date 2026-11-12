@@ -62,8 +62,6 @@ export interface TrainingFamily {
   shortName: string
   tagline: string
   description: string
-  image: string
-  imageAlt: string
   icon: IconName
   /** Ordre d’affichage dans le catalogue général. */
   order: number
@@ -98,8 +96,6 @@ export interface Training {
   modalities: string[]
   prerequisites: string
   assessment: string
-  image: string
-  imageAlt: string
   icon: IconName
   featured?: boolean
   /** Niveau de la qualification dans son référentiel. */

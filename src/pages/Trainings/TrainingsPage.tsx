@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { ArrowRight, GraduationCap, Search, Users } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
+import heroImage from '@/assets/images/heroes/legal-source-formations-professionnelles-congo.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
+import { ContentCover } from '@/components/common/ContentCover'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { AppIcon } from '@/components/common/AppIcon'
@@ -172,11 +173,11 @@ export default function TrainingsPage() {
                   className="group flex h-full flex-col overflow-hidden rounded-xl border border-brand-border bg-white shadow-sm transition-shadow hover:shadow-card"
                 >
                   <div className="relative overflow-hidden">
-                    <img
-                      src={family.image}
-                      alt={family.imageAlt}
-                      className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
+                    <ContentCover
+                      variant="card"
+                      icon={family.icon}
+                      toneKey={family.slug}
+                      className="h-40 w-full transition-transform duration-500 group-hover:scale-105"
                     />
                     <div
                       className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/25 to-transparent"

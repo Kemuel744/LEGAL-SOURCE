@@ -1,15 +1,5 @@
 import type { TrainingFamily } from '@/types'
 
-import formationsImg from '@/assets/images/activities/formations.webp'
-import terrainImg from '@/assets/images/projects/formation-terrain.webp'
-import auditsImg from '@/assets/images/activities/audits.webp'
-import rseImg from '@/assets/images/activities/rse.webp'
-import energiesImg from '@/assets/images/activities/energies-solaire.webp'
-import hygieneImg from '@/assets/images/activities/hygiene-tri-dechets.webp'
-import epiImg from '@/assets/images/activities/epi.webp'
-import incendieImg from '@/assets/images/activities/incendie-extincteur.webp'
-import laboratoireImg from '@/assets/images/activities/laboratoire-securite-aliments.webp'
-import releveEnvImg from '@/assets/images/projects/releve-terrain-environnement.webp'
 
 /**
  * Catalogues thématiques de formations.
@@ -28,8 +18,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Santé, sécurité et environnement au travail',
     description:
       'NEBOSH est un organisme britannique de référence en santé et sécurité au travail. Ce catalogue couvre les awards d’initiation, les certificats professionnels et les diplômes de niveau avancé, avec des parcours nationaux (Royaume-Uni) et internationaux.',
-    image: formationsImg,
-    imageAlt: 'Session de formation NEBOSH animée par LEGAL SOURCE',
     icon: 'award',
     order: 1,
     modalities: [
@@ -50,8 +38,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Management de la santé et de la sécurité',
     description:
       'IOSH est la plus grande organisation professionnelle mondiale dédiée à la santé et à la sécurité. Ce catalogue s’adresse aux managers, aux dirigeants et aux équipes opérationnelles qui souhaitent intégrer la prévention dans leurs décisions quotidiennes.',
-    image: terrainImg,
-    imageAlt: 'Formation IOSH en situation de travail avec LEGAL SOURCE',
     icon: 'coaching',
     order: 2,
     modalities: [
@@ -72,8 +58,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Durabilité et management environnemental',
     description:
       'L’ISEP (Institute of Sustainability & Environmental Professionals, anciennement IEMA) propose des parcours reconnus pour développer les compétences environnementales et de durabilité, du niveau sensibilisation au niveau professionnel.',
-    image: rseImg,
-    imageAlt: 'Formation ISEP sur la durabilité et l’environnement',
     icon: 'leaf',
     order: 3,
     modalities: [
@@ -94,8 +78,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Systèmes de management, audit et amélioration continue',
     description:
       'Ce catalogue prépare les équipes à mettre en œuvre, auditer et améliorer les systèmes de management selon les normes ISO : qualité, environnement, santé-sécurité, sécurité alimentaire, risques et systèmes d’information.',
-    image: auditsImg,
-    imageAlt: 'Formation ISO et audit de système de management',
     icon: 'clipboard',
     order: 4,
     modalities: [
@@ -116,8 +98,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Qualifications professionnelles par portfolio',
     description:
       'ProQual propose des qualifications professionnelles reconnues, notamment des NVQ évaluées à partir de situations de travail réelles. Ce catalogue s’adresse aux professionnels qui souhaitent faire reconnaître leurs compétences par un certificat.',
-    image: energiesImg,
-    imageAlt: 'Formation ProQual et reconnaissance professionnelle',
     icon: 'badge',
     order: 5,
     modalities: [
@@ -138,8 +118,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Prévenir les risques sur le terrain',
     description:
       'Des formations courtes et pratiques pour maîtriser les risques rencontrés au quotidien : espaces confinés, travail en hauteur, manutention, produits chimiques, bruit, consignation et évaluation des risques.',
-    image: terrainImg,
-    imageAlt: 'Formation sécurité opérationnelle sur le terrain',
     icon: 'shield',
     order: 6,
     modalities: [
@@ -160,8 +138,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Préparer les équipes à réagir',
     description:
       'Ce catalogue rassemble les formations liées à la prévention incendie, aux premiers secours et à la gestion des situations d’urgence, pour préparer vos équipes à réagir efficacement.',
-    image: incendieImg,
-    imageAlt: 'Exercice de lutte contre l’incendie avec un extincteur',
     icon: 'shield',
     order: 7,
     modalities: [
@@ -182,8 +158,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Préserver la santé mentale et physique',
     description:
       'Des parcours pour comprendre les enjeux de santé mentale, de bien-être et de qualité de vie au travail, et outiller les managers et les équipes pour prévenir les risques psychosociaux.',
-    image: hygieneImg,
-    imageAlt: 'Atelier sur la santé et le bien-être au travail',
     icon: 'users',
     order: 8,
     modalities: [
@@ -204,8 +178,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Maîtriser les impacts environnementaux',
     description:
       'Ce catalogue accompagne les organisations dans la compréhension de leurs impacts environnementaux, la réalisation d’études d’impact et la mise en place de bonnes pratiques de gestion.',
-    image: releveEnvImg,
-    imageAlt: 'Relevé de terrain par un technicien pour une étude environnementale',
     icon: 'leaf',
     order: 9,
     modalities: [
@@ -226,8 +198,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'HACCP, PRP et maîtrise sanitaire',
     description:
       'Des formations pour maîtriser les principes HACCP, les programmes prérequis (PRP) et les programmes prérequis opérationnels (PRPo), et sécuriser les processus agroalimentaires.',
-    image: laboratoireImg,
-    imageAlt: 'Analyse en laboratoire pour la sécurité des aliments',
     icon: 'sprout',
     order: 10,
     modalities: [
@@ -248,8 +218,6 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Faire vivre la prévention et la conformité',
     description:
       'Des parcours pour les dirigeants, managers et responsables conformité : leadership, management d’équipe, audit, réglementation du bâtiment, amiante et atmosphères explosives.',
-    image: epiImg,
-    imageAlt: 'Formation management et conformité HSE',
     icon: 'target',
     order: 11,
     modalities: [

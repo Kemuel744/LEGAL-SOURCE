@@ -1,6 +1,5 @@
 import { ArrowRight, Check } from 'lucide-react'
 import aboutImage from '@/assets/images/legal-source-accompagnement-entreprise-congo.webp'
-import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 import directorImage from '@/assets/images/team/israel-eloye-ondele.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -85,8 +84,8 @@ export default function AboutPage() {
         kicker="À propos"
         title="Une expertise QHSE au service de votre performance au Congo"
         description="LEGAL SOURCE accompagne les organisations dans la gestion de leurs risques, le renforcement de leurs compétences et la mise en conformité aux standards internationaux."
-        image={heroImage}
-        imageAlt="Échange entre une consultante LEGAL SOURCE et un responsable d’entreprise"
+        image={aboutImage}
+        imageAlt="Accompagnement LEGAL SOURCE : agir aujourd’hui pour un avenir meilleur"
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'À propos' }]}
       />
 
@@ -132,15 +131,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <img
-                src={aboutImage}
-                alt="Agir aujourd’hui pour un avenir meilleur — LEGAL SOURCE"
-                className="w-full rounded-xl shadow-card"
-                width={300}
-                height={180}
-                loading="lazy"
-              />
-              <div className="mt-5 rounded-lg bg-brand-navy p-6 text-white">
+              <div className="rounded-lg bg-brand-navy p-6 text-white">
                 <p className="font-display text-lg font-bold">Notre histoire</p>
                 <p className="mt-2 text-sm leading-relaxed text-white/75">
                   LEGAL SOURCE s’est construit autour d’une expertise de terrain, au contact des

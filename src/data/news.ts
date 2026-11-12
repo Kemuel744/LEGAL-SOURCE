@@ -1,8 +1,7 @@
 import type { NewsPost } from '@/types'
 
-import epiImg from '@/assets/images/activities/epi.webp'
-import securiteImg from '@/assets/images/activities/rse.webp'
-import haccpImg from '@/assets/images/activities/haccp.webp'
+import incendieImg from '@/assets/images/activities/incendie-extincteur.webp'
+import laboratoireImg from '@/assets/images/activities/laboratoire-securite-aliments.webp'
 
 /**
  * Publications statiques de la première version.
@@ -20,8 +19,6 @@ export const news: NewsPost[] = [
     category: 'Vie de l’entreprise',
     date: '2026-11-05',
     displayDate: '5 novembre 2026',
-    image: epiImg,
-    imageAlt: 'Équipements de protection individuelle proposés par LEGAL SOURCE',
     body: [
       'LEGAL SOURCE dispose désormais d’un site web institutionnel pensé pour présenter clairement ses domaines d’intervention, ses services, ses formations et ses réalisations.',
       'La boutique en ligne présente une sélection d’équipements de protection individuelle et de kits. Elle fonctionne comme un catalogue : chaque demande est orientée vers WhatsApp afin de permettre un échange direct sur les modalités de commande et de livraison.',
@@ -36,8 +33,8 @@ export const news: NewsPost[] = [
       'Comprendre la logique du référentiel ISO 45001, ses apports pour les organisations et les premières étapes d’une démarche structurée.',
     category: 'Conseils QHSE',
     displayDate: 'Fiche pratique',
-    image: securiteImg,
-    imageAlt: 'Jeune pousse symbolisant une démarche de progrès durable',
+    image: incendieImg,
+    imageAlt: 'Exercice de prévention incendie sur un site, illustration de la démarche santé-sécurité',
     body: [
       'L’ISO 45001 est un référentiel international consacré au management de la santé et de la sécurité au travail. Il propose un cadre structuré pour identifier les dangers, évaluer les risques et organiser la prévention.',
       'Une démarche ISO 45001 s’appuie sur plusieurs piliers : l’engagement de la direction, la participation des travailleurs, l’analyse du contexte, la planification des actions et l’évaluation régulière des résultats.',
@@ -52,8 +49,8 @@ export const news: NewsPost[] = [
       'Les principes de la méthode HACCP et leur rôle dans la maîtrise des dangers sanitaires tout au long de la chaîne alimentaire.',
     category: 'Conseils QHSE',
     displayDate: 'Fiche pratique',
-    image: haccpImg,
-    imageAlt: 'Produits agricoles frais et labels de bonnes pratiques',
+    image: laboratoireImg,
+    imageAlt: 'Analyse en laboratoire pour le contrôle de la sécurité des aliments',
     body: [
       'La méthode HACCP (Hazard Analysis Critical Control Point) vise à identifier, évaluer et maîtriser les dangers significatifs pour la sécurité des aliments. Elle s’applique tout au long du processus de production et de distribution.',
       'Sa mise en œuvre repose sur une analyse des dangers, la détermination des points critiques, la définition de limites et de mesures de surveillance, puis la vérification de l’efficacité du système.',

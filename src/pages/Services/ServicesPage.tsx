@@ -1,6 +1,5 @@
 import { ArrowRight, Check } from 'lucide-react'
 import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
-import ctaImage from '@/assets/images/projects/formation-terrain.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -176,12 +175,9 @@ export default function ServicesPage() {
       </section>
 
       <section className="relative overflow-hidden bg-brand-navy">
-        <img
-          src={ctaImage}
-          alt=""
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_25%,rgba(46,141,41,0.3),transparent_48%),radial-gradient(circle_at_82%_80%,rgba(44,127,184,0.3),transparent_48%)]"
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
-          loading="lazy"
         />
         <div
           className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/95 to-brand-navy/70"
@@ -215,14 +211,24 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="relative hidden lg:block">
-              <img
-                src={ctaImage}
-                alt="LEGAL SOURCE accompagnant une équipe lors d’une formation"
-                className="w-full rounded-xl border border-white/10 object-cover"
-                loading="lazy"
-                width={169}
-                height={90}
-              />
+              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-7">
+                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-[#A8DC97]">
+                  Notre approche
+                </p>
+                <ul className="mt-4 space-y-3">
+                  {[
+                    'Diagnostic partagé de vos pratiques',
+                    'Plan d’actions priorisé et mesurable',
+                    'Accompagnement de terrain',
+                    'Transfert de compétences aux équipes',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-white/85">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#A8DC97]" aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </Container>
