@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight, GraduationCap, Search, Users } from 'lucide-react'
-import heroImage from '@/assets/images/heroes/legal-source-formations-professionnelles-congo.webp'
+import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -171,18 +171,30 @@ export default function TrainingsPage() {
                   key={family.id}
                   className="group flex h-full flex-col overflow-hidden rounded-xl border border-brand-border bg-white shadow-sm transition-shadow hover:shadow-card"
                 >
-                  <div className="flex items-center justify-between gap-3 border-b border-brand-border bg-brand-sky px-5 py-4">
-                    <div className="flex min-w-0 items-center gap-2.5">
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-brand-green-dark">
-                        <AppIcon name={family.icon} className="h-4 w-4" />
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={family.image}
+                      alt={family.imageAlt}
+                      className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/25 to-transparent"
+                      aria-hidden="true"
+                    />
+                    <div className="absolute inset-x-4 bottom-3 flex items-end justify-between gap-3">
+                      <div className="flex items-center gap-2.5">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/95 text-brand-green-dark">
+                          <AppIcon name={family.icon} className="h-4 w-4" />
+                        </span>
+                        <h3 className="font-display text-base font-bold leading-tight text-white">
+                          {family.shortName}
+                        </h3>
+                      </div>
+                      <span className="rounded-full bg-white/95 px-2.5 py-1 font-display text-[11px] font-bold text-brand-navy">
+                        {familyTrainings.length} formation{familyTrainings.length > 1 ? 's' : ''}
                       </span>
-                      <h3 className="truncate font-display text-base font-bold leading-tight text-brand-ink">
-                        {family.shortName}
-                      </h3>
                     </div>
-                    <span className="shrink-0 rounded-full bg-white px-2.5 py-1 font-display text-[11px] font-bold text-brand-navy">
-                      {familyTrainings.length} formation{familyTrainings.length > 1 ? 's' : ''}
-                    </span>
                   </div>
 
                   <div className="flex flex-1 flex-col p-5">

@@ -87,6 +87,8 @@ export default function TrainingDetailPage() {
         kicker={training.category}
         title={training.title}
         description={training.description}
+        image={training.image}
+        imageAlt={training.imageAlt}
         crumbs={[
           { label: 'Accueil', to: '/' },
           { label: 'Nos formations', to: '/formations' },

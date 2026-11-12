@@ -1,6 +1,7 @@
-import { ArrowRight, Check } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazzaville.webp'
+import aboutImage from '@/assets/images/legal-source-accompagnement-entreprise-congo.webp'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
@@ -90,21 +91,15 @@ export default function HomePage() {
       <section className="section">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-            <Reveal variant="left" className="rounded-xl border border-brand-border bg-brand-sky p-8">
-              <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-brand-green-dark">
-                Notre engagement
-              </p>
-              <p className="mt-3 font-display text-2xl font-extrabold leading-snug text-brand-ink">
-                Agir aujourd’hui pour un avenir meilleur
-              </p>
-              <ul className="mt-6 space-y-3">
-                {['Qualité', 'Santé & Sécurité', 'Environnement', 'Durabilité'].map((value) => (
-                  <li key={value} className="flex items-center gap-2.5 text-sm text-brand-muted">
-                    <Check className="h-4 w-4 shrink-0 text-brand-green-dark" aria-hidden="true" />
-                    {value}
-                  </li>
-                ))}
-              </ul>
+            <Reveal variant="left" className="relative">
+              <img
+                src={aboutImage}
+                alt="Accompagnement LEGAL SOURCE : agir aujourd’hui pour un avenir meilleur"
+                className="w-full rounded-xl object-cover shadow-card"
+                width={300}
+                height={180}
+                loading="lazy"
+              />
             </Reveal>
             <div>
               <SectionHeading

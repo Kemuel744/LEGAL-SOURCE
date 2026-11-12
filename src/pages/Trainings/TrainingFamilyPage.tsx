@@ -45,6 +45,8 @@ export default function TrainingFamilyPage() {
         kicker="Catalogue de formations"
         title={family.name}
         description={family.description}
+        image={family.image}
+        imageAlt={family.imageAlt}
         crumbs={[
           { label: 'Accueil', to: '/' },
           { label: 'Nos formations', to: '/formations' },

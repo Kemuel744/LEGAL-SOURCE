@@ -8,23 +8,37 @@ type TrainingCardProps = {
 
 /**
  * Carte de synthèse du catalogue.
- * Aucune photo n’est affichée : le catalogue ne dispose pas d’une image dédiée
- * par formation, et une image ne doit jamais illustrer plusieurs contenus.
  * Le détail complet est présenté sur la page dédiée `/formations/:slug`.
  */
 export function TrainingCard({ training }: TrainingCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-card motion-reduce:transform-none">
+      <div className="relative overflow-hidden">
+        <Link
+          to={`/formations/${training.slug}`}
+          className="block"
+          tabIndex={-1}
+          aria-hidden="true"
+        >
+          <img
+            src={training.image}
+            alt=""
+            className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            width={180}
+            height={70}
+          />
+        </Link>
+        <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
+          {training.level}
+        </span>
+      </div>
+
       <div className="flex flex-1 flex-col p-5">
-        <div className="flex items-start justify-between gap-3">
-          <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-muted">
-            {training.category}
-          </p>
-          <span className="shrink-0 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
-            {training.level}
-          </span>
-        </div>
-        <h3 className="mt-2 font-display text-base font-bold leading-snug text-brand-ink">
+        <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-muted">
+          {training.category}
+        </p>
+        <h3 className="mt-1.5 font-display text-base font-bold leading-snug text-brand-ink">
           <Link to={`/formations/${training.slug}`} className="hover:text-brand-green-dark">
             {training.title}
           </Link>

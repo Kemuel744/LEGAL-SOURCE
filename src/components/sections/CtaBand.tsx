@@ -1,4 +1,5 @@
 import { Mail, Phone } from 'lucide-react'
+import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazzaville.webp'
 import { site } from '@/config/site'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -8,7 +9,18 @@ import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
 export function CtaBand() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-brand-navy">
+    <section className="relative overflow-hidden bg-brand-navy">
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-30"
+        loading="lazy"
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/60"
+        aria-hidden="true"
+      />
       <Container className="relative">
         <div className="flex flex-col gap-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-14">
           <Reveal className="max-w-2xl">

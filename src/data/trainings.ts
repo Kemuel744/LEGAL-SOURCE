@@ -35,6 +35,8 @@ function build(familySlug: string, seed: Seed): Training {
     modalities: family.modalities,
     prerequisites: seed.prerequisites ?? family.prerequisites,
     assessment: seed.assessment ?? family.assessment,
+    image: family.image,
+    imageAlt: family.imageAlt,
     icon: family.icon,
     featured: seed.featured,
   }

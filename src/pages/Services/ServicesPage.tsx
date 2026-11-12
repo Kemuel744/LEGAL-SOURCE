@@ -1,5 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react'
 import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
+import ctaImage from '@/assets/images/projects/formation-terrain.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -174,7 +175,18 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden border-y border-white/10 bg-brand-navy">
+      <section className="relative overflow-hidden bg-brand-navy">
+        <img
+          src={ctaImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          loading="lazy"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/95 to-brand-navy/70"
+          aria-hidden="true"
+        />
         <Container className="relative">
           <div className="grid items-center gap-10 py-14 lg:grid-cols-[1fr_0.85fr] lg:py-16">
             <div>
@@ -203,24 +215,14 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="relative hidden lg:block">
-              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-7">
-                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-[#A8DC97]">
-                  Notre approche
-                </p>
-                <ul className="mt-4 space-y-3">
-                  {[
-                    'Diagnostic partagé de vos pratiques',
-                    'Plan d’actions priorisé et mesurable',
-                    'Accompagnement de terrain',
-                    'Transfert de compétences aux équipes',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-white/85">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#A8DC97]" aria-hidden="true" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <img
+                src={ctaImage}
+                alt="LEGAL SOURCE accompagnant une équipe lors d’une formation"
+                className="w-full rounded-xl border border-white/10 object-cover"
+                loading="lazy"
+                width={169}
+                height={90}
+              />
             </div>
           </div>
         </Container>

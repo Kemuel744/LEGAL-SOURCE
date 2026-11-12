@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazzaville.webp'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
@@ -29,6 +30,8 @@ export default function ActivitiesPage() {
         kicker="Nos activités"
         title="Nos activités au Congo : des domaines d’intervention complémentaires"
         description="LEGAL SOURCE regroupe ses expertises par famille d’activités pour vous accompagner de manière globale, du diagnostic jusqu’à la mise en œuvre sur le terrain."
+        image={heroImage}
+        imageAlt="Équipe LEGAL SOURCE sur un site industriel"
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'Nos activités' }]}
       >
         <Button to="/services">
