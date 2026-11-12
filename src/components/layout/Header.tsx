@@ -109,7 +109,7 @@ export function Header() {
             <img
               src={logo}
               alt="LEGAL SOURCE — Consulting, Management, Certification QHSE"
-              className="h-12 w-auto sm:h-14 lg:h-16"
+              className="logo-in h-12 w-auto sm:h-14 lg:h-16"
               width={370}
               height={92}
             />
@@ -126,10 +126,10 @@ export function Header() {
                     end={item.to === '/'}
                     className={({ isActive }) =>
                       cn(
-                        'flex items-center gap-1 border-b-2 px-3 py-6 font-display text-[13px] font-semibold text-brand-ink transition-colors hover:text-brand-green-dark',
+                        'nav-underline flex items-center gap-1 px-3 py-6 font-display text-[13px] font-semibold text-brand-ink transition-colors hover:text-brand-green-dark',
                         isActive || (active && item.to !== '/')
-                          ? 'border-brand-green-dark text-brand-green-dark'
-                          : 'border-transparent',
+                          ? 'text-brand-green-dark after:scale-x-100'
+                          : '',
                       )
                     }
                   >

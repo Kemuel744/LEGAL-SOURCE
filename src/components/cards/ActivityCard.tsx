@@ -25,7 +25,7 @@ export function ActivityCard({ activity }: ActivityCardProps) {
   return (
     <article
       className={cn(
-        'group flex h-full flex-col overflow-hidden rounded-lg border-b-4 shadow-sm transition-shadow hover:shadow-card',
+        'group flex h-full flex-col overflow-hidden rounded-lg border-b-4 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-card motion-reduce:transform-none',
         tone.panel,
         tone.border,
       )}
@@ -34,14 +34,14 @@ export function ActivityCard({ activity }: ActivityCardProps) {
         <img
           src={activity.image}
           alt={activity.imageAlt}
-          className="h-32 w-full object-cover"
+          className="h-32 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
           width={180}
           height={72}
         />
         <span
           className={cn(
-            'absolute -bottom-6 left-4 flex h-12 w-12 items-center justify-center rounded-full text-white ring-4 ring-white',
+            'absolute -bottom-6 left-4 flex h-12 w-12 items-center justify-center rounded-full text-white ring-4 ring-white transition-transform duration-300 ease-out group-hover:scale-110',
             tone.icon,
           )}
         >

@@ -14,7 +14,7 @@ type TrainingCardProps = {
  */
 export function TrainingCard({ training }: TrainingCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white shadow-sm transition-shadow hover:shadow-card">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-card motion-reduce:transform-none">
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start justify-between gap-3">
           <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-muted">
@@ -44,7 +44,7 @@ export function TrainingCard({ training }: TrainingCardProps) {
         >
           Voir la fiche détaillée
           <ArrowRight
-            className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
             aria-hidden="true"
           />
         </Link>

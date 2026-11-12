@@ -4,11 +4,12 @@ import logoWhite from '@/assets/logos/legal-source-logo-white.png'
 import { site } from '@/config/site'
 import { domainLinks, legalLinks, quickLinks } from '@/config/links'
 import { Container } from '@/components/common/Container'
+import { Reveal } from '@/components/common/Reveal'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
 const footerLink =
-  'rounded-sm text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy'
+  'footer-link rounded-sm text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -17,7 +18,7 @@ export function Footer() {
     <footer className="bg-brand-navy text-white print:hidden">
       <Container>
         <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.9fr_1.1fr] lg:gap-8 lg:py-14">
-          <div>
+          <Reveal variant="fade">
             <Link to="/" aria-label="LEGAL SOURCE — Accueil" className="inline-block">
               <img
                 src={logoWhite}
@@ -50,9 +51,9 @@ export function Footer() {
                 ))}
               </ul>
             )}
-          </div>
+          </Reveal>
 
-          <nav aria-label="Liens rapides">
+          <Reveal as="nav" delay={100} aria-label="Liens rapides">
             <h2 className="font-display text-sm font-bold uppercase tracking-wider text-white">
               Liens rapides
             </h2>
@@ -65,9 +66,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </nav>
+          </Reveal>
 
-          <nav aria-label="Nos domaines">
+          <Reveal as="nav" delay={200} aria-label="Nos domaines">
             <h2 className="font-display text-sm font-bold uppercase tracking-wider text-white">
               Nos domaines
             </h2>
@@ -80,9 +81,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </nav>
+          </Reveal>
 
-          <div>
+          <Reveal delay={300}>
             <h2 className="font-display text-sm font-bold uppercase tracking-wider text-white">
               Contact
             </h2>
@@ -121,7 +122,7 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </Reveal>
         </div>
 
         <div className="flex flex-col gap-3 border-t border-white/15 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">

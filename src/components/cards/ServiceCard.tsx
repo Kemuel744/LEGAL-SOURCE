@@ -10,9 +10,9 @@ type ServiceCardProps = {
 
 export function ServiceCard({ service, index }: ServiceCardProps) {
   return (
-    <article className="group flex h-full flex-col rounded-lg border border-brand-border bg-white p-6 shadow-sm transition-shadow hover:shadow-card">
+    <article className="group flex h-full flex-col rounded-lg border border-brand-border bg-white p-6 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-card motion-reduce:transform-none">
       <div className="flex items-start justify-between gap-3">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-sky text-brand-navy">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-sky text-brand-navy transition-[transform,background-color,color] duration-300 ease-out group-hover:scale-110 group-hover:bg-brand-green-light group-hover:text-brand-green-dark">
           <AppIcon name={service.icon} className="h-6 w-6" />
         </span>
         {typeof index === 'number' && (
@@ -29,7 +29,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         className="mt-auto inline-flex items-center gap-1.5 pt-5 font-display text-sm font-semibold text-brand-green-dark transition-colors hover:text-brand-green-darker"
       >
         Découvrir le service
-        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
       </Link>
     </article>
   )

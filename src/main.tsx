@@ -15,6 +15,16 @@ import '@fontsource/open-sans/700.css'
 import '@/styles/index.css'
 import App from '@/App'
 
+// Active les états masqués des animations au défilement uniquement si le
+// navigateur les supporte et que l'utilisateur ne demande pas de réduire les
+// animations. Sinon, tout le contenu reste visible immédiatement.
+if (
+  typeof IntersectionObserver !== 'undefined' &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+) {
+  document.documentElement.classList.add('motion-ok')
+}
+
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

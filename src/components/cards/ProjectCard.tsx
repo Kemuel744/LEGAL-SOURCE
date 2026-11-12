@@ -8,12 +8,12 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white shadow-sm transition-shadow hover:shadow-card">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-card motion-reduce:transform-none">
       <div className="relative">
         <img
           src={project.image}
           alt={project.imageAlt}
-          className="h-48 w-full object-cover"
+          className="h-48 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
           width={172}
           height={80}
@@ -32,7 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           className="mt-auto inline-flex items-center gap-1.5 pt-4 font-display text-sm font-semibold text-brand-green-dark hover:text-brand-green-darker"
         >
           En savoir plus
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
         </Link>
       </div>
     </article>

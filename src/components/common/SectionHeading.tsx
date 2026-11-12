@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Reveal } from '@/components/common/Reveal'
 import { cn } from '@/utils/format'
 
 type SectionHeadingProps = {
@@ -21,7 +22,7 @@ export function SectionHeading({
   as: Heading = 'h2',
 }: SectionHeadingProps) {
   return (
-    <div
+    <Reveal
       className={cn(
         'max-w-3xl',
         align === 'center' && 'mx-auto text-center',
@@ -56,6 +57,6 @@ export function SectionHeading({
           {description}
         </p>
       )}
-    </div>
+    </Reveal>
   )
 }

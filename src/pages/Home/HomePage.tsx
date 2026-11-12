@@ -4,6 +4,7 @@ import heroImage from '@/assets/images/heroes/legal-source-consultant-qhse-brazz
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
+import { Reveal, stagger } from '@/components/common/Reveal'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { ActivityCard } from '@/components/cards/ActivityCard'
 import { ServiceCard } from '@/components/cards/ServiceCard'
@@ -59,8 +60,10 @@ export default function HomePage() {
           />
 
           <div className="mt-9 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-            {activities.map((activity) => (
-              <ActivityCard key={activity.id} activity={activity} />
+            {activities.map((activity, index) => (
+              <Reveal key={activity.id} variant="scale" delay={stagger(index % 5, 70)} className="h-full">
+                <ActivityCard activity={activity} />
+              </Reveal>
             ))}
           </div>
 
@@ -87,7 +90,7 @@ export default function HomePage() {
       <section className="section">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-            <div className="rounded-xl border border-brand-border bg-brand-sky p-8">
+            <Reveal variant="left" className="rounded-xl border border-brand-border bg-brand-sky p-8">
               <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-brand-green-dark">
                 Notre engagement
               </p>
@@ -102,7 +105,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
             <div>
               <SectionHeading
                 kicker="À propos de LEGAL SOURCE"
@@ -145,7 +148,9 @@ export default function HomePage() {
           </div>
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
+              <Reveal key={service.id} delay={stagger(index)} className="h-full">
+                <ServiceCard service={service} index={index} />
+              </Reveal>
             ))}
           </div>
         </Container>
@@ -165,8 +170,10 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {trainings.map((training) => (
-              <TrainingCard key={training.id} training={training} />
+            {trainings.map((training, index) => (
+              <Reveal key={training.id} delay={stagger(index)} className="h-full">
+                <TrainingCard training={training} />
+              </Reveal>
             ))}
           </div>
         </Container>
@@ -186,8 +193,10 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="mt-9 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {products.map((product, index) => (
+              <Reveal key={product.id} variant="scale" delay={stagger(index % 4, 80)} className="h-full">
+                <ProductCard product={product} />
+              </Reveal>
             ))}
           </div>
           <p className="mt-6 text-xs text-brand-muted">
@@ -211,8 +220,10 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {projects.map((project, index) => (
+              <Reveal key={project.id} delay={stagger(index)} className="h-full">
+                <ProjectCard project={project} />
+              </Reveal>
             ))}
           </div>
           <div className="mt-6">

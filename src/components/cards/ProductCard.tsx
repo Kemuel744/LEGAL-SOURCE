@@ -21,7 +21,7 @@ export function ProductCard({ product, view = 'grid' }: ProductCardProps) {
   return (
     <article
       className={cn(
-        'group flex overflow-hidden rounded-lg border border-brand-border bg-white transition-shadow hover:shadow-card',
+        'group flex overflow-hidden rounded-lg border border-brand-border bg-white transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-card motion-reduce:transform-none',
         isList ? 'flex-col sm:flex-row' : 'h-full flex-col',
       )}
     >
@@ -35,7 +35,7 @@ export function ProductCard({ product, view = 'grid' }: ProductCardProps) {
             src={product.image}
             alt={product.imageAlt}
             className={cn(
-              'w-full object-contain transition-transform duration-300 group-hover:scale-105',
+              'w-full object-contain transition-transform duration-500 ease-out group-hover:scale-105',
               isList ? 'h-40 sm:h-full sm:min-h-[160px]' : 'h-40',
             )}
             loading="lazy"

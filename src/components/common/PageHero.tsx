@@ -1,8 +1,11 @@
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Container } from '@/components/common/Container'
+import { useParallax } from '@/hooks/useParallax'
 import { cn } from '@/utils/format'
+
+const delay = (ms: number) => ({ '--hero-delay': `${ms}ms` }) as CSSProperties
 
 type Crumb = { label: string; to?: string }
 
@@ -31,10 +34,12 @@ export function PageHero({
   compact = false,
   className,
 }: PageHeroProps) {
+  const parallaxRef = useParallax<HTMLImageElement>(0.07)
+
   return (
     <section className={cn('relative overflow-hidden bg-brand-navy', className)}>
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_15%,rgba(46,141,41,0.28),transparent_42%),radial-gradient(circle_at_85%_90%,rgba(44,127,184,0.3),transparent_45%)]"
+        className="hero-fade pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_15%,rgba(46,141,41,0.28),transparent_42%),radial-gradient(circle_at_85%_90%,rgba(44,127,184,0.3),transparent_45%)]"
         aria-hidden="true"
       />
       <Container className="relative">
@@ -45,9 +50,9 @@ export function PageHero({
             compact ? 'py-10 lg:py-12' : 'py-12 lg:py-16',
           )}
         >
-          <div className="relative z-10 max-w-2xl animate-fade-up">
+          <div className="relative z-10 max-w-2xl">
             {crumbs && crumbs.length > 0 && (
-              <nav aria-label="Fil d’Ariane" className="mb-5">
+              <nav aria-label="Fil d’Ariane" className="hero-fade mb-5" style={delay(100)}>
                 <ol className="flex flex-wrap items-center gap-1 text-xs text-white/60">
                   {crumbs.map((crumb, index) => (
                     <li key={`${crumb.label}-${index}`} className="flex items-center gap-1">
@@ -66,31 +71,48 @@ export function PageHero({
             )}
 
             {kicker && (
-              <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-[#A8DC97]">
+              <p
+                className="hero-rise mb-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-[#A8DC97]"
+                style={delay(250)}
+              >
                 {kicker}
               </p>
             )}
 
-            <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-[2.9rem] 3xl:text-[3.4rem] 4xl:text-[4rem]">
+            <h1
+              className="hero-reveal font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-[2.9rem] 3xl:text-[3.4rem] 4xl:text-[4rem]"
+              style={delay(400)}
+            >
               {title}
             </h1>
 
             {description && (
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base">
+              <p
+                className="hero-rise mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base"
+                style={delay(750)}
+              >
                 {description}
               </p>
             )}
 
-            {children && <div className="mt-7 flex flex-wrap items-center gap-3">{children}</div>}
+            {children && (
+              <div className="hero-rise mt-7 flex flex-wrap items-center gap-3" style={delay(1000)}>
+                {children}
+              </div>
+            )}
           </div>
 
           {image && (
             <div className="relative">
-              <div className="relative h-56 overflow-hidden rounded-xl border border-white/10 sm:h-72 lg:h-[360px]">
+              <div
+                className="hero-fade relative h-56 overflow-hidden rounded-xl border border-white/10 sm:h-72 lg:h-[360px]"
+                style={delay(300)}
+              >
                 <img
+                  ref={parallaxRef}
                   src={image}
                   alt={imageAlt ?? ''}
-                  className="h-full w-full object-cover [image-rendering:high-quality] will-change-[opacity]"
+                  className="h-full w-full object-cover [image-rendering:high-quality] hero-image"
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
@@ -103,10 +125,11 @@ export function PageHero({
 
               {features && features.length > 0 && (
                 <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 lg:absolute lg:-right-2 lg:top-8 lg:mt-0 lg:block lg:space-y-2 lg:rounded-lg lg:bg-brand-navy/55 lg:px-5 lg:py-4 lg:backdrop-blur-sm">
-                  {features.map((feature) => (
+                  {features.map((feature, index) => (
                     <li
                       key={feature}
-                      className="border-b border-[#A8DC97]/50 pb-1 font-display text-sm font-semibold italic text-white lg:text-right"
+                      className="hero-rise border-b border-[#A8DC97]/50 pb-1 font-display text-sm font-semibold italic text-white lg:text-right"
+                      style={delay(1100 + index * 130)}
                     >
                       {feature}
                     </li>
