@@ -9,4 +9,6 @@ Recadrées en 16:9, redimensionnées à 1280 px et converties en WebP.
 |---|---|---|
 | src/assets/images/heroes/legal-source-projets-chantier.webp — bannière « Projets » | [Construction site aerial view of the future Medical West Hospital, an affiliate of University of Alabama at Birmingham (UAB) Health System, in Bessemer, Alabama on January 21, 2022 - 2.jpg](https://commons.wikimedia.org/wiki/File:Construction_site_aerial_view_of_the_future_Medical_West_Hospital,_an_affiliate_of_University_of_Alabama_at_Birmingham_(UAB)_Health_System,_in_Bessemer,_Alabama_on_January_21,_2022_-_2.jpg) | Public domain |
 
+Les autres visuels ajoutés (activités, projets, formations) sont des images libres de droits : aucune attribution n’est exigée.
+
 Les autres visuels du site (photos de l’équipe, produits, bannières d’accueil) proviennent des ressources fournies par LEGAL SOURCE.
