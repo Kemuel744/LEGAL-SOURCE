@@ -4,7 +4,7 @@ Ce document décrit le référencement intégré au site. Les métadonnées ne s
 ajoutées après coup : elles sont produites par l'architecture React (hook
 `useDocumentMeta`), le HTML statique et les scripts de génération exécutés au build.
 
-Dernière mise à jour : 11 novembre 2026.
+Dernière mise à jour : 12 novembre 2026.
 
 ## 1. Positionnement
 
