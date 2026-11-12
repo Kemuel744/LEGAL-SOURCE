@@ -39,8 +39,8 @@ Aucun code source, aucun HTML/CSS/JS, aucune police, aucun fichier de configurat
 | Photos | Basse résolution (vignettes 135–180 px) | Affichage à taille native ou légèrement agrandie, `object-cover`, `loading="lazy"` |
 | Polices | Non fournies | **Montserrat** (titres) + **Open Sans** (texte), auto-hébergées via Fontsource |
 | Couleurs | Non fournies en code | Échantillonnage des templates (voir §6) |
-| Coordonnées | `contact@legal-source.com`, `+242 06 813 88 52`, Brazzaville — issus des templates | Centralisées dans `src/config/site.ts`, signalées « à confirmer » |
-| WhatsApp | Aucun numéro officiel dédié fourni | Numéro du template utilisé par défaut, centralisé et documenté comme **provisoire** |
+| Coordonnées | `contact@legal-source.com`, `+242 06 813 88 52`, Brazzaville — validés par LEGAL SOURCE (12 nov. 2026) | Centralisées dans `src/config/site.ts` et le JSON-LD de `index.html` |
+| WhatsApp | `+242 06 813 88 52` — validé par LEGAL SOURCE (12 nov. 2026) | Numéro officiel centralisé dans `site.whatsapp` ; liens générés par `src/utils/whatsapp.ts` |
 | Réseaux sociaux | Aucune URL fournie | Icônes rendues uniquement si une URL est configurée (aucun lien fictif) |
 | Catalogue | 8 produits + 4 kits visibles dans le template | Repris à l'identique ; aucun produit/prix inventé |
 | Témoignages | Présents dans le template mais non sourcés | **Non repris** (interdiction d'inventer des références clients) |

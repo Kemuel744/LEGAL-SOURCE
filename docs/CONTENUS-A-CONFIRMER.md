@@ -2,7 +2,7 @@
 
 Ce document recense les informations provisoires ou non sourcées publiées sur le site. Chaque ligne doit être validée par LEGAL SOURCE avant diffusion commerciale.
 
-Dernière mise à jour : 11 novembre 2026.
+Dernière mise à jour : 12 novembre 2026.
 
 ## 1. Coordonnées et identité
 
@@ -104,7 +104,7 @@ Fichiers concernés : `src/data/legal.ts`, `src/components/common/LegalContent.t
 
 ## 8. Validation finale
 
-- [x] Coordonnées officielles intégrées et testées (appel, WhatsApp, e-mail) — validées le 8 novembre 2026.
+- [x] Coordonnées officielles intégrées et testées (appel, WhatsApp, e-mail) — validées le 12 novembre 2026.
 - [ ] Domaine acheté et `VITE_SITE_URL` / `VITE_BASE_PATH` mis à jour.
 - [ ] Contenus juridiques relus par un conseil compétent.
 - [ ] Catalogue et prix validés.

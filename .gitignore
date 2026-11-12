@@ -18,6 +18,9 @@ npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 
+# Agents IA locaux
+.kilo/
+
 # Editeurs
 .vscode/*
 !.vscode/extensions.json
