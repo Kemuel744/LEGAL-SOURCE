@@ -174,15 +174,7 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-brand-navy">
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_25%,rgba(46,141,41,0.3),transparent_48%),radial-gradient(circle_at_82%_80%,rgba(44,127,184,0.3),transparent_48%)]"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/95 to-brand-navy/70"
-          aria-hidden="true"
-        />
+      <section className="relative overflow-hidden border-y border-white/10 bg-brand-navy">
         <Container className="relative">
           <div className="grid items-center gap-10 py-14 lg:grid-cols-[1fr_0.85fr] lg:py-16">
             <div>

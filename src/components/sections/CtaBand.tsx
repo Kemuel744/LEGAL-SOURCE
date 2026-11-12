@@ -7,15 +7,7 @@ import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
 
 export function CtaBand() {
   return (
-    <section className="relative overflow-hidden bg-brand-navy">
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(46,141,41,0.32),transparent_45%),radial-gradient(circle_at_85%_85%,rgba(44,127,184,0.32),transparent_45%)]"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/60"
-        aria-hidden="true"
-      />
+    <section className="relative overflow-hidden border-y border-white/10 bg-brand-navy">
       <Container className="relative">
         <div className="flex flex-col gap-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-14">
           <div className="max-w-2xl">

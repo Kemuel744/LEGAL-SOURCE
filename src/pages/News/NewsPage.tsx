@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
 import { PageHero } from '@/components/common/PageHero'
-import { ContentCover } from '@/components/common/ContentCover'
 import { SearchField } from '@/components/common/SearchField'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { NewsCard } from '@/components/cards/NewsCard'
@@ -36,15 +35,6 @@ export default function NewsPage() {
         kicker="Actualités"
         title="Actualités QHSE et conseils aux entreprises au Congo"
         description="Publications, fiches pratiques et annonces de LEGAL SOURCE pour accompagner vos démarches de qualité, santé, sécurité et environnement."
-        cover={
-          <ContentCover
-            icon="lightbulb"
-            kicker="Conseils & actualités"
-            title="QHSE, formations et vie de l’entreprise"
-            toneKey="actualites"
-            className="h-56 rounded-xl border border-white/10 sm:h-72 lg:h-[360px]"
-          />
-        }
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'Actualités' }]}
       >
         <Button

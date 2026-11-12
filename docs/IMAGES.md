@@ -1,16 +1,19 @@
 # Politique visuelle — une image, un contenu
 
 Règle du projet : **un fichier image ne peut illustrer qu’un seul contenu**.
-Une photo ne doit jamais être recyclée pour combler un manque. Quand aucun
-visuel dédié n’existe, on utilise une couverture générée (pictogramme, teinte
-et intitulé) plutôt qu’une photo déjà employée ailleurs.
+Une photo ne doit jamais être recyclée pour combler un manque.
+
+Corollaire : **pas de photo dédiée = pas d’image**. On n’affiche ni une photo
+déjà utilisée ailleurs, ni un décor de remplacement (dégradé, motif, visuel
+généré). Une carte ou une page sans visuel propre reste une mise en page
+typographique : titre, catégorie, contenu.
 
 Cette règle est vérifiée automatiquement à chaque build.
 
 ## Vérification
 
 ```bash
-npm run check:images          # échoue si doublon, réutilisation indirecte ou fichier mort
+npm run check:images               # échoue si doublon, réutilisation indirecte ou fichier mort
 npm run check:images -- --report   # affiche le rapport sans échouer
 ```
 
@@ -43,14 +46,15 @@ Réattributions effectuées :
 - Bandeau **formations** : `heroes/legal-source-formations-professionnelles-congo.webp`
   (auparavant inutilisé) remplace les bandeaux mutualisés.
 - Bandeau **à propos** : `legal-source-accompagnement-entreprise-congo.webp`,
-  retiré de la page d’accueil (remplacé par un panneau « Notre engagement »).
+  retiré de la page d’accueil.
 - **Actualités** : illustration propre pour ISO 45001 (prévention incendie) et
-  HACCP (analyse en laboratoire) ; l’annonce de lancement utilise une couverture générée.
-- **89 fiches formations** : plus aucune photo dupliquée. Chaque carte et chaque
-  page de détail affiche une couverture procédurale (`src/components/common/ContentCover.tsx`)
-  teintée selon la famille et le pictogramme du référentiel.
+  HACCP (analyse en laboratoire). L’annonce de lancement n’a pas d’image et
+  s’affiche en texte seul.
+- **Familles et fiches de formation** : aucune photo partagée. En attendant les
+  photographies dédiées (voir `docs/IMAGES-A-FOURNIR.md`), les cartes sont en
+  texte et les pages de détail n’affichent pas de visuel.
 - **Bandeaux d’appel à l’action** (`CtaBand`, sections « pourquoi nous choisir ») :
-  dégradés de marque, sans photo répétée sur toutes les pages.
+  mises en page de marque sans photo répétée sur toutes les pages.
 
 Fichiers supprimés (morts ou doublons) : `products/kit-agricole-strip.webp`,
 `projects/releve-terrain-environnement.webp`, `logos/legal-source-symbol.png`.
@@ -60,5 +64,5 @@ Fichiers supprimés (morts ou doublons) : `products/kit-agricole-strip.webp`,
 1. Fournir un fichier **spécifique au contenu** (nom explicite, WebP optimisé).
 2. L’importer dans **un seul** fichier de données ou de page.
 3. Lancer `npm run check:images`.
-4. Si aucun visuel dédié n’est disponible : ne pas réutiliser une photo,
-   utiliser `ContentCover`.
+4. S’il n’existe pas de visuel dédié : ne rien afficher. Ne jamais réutiliser
+   une photo, ne jamais la remplacer par un dégradé.

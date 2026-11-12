@@ -2,7 +2,6 @@ import { ArrowLeft, ArrowRight, CalendarDays, Tag } from 'lucide-react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
-import { ContentCover } from '@/components/common/ContentCover'
 import { NewsCard } from '@/components/cards/NewsCard'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
@@ -75,7 +74,7 @@ export default function NewsArticlePage() {
             </header>
 
             {/* Image */}
-            {post.image ? (
+            {post.image && (
               <figure className="mb-8 overflow-hidden rounded-xl">
                 <img
                   src={post.image}
@@ -86,14 +85,6 @@ export default function NewsArticlePage() {
                   height={280}
                 />
               </figure>
-            ) : (
-              <ContentCover
-                icon={post.category.toLowerCase().includes('vie') ? 'building' : 'lightbulb'}
-                kicker={post.category}
-                title={post.title}
-                toneKey={post.slug}
-                className="mb-8 h-52 rounded-xl sm:h-60"
-              />
             )}
 
             {/* Corps de l’article */}

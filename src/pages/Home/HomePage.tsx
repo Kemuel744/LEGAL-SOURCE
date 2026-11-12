@@ -87,27 +87,21 @@ export default function HomePage() {
       <section className="section">
         <Container>
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-brand-navy via-brand-deep to-brand-green-dark p-8 text-white shadow-card">
-                <div
-                  className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#A8DC97]/20 blur-3xl"
-                  aria-hidden="true"
-                />
-                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-[#A8DC97]">
-                  Notre engagement
-                </p>
-                <p className="mt-3 font-display text-2xl font-extrabold leading-snug">
-                  Agir aujourd’hui pour un avenir meilleur
-                </p>
-                <ul className="mt-6 space-y-3">
-                  {['Qualité', 'Santé & Sécurité', 'Environnement', 'Durabilité'].map((value) => (
-                    <li key={value} className="flex items-center gap-2.5 text-sm text-white/85">
-                      <Check className="h-4 w-4 shrink-0 text-[#A8DC97]" aria-hidden="true" />
-                      {value}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="rounded-xl border border-brand-border bg-brand-sky p-8">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-brand-green-dark">
+                Notre engagement
+              </p>
+              <p className="mt-3 font-display text-2xl font-extrabold leading-snug text-brand-ink">
+                Agir aujourd’hui pour un avenir meilleur
+              </p>
+              <ul className="mt-6 space-y-3">
+                {['Qualité', 'Santé & Sécurité', 'Environnement', 'Durabilité'].map((value) => (
+                  <li key={value} className="flex items-center gap-2.5 text-sm text-brand-muted">
+                    <Check className="h-4 w-4 shrink-0 text-brand-green-dark" aria-hidden="true" />
+                    {value}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div>
               <SectionHeading

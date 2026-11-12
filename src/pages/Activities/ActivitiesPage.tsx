@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { AppIcon } from '@/components/common/AppIcon'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
-import { ContentCover } from '@/components/common/ContentCover'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { WhatsAppIcon } from '@/components/common/WhatsAppIcon'
@@ -30,15 +29,6 @@ export default function ActivitiesPage() {
         kicker="Nos activités"
         title="Nos activités au Congo : des domaines d’intervention complémentaires"
         description="LEGAL SOURCE regroupe ses expertises par famille d’activités pour vous accompagner de manière globale, du diagnostic jusqu’à la mise en œuvre sur le terrain."
-        cover={
-          <ContentCover
-            icon="target"
-            kicker="Domaines d’intervention"
-            title="Des expertises complémentaires pour vos enjeux QHSE"
-            toneKey="activites"
-            className="h-56 rounded-xl border border-white/10 sm:h-72 lg:h-[360px]"
-          />
-        }
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'Nos activités' }]}
       >
         <Button to="/services">

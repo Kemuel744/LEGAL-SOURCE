@@ -12,7 +12,6 @@ import {
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
-import { ContentCover } from '@/components/common/ContentCover'
 import { PageHero } from '@/components/common/PageHero'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { TrainingCard } from '@/components/cards/TrainingCard'
@@ -88,15 +87,6 @@ export default function TrainingDetailPage() {
         kicker={training.category}
         title={training.title}
         description={training.description}
-        cover={
-          <ContentCover
-            icon={training.icon}
-            kicker={family ? family.shortName : training.category}
-            title={training.title}
-            toneKey={training.familySlug}
-            className="h-56 rounded-xl border border-white/10 sm:h-72 lg:h-[360px]"
-          />
-        }
         crumbs={[
           { label: 'Accueil', to: '/' },
           { label: 'Nos formations', to: '/formations' },

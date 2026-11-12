@@ -1,7 +1,6 @@
 import { ArrowRight, GraduationCap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Training } from '@/types'
-import { ContentCover } from '@/components/common/ContentCover'
 
 type TrainingCardProps = {
   training: Training
@@ -9,36 +8,23 @@ type TrainingCardProps = {
 
 /**
  * Carte de synthèse du catalogue.
+ * Aucune photo n’est affichée : le catalogue ne dispose pas d’une image dédiée
+ * par formation, et une image ne doit jamais illustrer plusieurs contenus.
  * Le détail complet est présenté sur la page dédiée `/formations/:slug`.
  */
 export function TrainingCard({ training }: TrainingCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white shadow-sm transition-shadow hover:shadow-card">
-      <div className="relative overflow-hidden">
-        <Link
-          to={`/formations/${training.slug}`}
-          className="block"
-          tabIndex={-1}
-          aria-hidden="true"
-        >
-          <ContentCover
-            variant="card"
-            icon={training.icon}
-            kicker={training.category}
-            toneKey={training.familySlug}
-            className="h-40 w-full transition-transform duration-500 group-hover:scale-105"
-          />
-        </Link>
-        <span className="absolute left-3 top-3 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
-          {training.level}
-        </span>
-      </div>
-
       <div className="flex flex-1 flex-col p-5">
-        <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-muted">
-          {training.category}
-        </p>
-        <h3 className="mt-1.5 font-display text-base font-bold leading-snug text-brand-ink">
+        <div className="flex items-start justify-between gap-3">
+          <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-brand-muted">
+            {training.category}
+          </p>
+          <span className="shrink-0 rounded bg-brand-green-dark px-2.5 py-1 font-display text-[11px] font-bold uppercase tracking-wide text-white">
+            {training.level}
+          </span>
+        </div>
+        <h3 className="mt-2 font-display text-base font-bold leading-snug text-brand-ink">
           <Link to={`/formations/${training.slug}`} className="hover:text-brand-green-dark">
             {training.title}
           </Link>
