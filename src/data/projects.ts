@@ -1,9 +1,9 @@
 import type { Project } from '@/types'
 
-import auditIso from '@/assets/images/projects/audit-iso.webp'
+import auditIso from '@/assets/images/projects/audit-qualite.webp'
 import formation from '@/assets/images/projects/formation-terrain.webp'
 import agriculture from '@/assets/images/projects/agriculture-durable.webp'
-import impact from '@/assets/images/projects/etude-impact.webp'
+import impact from '@/assets/images/projects/etude-impact-eau.webp'
 
 /**
  * Réalisations présentées dans le template officiel « activités / services ».
@@ -33,7 +33,7 @@ export const projects: Project[] = [
       'Une démarche de conformité pilotée dans la durée',
     ],
     image: auditIso,
-    imageAlt: 'Équipe QHSE en réunion sur un site industriel',
+    imageAlt: 'Contrôle qualité sur un chantier : classeur de suivi et fiches d’inspection',
   },
   {
     id: 'formation-renforcement-capacites',
@@ -108,6 +108,6 @@ export const projects: Project[] = [
       'Un support d’aide à la décision pour le porteur de projet',
     ],
     image: impact,
-    imageAlt: 'Paysage d’un site agricole et forestier faisant l’objet d’une étude d’impact',
+    imageAlt: 'Prélèvement d’eau par un technicien lors d’une étude d’impact environnemental',
   },
 ]

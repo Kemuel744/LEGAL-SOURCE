@@ -3,11 +3,13 @@ import type { TrainingFamily } from '@/types'
 import formationsImg from '@/assets/images/activities/formations.webp'
 import terrainImg from '@/assets/images/projects/formation-terrain.webp'
 import auditsImg from '@/assets/images/activities/audits.webp'
-import haccpImg from '@/assets/images/activities/haccp.webp'
 import rseImg from '@/assets/images/activities/rse.webp'
-import energiesImg from '@/assets/images/activities/energies.webp'
-import hygieneImg from '@/assets/images/activities/hygiene.webp'
+import energiesImg from '@/assets/images/activities/energies-solaire.webp'
+import hygieneImg from '@/assets/images/activities/hygiene-tri-dechets.webp'
 import epiImg from '@/assets/images/activities/epi.webp'
+import incendieImg from '@/assets/images/activities/incendie-extincteur.webp'
+import laboratoireImg from '@/assets/images/activities/laboratoire-securite-aliments.webp'
+import releveEnvImg from '@/assets/images/projects/releve-terrain-environnement.webp'
 
 /**
  * Catalogues thématiques de formations.
@@ -158,8 +160,8 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Préparer les équipes à réagir',
     description:
       'Ce catalogue rassemble les formations liées à la prévention incendie, aux premiers secours et à la gestion des situations d’urgence, pour préparer vos équipes à réagir efficacement.',
-    image: formationsImg,
-    imageAlt: 'Exercice de sécurité incendie et de premiers secours',
+    image: incendieImg,
+    imageAlt: 'Exercice de lutte contre l’incendie avec un extincteur',
     icon: 'shield',
     order: 7,
     modalities: [
@@ -202,8 +204,8 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'Maîtriser les impacts environnementaux',
     description:
       'Ce catalogue accompagne les organisations dans la compréhension de leurs impacts environnementaux, la réalisation d’études d’impact et la mise en place de bonnes pratiques de gestion.',
-    image: rseImg,
-    imageAlt: 'Formation environnement et études d’impact',
+    image: releveEnvImg,
+    imageAlt: 'Relevé de terrain par un technicien pour une étude environnementale',
     icon: 'leaf',
     order: 9,
     modalities: [
@@ -224,8 +226,8 @@ export const trainingFamilies: TrainingFamily[] = [
     tagline: 'HACCP, PRP et maîtrise sanitaire',
     description:
       'Des formations pour maîtriser les principes HACCP, les programmes prérequis (PRP) et les programmes prérequis opérationnels (PRPo), et sécuriser les processus agroalimentaires.',
-    image: haccpImg,
-    imageAlt: 'Formation HACCP et sécurité alimentaire',
+    image: laboratoireImg,
+    imageAlt: 'Analyse en laboratoire pour la sécurité des aliments',
     icon: 'sprout',
     order: 10,
     modalities: [

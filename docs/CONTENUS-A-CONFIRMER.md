@@ -44,7 +44,7 @@ Fichier concerné : `src/data/products.ts`.
 
 ## 4. Formations
 
-Source : `Informations et Inspirations sur la partie formation/Legal source.xlsx`, feuille `Formation`.
+Source : fichier `Legal source.xlsx` (feuille `Formation`), retiré du dépôt (récupérable dans l’historique git).
 
 | Élément | Statut | Action |
 |---|---|---|

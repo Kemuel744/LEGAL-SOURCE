@@ -8,7 +8,7 @@ import { CtaBand } from '@/components/sections/CtaBand'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 import { catalogService } from '@/services/catalogService'
 import { whatsappLink, whatsappMessages } from '@/utils/whatsapp'
-import heroImage from '@/assets/images/heroes/legal-source-services-professionnels-congo.webp'
+import heroImage from '@/assets/images/heroes/legal-source-projets-chantier.webp'
 
 export default function ProjectsPage() {
   useDocumentMeta({
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
         title="Nos réalisations au Congo : des interventions concrètes"
         description="LEGAL SOURCE accompagne les organisations dans des projets variés : audit et mise en conformité, formation, agriculture durable et études environnementales."
         image={heroImage}
-        imageAlt="Équipe LEGAL SOURCE sur le terrain"
+        imageAlt="Chantier vu du ciel avec grues et engins de terrassement"
         crumbs={[{ label: 'Accueil', to: '/' }, { label: 'Projets & réalisations' }]}
       >
         <Button
