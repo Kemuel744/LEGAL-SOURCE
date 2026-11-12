@@ -49,12 +49,12 @@ export const site = {
     ],
   },
   phone: {
-    display: '+242 06 123 45 67',
-    href: '+242061234567',
+    display: '+242 06 813 88 52',
+    href: '+242068138852',
   },
   whatsapp: {
-    number: '242061234567',
-    display: '+242 06 123 45 67',
+    number: '242068138852',
+    display: '+242 06 813 88 52',
   },
   address: {
     line: 'Brazzaville',

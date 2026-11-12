@@ -39,7 +39,7 @@ Aucun code source, aucun HTML/CSS/JS, aucune police, aucun fichier de configurat
 | Photos | Basse résolution (vignettes 135–180 px) | Affichage à taille native ou légèrement agrandie, `object-cover`, `loading="lazy"` |
 | Polices | Non fournies | **Montserrat** (titres) + **Open Sans** (texte), auto-hébergées via Fontsource |
 | Couleurs | Non fournies en code | Échantillonnage des templates (voir §6) |
-| Coordonnées | `contact@legal-source.com`, `+242 06 123 45 67`, Brazzaville — issus des templates | Centralisées dans `src/config/site.ts`, signalées « à confirmer » |
+| Coordonnées | `contact@legal-source.com`, `+242 06 813 88 52`, Brazzaville — issus des templates | Centralisées dans `src/config/site.ts`, signalées « à confirmer » |
 | WhatsApp | Aucun numéro officiel dédié fourni | Numéro du template utilisé par défaut, centralisé et documenté comme **provisoire** |
 | Réseaux sociaux | Aucune URL fournie | Icônes rendues uniquement si une URL est configurée (aucun lien fictif) |
 | Catalogue | 8 produits + 4 kits visibles dans le template | Repris à l'identique ; aucun produit/prix inventé |

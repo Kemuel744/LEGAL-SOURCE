@@ -8,10 +8,10 @@ Dernière mise à jour : 11 novembre 2026.
 
 | Donnée | Valeur actuelle | Source | Statut | Action |
 |---|---|---|---|---|
-| Téléphone | `+242 06 123 45 67` | Validation LEGAL SOURCE (8 nov. 2026) | ✅ Officiel | Aucune |
-| WhatsApp | `242061234567` | Validation LEGAL SOURCE (8 nov. 2026) | ✅ Officiel | Aucune |
-| E-mail | `contact@legal-source.com` | Validation LEGAL SOURCE (8 nov. 2026) | ✅ Officiel | Aucune |
-| Adresse physique | `Brazzaville, Congo` | Validation LEGAL SOURCE (8 nov. 2026) | ✅ Officiel | Compléter l'adresse précise si disponible |
+| Téléphone | `+242 06 813 88 52` | Validation LEGAL SOURCE (12 nov. 2026) | ✅ Officiel | Aucune |
+| WhatsApp | `242068138852` | Validation LEGAL SOURCE (12 nov. 2026) | ✅ Officiel | Aucune |
+| E-mail | `contact@legal-source.com` | Validation LEGAL SOURCE (12 nov. 2026) | ✅ Officiel | Aucune |
+| Adresse physique | `Brazzaville, Congo` | Validation LEGAL SOURCE (12 nov. 2026) | ✅ Officiel | Compléter l'adresse précise si disponible |
 | Horaires | « lundi au vendredi pendant les heures de bureau » | Rédaction interne | ⚠️ Non validé | Confirmer ou supprimer |
 | Raison sociale / mentions | `LEGAL SOURCE` | Template | ⚠️ À confirmer | Fournir RCCM, NIU, siège |
 | Direction / directeur de publication | `Israël ELOYE ONDELE`, Directeur général | Validation LEGAL SOURCE | ✅ Officiel | Aucune |
